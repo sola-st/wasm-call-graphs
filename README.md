@@ -8,10 +8,10 @@ The repository is organized as follows.
 
 - `challenges-prevalence/`: Evaluation scripts for the study of prevalence of call graph challenges (section 3).
   * `wasm/`: Source code of the Rust WebAssembly parser and analysis library.
-  * `scripts/`: TODO
+  * `scripts/`: Scripts used to analyze WasmBench along with extracted data
 - `microbenchmarks/`: Set of microbenchmarks with their build and run scripts.
 - `real-world-programs/`: Programs collected from NPM and GitHub.
-- `evaluation/`: Evaluation scripts for the study of soundness (and precision for the microbenchmarks) of the existing static analyses
+- `evaluation/`: Evaluation scripts, raw data and processed data for the study of soundness (and precision for the microbenchmarks) of the existing static analyses
 
 ## Requirements
 
