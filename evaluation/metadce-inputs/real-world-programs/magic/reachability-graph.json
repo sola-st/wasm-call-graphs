@@ -1,0 +1,117 @@
+[
+  {
+    "name": "memory",
+    "root": true,
+    "export": "memory"
+  },
+  {
+    "name": "__wasm_call_ctors",
+    "root": true,
+    "export": "__wasm_call_ctors"
+  },
+  {
+    "name": "free",
+    "root": true,
+    "export": "free"
+  },
+  {
+    "name": "__errno_location",
+    "root": true,
+    "export": "__errno_location"
+  },
+  {
+    "name": "malloc",
+    "root": true,
+    "export": "malloc"
+  },
+  {
+    "name": "fflush",
+    "root": true,
+    "export": "fflush"
+  },
+  {
+    "name": "__indirect_function_table",
+    "root": true,
+    "export": "__indirect_function_table"
+  },
+  {
+    "name": "__getTypeName",
+    "root": true,
+    "export": "__getTypeName"
+  },
+  {
+    "name": "__embind_register_native_and_builtin_types",
+    "root": true,
+    "export": "__embind_register_native_and_builtin_types"
+  },
+  {
+    "name": "_get_tzname",
+    "root": true,
+    "export": "_get_tzname"
+  },
+  {
+    "name": "_get_daylight",
+    "root": true,
+    "export": "_get_daylight"
+  },
+  {
+    "name": "_get_timezone",
+    "root": true,
+    "export": "_get_timezone"
+  },
+  {
+    "name": "emscripten_stack_init",
+    "root": true,
+    "export": "emscripten_stack_init"
+  },
+  {
+    "name": "emscripten_stack_get_free",
+    "root": true,
+    "export": "emscripten_stack_get_free"
+  },
+  {
+    "name": "emscripten_stack_get_end",
+    "root": true,
+    "export": "emscripten_stack_get_end"
+  },
+  {
+    "name": "stackSave",
+    "root": true,
+    "export": "stackSave"
+  },
+  {
+    "name": "stackRestore",
+    "root": true,
+    "export": "stackRestore"
+  },
+  {
+    "name": "stackAlloc",
+    "root": true,
+    "export": "stackAlloc"
+  },
+  {
+    "name": "dynCall_jiji",
+    "root": true,
+    "export": "dynCall_jiji"
+  },
+  {
+    "name": "dynCall_viijii",
+    "root": true,
+    "export": "dynCall_viijii"
+  },
+  {
+    "name": "dynCall_iiiiij",
+    "root": true,
+    "export": "dynCall_iiiiij"
+  },
+  {
+    "name": "dynCall_iiiiijj",
+    "root": true,
+    "export": "dynCall_iiiiijj"
+  },
+  {
+    "name": "dynCall_iiiiiijj",
+    "root": true,
+    "export": "dynCall_iiiiiijj"
+  }
+]
