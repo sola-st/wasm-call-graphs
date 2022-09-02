@@ -1,0 +1,3 @@
+wasm-metadce error: wasm-metadce: /build/binaryen-_t7Va4/binaryen-91/src/support/json.h:179: json::IString& json::Value::getIString(): Assertion `isString()' failed.
+Aborted (core dumped)
+
