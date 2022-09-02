@@ -1,0 +1,8 @@
+aWsm error: INFO [awsm] running awsm("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/opencv-wasm/opencv.wasm", Some("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data/opencv-wasm/CG_tools_data/aWsm/awsm.bc"))
+INFO [awsm::wasm] Globals taking up 28 bytes
+INFO [awsm::wasm] Data initializers taking up 582782 bytes
+INFO [awsm::wasm] Function table entries 13920 (ignoring fragmentation)
+INFO [awsm::codegen::memory] memory limits ResizableLimits { initial: 2048, maximum: Some(16384) }
+thread 'main' panicked at 'assertion failed: wasm_module.tables[0].limits.initial <= 1024', src/codegen/mod.rs:138:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+

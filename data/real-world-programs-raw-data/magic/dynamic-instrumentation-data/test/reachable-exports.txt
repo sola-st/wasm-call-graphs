@@ -1,0 +1,6 @@
+emscripten_stack_init
+emscripten_stack_get_end
+__wasm_call_ctors
+__embind_register_native_and_builtin_types
+malloc
+free

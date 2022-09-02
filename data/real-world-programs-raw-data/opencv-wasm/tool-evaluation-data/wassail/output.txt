@@ -1,0 +1,2 @@
+wassail output: [WARNING] Call graph generation cannot deal with imported tables if they are used for indirect calls
+

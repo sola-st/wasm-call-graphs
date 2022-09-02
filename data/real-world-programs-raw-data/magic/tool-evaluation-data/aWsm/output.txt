@@ -1,0 +1,4 @@
+aWsm error: INFO [awsm] running awsm("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/magic/magic-js.wasm", Some("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data/magic/CG_tools_data/aWsm/awsm.bc"))
+thread 'main' panicked at 'Have not implemented export kind Table', src/wasm.rs:1238:26
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
