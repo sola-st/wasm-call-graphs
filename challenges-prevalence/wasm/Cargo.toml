@@ -1,0 +1,53 @@
+[package]
+name = "wasm"
+version = "0.5.0"
+authors = ["Daniel Lehmann <mail@dlehmann.eu>"]
+edition = "2018"
+
+[dependencies]
+binary_derive = { path = "binary_derive" }
+wasabi_leb128 = "0.4"
+byteorder = "1"
+rayon = "1"
+serde = { version = "1", features = ["derive"] }
+ordered-float = "1"
+lazy_static = "1.4.0"
+csv = "1.1"
+
+# For parsing Wimpl text format
+nom = "7.1.0"
+
+thiserror = "1.0.30"
+anyhow = "1.0.55"
+
+# TODO move to dev-dependencies by moving imports into blocks of #[cfg(test)]
+test_utilities = { path = "../test_utilities" }
+
+regex = "1.5.4"
+
+# For interning function types and some strings.
+internment = "0.6.0"
+arc-interner = "0.7.0"
+
+# For faster HashSet and HashMap in callgraph analysis.
+rustc-hash = "1.1.0"
+
+# For fast checking of function membership in set of indirectly callable functions.
+# bloomfilter = "1.0.9"
+# cuckoofilter = "0.5.0"
+
+[dev-dependencies]
+walkdir = "2.3.2"
+bencher = "0.1.5"
+
+# Necessary to avoid stack overflow for very deeply nested tests.
+[profile.test]
+opt-level = 2
+lto = "thin"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+overflow-checks = true
+# For profiling with debug info.
+debug = 1
