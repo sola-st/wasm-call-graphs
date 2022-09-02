@@ -1,0 +1,10 @@
+digraph "Call graph: /home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data/indirect-call-index-expr-memory-mutable/CG_tools_data/WAVM/wavm.bc" {
+	label="Call graph: /home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data/indirect-call-index-expr-memory-mutable/CG_tools_data/WAVM/wavm.bc";
+
+	Node0xf8fb40 [shape=record,label="{__gxx_personality_v0}"];
+	Node0xf8fc20 [shape=record,label="{functionDef0}"];
+	Node0xf8fc20 -> Node0xf8fca0;
+	Node0xf846e0 [shape=record,label="{functionDef1}"];
+	Node0xf84760 [shape=record,label="{functionDef2}"];
+	Node0xf8fca0 [shape=record,label="{callIndirectFail}"];
+}

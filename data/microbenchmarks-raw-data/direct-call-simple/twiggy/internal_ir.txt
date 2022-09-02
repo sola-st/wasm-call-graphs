@@ -1,0 +1,10 @@
+Id(0, 4294967295) | wasm magic bytes | None
+Id(1, 0) | type[0]: () -> nil | None
+Id(1, 4294967295) | type section headers | None
+Id(3, 0) | export "main" | Some([Id(4, 0)])
+Id(3, 4294967295) | export section headers | None
+Id(4, 0) | code[0] | Some([Id(1, 0), Id(4, 1)])
+Id(4, 1) | code[1] | Some([Id(1, 0)])
+Id(4, 2) | code[2] | Some([Id(1, 0)])
+Id(4, 4294967295) | code section headers | None
+Id(4294967295, 4294967295) | <meta root> | Some([Id(0, 4294967295), Id(1, 4294967295), Id(3, 0), Id(3, 4294967295), Id(4, 4294967295)])

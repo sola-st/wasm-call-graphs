@@ -1,0 +1,34 @@
+=== graph ===
+root: main
+node: export$export2$8
+  is export export2, 2
+  reaches: func$2$2
+node: export$export1$7
+  is export export1, 1
+  reaches: func$1$1
+node: func$5$5
+  is function 5
+node: func$3$3
+  is function 3
+node: func$2$2
+  is function 2
+  reaches: func$4$4
+node: func$1$1
+  is function 1
+  reaches: func$3$3
+node: func$4$4
+  is function 4
+node: func$0$0
+  is function 0
+  reaches: importId$fimport$0$6
+node: main
+  is export main, 0
+  reaches: func$0$0
+=============
+unused: export$export1$7
+unused: export$export2$8
+unused: func$1$1
+unused: func$2$2
+unused: func$3$3
+unused: func$4$4
+unused: func$5$5

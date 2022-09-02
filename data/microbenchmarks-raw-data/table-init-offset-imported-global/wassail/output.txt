@@ -1,0 +1,19 @@
+wassail error: Uncaught exception:
+  
+  (Failure "Unsupported elems for table initialization")
+
+Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
+Called from Stdlib__list.iter in file "list.ml", line 110, characters 12-15
+Called from Base__List0.iter in file "src/list0.ml" (inlined), line 25, characters 16-35
+Called from Wassail__Table_inst.init in file "lib/wasm/table_inst.ml", line 18, characters 2-357
+Called from Base__List.count_map in file "src/list.ml", line 462, characters 13-17
+Called from Base__List.map in file "src/list.ml" (inlined), line 493, characters 15-31
+Called from Wassail__Wasm_module.of_wasm in file "lib/wasm/wasm_module.ml", line 127, characters 20-161
+Called from Base__Exn.protectx in file "src/exn.ml", line 80, characters 8-11
+Re-raised at Base__Exn.raise_with_original_backtrace in file "src/exn.ml" (inlined), line 60, characters 2-48
+Called from Base__Exn.protectx in file "src/exn.ml", line 87, characters 13-49
+Called from Dune__exe__Callgraph.callgraph.(fun) in file "callgraph.ml", line 11, characters 23-50
+Called from Core__Command.For_unix.dispatch.parse_group.resolve in file "core/src/command.ml", line 2761, characters 12-352
+Called from Core__Command.For_unix.run.(fun) in file "core/src/command.ml", line 2871, characters 8-270
+Called from Base__Exn.handle_uncaught_aux in file "src/exn.ml", line 127, characters 6-10
+

@@ -1,0 +1,12 @@
+digraph "Call graph: /home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data/indirect-call-index-expr-load-interprocedural-result/CG_tools_data/WAVM/wavm.bc" {
+	label="Call graph: /home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data/indirect-call-index-expr-load-interprocedural-result/CG_tools_data/WAVM/wavm.bc";
+
+	Node0x1a12c90 [shape=record,label="{callIndirectFail}"];
+	Node0x19fc890 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x1a12b90 [shape=record,label="{functionDef0}"];
+	Node0x1a12b90 -> Node0x1a12c10;
+	Node0x1a12b90 -> Node0x1a12c90;
+	Node0x1a12c10 [shape=record,label="{functionDef1}"];
+	Node0x1a12dc0 [shape=record,label="{functionDef2}"];
+	Node0x1a12e40 [shape=record,label="{functionDef3}"];
+}
