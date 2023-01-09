@@ -1,0 +1,9 @@
+=== graph ===
+node: func$2$2
+  is function 2
+node: func$1$1
+  is function 1
+node: func$0$0
+  is function 0
+  reaches: func$1$1
+=============

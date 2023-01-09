@@ -1,5 +1,0 @@
- Bytes │ Size % │ Garbage Item
-───────┼────────┼─────────────────────────────────────────
-     2 ┊  2.06% ┊ memory[0]
-     2 ┊  2.06% ┊ Σ [1 Total Rows]
-    10 ┊ 10.31% ┊ 1 potential false-positive data segments

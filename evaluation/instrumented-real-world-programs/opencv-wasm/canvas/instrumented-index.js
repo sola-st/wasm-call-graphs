@@ -1,4 +1,4 @@
-global.Wasabi = require("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/opencv-wasm/canvas/node_modules/opencv-wasm/opencv.wasabi.js");
+global.Wasabi = require("./node_modules/opencv-wasm/opencv.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
@@ -12,14 +12,12 @@ const { JSDOM } = require('jsdom');
 const { writeFileSync, readFileSync } = require('fs');
 const { cv, cvTranslateError } = require('opencv-wasm');
 
-let DIR_PATH = 
-
 // This is our program. This time we use JavaScript async / await and promises to handle asynchronicity.
 (async () => {
     // before loading opencv.js we emulate a minimal HTML DOM. See the function declaration below.
     installDOM();
     // using node-canvas, we an image file to an object compatible with HTML DOM Image and therefore with cv.imread()
-    const image = await loadImage('/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/opencv-wasm/canvas/input/image-sample-1.jpg');
+    const image = await loadImage('./input/image-sample-1.jpg');
     const src = cv.imread(image);
     const dst = new cv.Mat();
     const M = cv.Mat.ones(5, 5, cv.CV_8U);
@@ -28,9 +26,10 @@ let DIR_PATH =
     // we create an object compatible HTMLCanvasElement
     const canvas = createCanvas(300, 300);
     cv.imshow(canvas, dst);
-    writeFileSync('/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/opencv-wasm/canvas/output/output.jpg', canvas.toBuffer('image/jpeg'));
+    writeFileSync('./output/output.jpg', canvas.toBuffer('image/jpeg'));
     src.delete();
     dst.delete();
+    require('./../../collect-data.js')
 
   })();
 
@@ -40,7 +39,7 @@ let DIR_PATH =
       global.Module = {
         onRuntimeInitialized: resolve
       };
-      global.cv = require(DIR_PATH+'/opencv.js');
+      global.cv = require('./opencv.js');
     });
     
   }
@@ -59,4 +58,4 @@ let DIR_PATH =
 
   }
 
-require('./../../collect-data.js')
+

@@ -1,0 +1,4 @@
+aWsm error: INFO [awsm] running awsm("./../../microbenchmarks/host-reachable-table-export/main.wasm", Some("./../../data/microbenchmarks-raw-data/host-reachable-table-export/tool-evaluation-data/aWsm/awsm.bc"))
+thread 'main' panicked at 'Have not implemented export kind Table', src/wasm.rs:1238:26
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+

@@ -1,0 +1,11 @@
+digraph "Call graph: ./../../data/microbenchmarks-raw-data/host-code-table-mutable/tool-evaluation-data/WAVM/wavm.bc" {
+	label="Call graph: ./../../data/microbenchmarks-raw-data/host-code-table-mutable/tool-evaluation-data/WAVM/wavm.bc";
+
+	Node0x6f6920 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x6f6a00 [shape=record,label="{functionDef0}"];
+	Node0x6f6a00 -> Node0x6fe960;
+	Node0x6fe9e0 [shape=record,label="{functionDef1}"];
+	Node0x6fea60 [shape=record,label="{functionDef2}"];
+	Node0x6feae0 [shape=record,label="{functionDef3}"];
+	Node0x6fe960 [shape=record,label="{callIndirectFail}"];
+}

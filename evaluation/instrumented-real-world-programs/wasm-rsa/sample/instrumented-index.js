@@ -1,4 +1,4 @@
-global.Wasabi = require("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/wasm-rsa/sample/node_modules/wasm-rsa/wasm/nodejs/rsa_lib_bg.wasabi.js");
+global.Wasabi = require("./node_modules/wasm-rsa/wasm/nodejs/rsa_lib_bg.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
@@ -33,9 +33,11 @@ async function main() {
   console.log("CIPHER TEXT:", cipher)
   const decryptedMessage = firstInstance.privateDecrypt(cipher)
   console.log("DECRYPTED MESSAGE", decryptedMessage)
-  require('./../../collect-data.js')
+	
+	require('./../../collect-data.js')
 }
 
 main()
+
 
 

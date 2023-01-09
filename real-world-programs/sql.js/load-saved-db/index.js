@@ -2,7 +2,7 @@ const fs = require("fs");
 const initSqlJs = require('./node_modules/sql.js/dist/sql-wasm.js');
 const { exit } = require("process");
 
-const filebuffer = fs.readFileSync("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/sql.js/load-db/db.sqlite");
+const filebuffer = fs.readFileSync("./db.sqlite");
 
 initSqlJs().then(function(SQL){
 
@@ -32,7 +32,7 @@ INSERT INTO new_student VALUES (102, 'rachel', 23);";
   
   const binaryArray = db.export();
   
-  fs.writeFileSync("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/sql.js/load-db/db_new.sqlite", binaryArray)
+  fs.writeFileSync("./db_new.sqlite", binaryArray)
 
   fs.writeFileSync("db_new.sqlite", binaryArray)
 

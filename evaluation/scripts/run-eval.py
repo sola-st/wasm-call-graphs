@@ -2,21 +2,22 @@ import os, sys
 from subprocess import PIPE, Popen
 import re
 
-REAL_TEST_SUITE_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite" 
-MICRO_TEST_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/micro-benchmarks"
+REAL_TEST_SUITE_PATH = "./../../real-world-programs" 
+MICRO_TEST_PATH = "./../../microbenchmarks"
 
 SCRIPTS_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/scripts/"
 
-TEST_SUITE_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/test-suite.json"
-TEST_SUITE_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/test-suite-data.json"
+TEST_SUITE_JSON_PATH = "./../../real-world-programs/real-world-programs-metadata.json"
+TEST_SUITE_DATA_JSON_PATH = "./../../data/real-world-processed-data.json"
 
-MICROBENCH_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/micro-benchmarks.json"
-MICROBENCH_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/microbench-data.json"
+MICROBENCH_JSON_PATH = "./../../microbenchmarks/microbenchmarks-ground-truth.json"
+MICROBENCH_DATA_JSON_PATH = "./../../data/microbenchmarks-processed-data.json"
 
 
 def extract_name(path): 
     return path.split("/")[len(path.split("/"))-1]
 
+# TODO: put the wasm file path for each real world program in the metadata json. 
 def extract_wasm_and_test_paths(TEST_DIR): 
     paths = {} # {lib -> {testpaths -> [], wasmpath -> ""}}
     for item1 in os.listdir(TEST_DIR):
@@ -106,7 +107,7 @@ def main():
                 help_message()
                 sys.exit()
 
-    # Start "fresh" by removing the old results and copying test-suite.json to data.json.
+    # Start "fresh" by removing the old results and copying the skeleton json files into a new file in the data directory.
     if flag_real_fresh:
         execute_command("rm {}".format(TEST_SUITE_DATA_JSON_PATH))
         execute_command("cp {} {}".format(TEST_SUITE_JSON_PATH, TEST_SUITE_DATA_JSON_PATH))
@@ -115,10 +116,6 @@ def main():
         execute_command("rm {}".format(MICROBENCH_DATA_JSON_PATH))
         execute_command("cp {} {}".format(MICROBENCH_JSON_PATH, MICROBENCH_DATA_JSON_PATH))
 
-    # Build ourtool 
-    if flag_real_fresh:
-        execute_command('RUSTFLAGS=-Awarnings cargo build -q --package wasm --bin dce --release')
-    
     if flag_micro: 
         paths = extract_wasm_and_test_paths(MICRO_TEST_PATH)
         for lib in paths:
@@ -129,11 +126,13 @@ def main():
 
     if flag_real: 
         paths = extract_wasm_and_test_paths(REAL_TEST_SUITE_PATH)    
+        
         for lib in paths:
             wasm_file = paths[lib]["wasm_path"]
+            
             if flag_real_eval[0]: execute_command("python3 get-static-data.py --real-update-json {}".format(wasm_file)); print("\n") 
             if flag_real_eval[1]: execute_command("python3 get-tools-data.py  --real-update-json {}".format(wasm_file)); print("\n")
-
+            
             if flag_real_eval[2]: 
                 
                 print("Running tests for {}...\n".format(lib))
@@ -153,7 +152,15 @@ def main():
                         # test specific instrumentation -> add collect.js in the right place - use Babble?
 
                     # Run instrumented tests
-                    run_instrumented_tests_command = "node {} --reachable-exports --callsite-sensitive-cg --lower-bound".format(test+"/instrumented-index.js")
+                    test = test.split("/")[-2:]
+                    test = "./../instrumented-real-world-programs/" + "/".join(test)
+
+                        # Save the pwd and cd into the test directory 
+                        # because this is the easiest way we can keep relative paths 
+                    cwd = os.getcwd()
+                    os.chdir(test)
+                    
+                    run_instrumented_tests_command = "node ./instrumented-index.js --reachable-exports --callsite-sensitive-cg --lower-bound"
                     stdout = execute_command(run_instrumented_tests_command, print_stdout=False)
                     stdout = stdout.split("\n")
                     results = [re.search("(\d+) ",x).groups()[0].strip() for x in stdout[len(stdout)-6:] if x != '']
@@ -161,6 +168,8 @@ def main():
                     print("{} callsites have been analyzed.".format(results[1]))          
                     print("{} functions are the lower bound for the analysis.".format(results[2]))
                     print("\n")
+
+                    os.chdir(cwd)
 
             print("\n")
 

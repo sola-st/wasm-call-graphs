@@ -1,0 +1,2 @@
+wassail error: /bin/sh: 1: /home/michelle/Documents/sa-for-wasm/wassail/_build/default/main.exe: not found
+

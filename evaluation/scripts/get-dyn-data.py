@@ -3,7 +3,8 @@ import json
 
 # This script reads the Wasabi output files and saves the data in data.json by updating it  
 
-TEST_SUITE_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/test-suite-data.json"
+TEST_SUITE_DATA_JSON_PATH = "./../../data/real-world-processed-data.json"
+TEST_SUITE_PATH = "./../../data/real-world-programs-raw-data" 
 
 args = sys.argv[1:]
 if len(args)>0: 
@@ -17,12 +18,13 @@ def get_file_data(path):
 dyn_data = dict() # {library -> {test_name -> {reachable ->, lowerbound -> }}}
 
 # Extract the reachable exports and reachable functions sets from the data 
-for root, dirs, files in os.walk("../data/library_data"):
+for root, _, files in os.walk(TEST_SUITE_PATH):
 	for f in files: 
 		
 		if "exports" in f or "lowerbound" in f: 
 			
-			lib, _, test = root[21:].split("/")
+			lib, _, test = root.split("/")[-3:]
+			
 			if lib not in dyn_data.keys(): 
 				dyn_data[lib] = {}
 				dyn_data[lib]["tests"] = {}

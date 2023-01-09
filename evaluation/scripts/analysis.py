@@ -1,8 +1,8 @@
 import sys
 import json 
 
-REAL_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/test-suite-data.json"
-MICRO_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/microbench-data.json"
+REAL_DATA_JSON_PATH = "./../../data/real-world-processed-data.json"
+MICRO_DATA_JSON_PATH = "./../../data/microbenchmarks-processed-data.json"
 
 
 def graph_names_normalize(graph, export_names, import_names):

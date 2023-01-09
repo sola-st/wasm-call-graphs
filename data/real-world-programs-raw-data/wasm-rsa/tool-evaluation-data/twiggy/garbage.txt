@@ -1,7 +1,0 @@
- Bytes │ Size % │ Garbage Item
-───────┼────────┼───────────────────────────────────────────
-   113 ┊  0.03% ┊ custom section 'producers'
-     7 ┊  0.00% ┊ type[29]: (i32, f32, i32, i32) -> nil
-     7 ┊  0.00% ┊ type[30]: (i32, f64, i32, i32) -> nil
-   127 ┊  0.03% ┊ Σ [3 Total Rows]
- 14387 ┊  3.90% ┊ 132 potential false-positive data segments

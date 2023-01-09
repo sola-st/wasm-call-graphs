@@ -1,13 +1,10 @@
 import os, re, sys
 import json 
 
+TEST_SUITE_PATH = "./../../real-world-programs" 
 
-TEST_SUITE_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite" 
-
-DATA_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data"
-
-TEST_SUITE_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/test-suite-data.json"
-MICROBENCH_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/microbench-data.json"
+TEST_SUITE_DATA_JSON_PATH = "./../../data/real-world-processed-data.json"
+MICROBENCH_DATA_JSON_PATH = "./../../data/microbenchmarks-processed-data.json"
 
 #TODO: Modularize  
 #TODO: make groups and extract output via groups! 

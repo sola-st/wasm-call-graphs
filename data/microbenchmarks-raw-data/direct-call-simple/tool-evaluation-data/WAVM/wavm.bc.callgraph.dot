@@ -1,0 +1,9 @@
+digraph "Call graph: ./../../data/microbenchmarks-raw-data/direct-call-simple/tool-evaluation-data/WAVM/wavm.bc" {
+	label="Call graph: ./../../data/microbenchmarks-raw-data/direct-call-simple/tool-evaluation-data/WAVM/wavm.bc";
+
+	Node0xfc9f40 [shape=record,label="{__gxx_personality_v0}"];
+	Node0xfca020 [shape=record,label="{functionDef0}"];
+	Node0xfca020 -> Node0xfca0a0;
+	Node0xfca0a0 [shape=record,label="{functionDef1}"];
+	Node0xfca120 [shape=record,label="{functionDef2}"];
+}

@@ -6,18 +6,16 @@ from itertools import count, groupby
 
 # Note: If you aren't Michelle, change variable 'wassail_path' in function run_wassail() to your wassail binary path. 
 # or see if the wassail command runs on the shell without any path being specified.  
-# Nevermind youy have to change all the paths 
+# Nevermind you have to change all the paths 
 
-TEST_SUITE_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite" 
-MICROBENCH_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/micro-benchmarks"
-DATA_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data"
+TEST_SUITE_PATH = "./../../real-world-programs" 
+MICROBENCH_PATH = "./../../microbenchmarks"
 
-TEST_SUITE_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/test-suite-data.json"
-MICROBENCH_DATA_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/microbench-data.json"
+DATA_PATH = "./../../data"
 
-OURTOOL_DIR = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm"
-OURTOOL_BINARY_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/target/release/dce"
-    
+TEST_SUITE_DATA_JSON_PATH = "./../../data/real-world-processed-data.json"
+MICROBENCH_DATA_JSON_PATH = "./../../data/microbenchmarks-processed-data.json"
+
 DOT_FILE_EDGE_RE = "^(?:\"f(\d+)\"|\"(.+)\"|node(\d+)) ?-> ?(?:\"f(\d+)\"|\"(.+)\"|node(\d+));$"
 
 METADCE_ROOT_FUNC_RE = "root: func\$(\d+)\$\d+$"
@@ -79,21 +77,29 @@ def execute_command(command, program, output_file, write_stdout=True):
         
     return (not flag_stderr, stdout, exec_time)    
     
-def run_wassail(wasm_file, lib):
+def run_wassail(wasm_file, lib, bin_type):
     # Wassail 
     wassail_path = "/home/michelle/Documents/sa-for-wasm/wassail/_build/default/main.exe"
-    cg_path = "{}/{}/CG_tools_data/wassail/callgraph.dot".format(DATA_PATH, lib)
-    tool_shell_output = "{}/{}/CG_tools_data/wassail/output.txt".format(DATA_PATH, lib)
+    
+    # data/real-world-programs-raw-data/lib/tool-evaluation-data/wassail/callgraph.dot
+    prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
+    raw_data_output = "{}/{}/{}/tool-evaluation-data/wassail".format(DATA_PATH, prg_type, lib)
+    cg_path = "{}/callgraph.dot".format(raw_data_output)
+    tool_shell_output = "{}/output.txt".format(raw_data_output)
+    
     wassail_command = "{} callgraph {} {}".format(wassail_path, wasm_file, cg_path)
     status, _, exec_time = execute_command(wassail_command, "wassail", tool_shell_output)
     return (status, exec_time) 
 
-def run_metadce(bin_type, wasm_file, lib_name, lib_obj): 
+def run_metadce(wasm_file, lib, lib_obj, bin_type): 
+    prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
+    raw_data_output = "{}/{}/{}/tool-evaluation-data/wassail".format(DATA_PATH, prg_type, lib)
+    
     # Generate reachablity graph.
     # All exports (memory, variables, functions, tables) are made reachable. 
     reachability_graph_path = ""
     if bin_type == "real": 
-        reachability_graph_path = '{}/{}/reachability-graph.json'.format(TEST_SUITE_PATH, lib_name)
+        reachability_graph_path = '{}/reachability-graph.json'.format(raw_data_output)
         reachability_graph = []
         for export in lib_obj['static_info']['exports']['names']: 
             reachability_graph.append({
@@ -103,10 +109,10 @@ def run_metadce(bin_type, wasm_file, lib_name, lib_obj):
             })
         json.dump(reachability_graph, open(reachability_graph_path, 'w'), indent=2)
     if bin_type == "micro": 
-        reachability_graph_path = '{}/{}/reachability-graph.json'.format(MICROBENCH_PATH, lib_name)
+        reachability_graph_path = '{}/reachability-graph.json'.format(raw_data_output)
         export_names = {item['internal_id'] : item['name'] for item in lib_obj["static_info"]["exports"]["names"]}    
         reachability_graph = []
-        for export in json.load(open(MICROBENCH_DATA_JSON_PATH))[lib_name]['ground_truth']['entry_points']:
+        for export in json.load(open(MICROBENCH_DATA_JSON_PATH))[lib]['ground_truth']['entry_points']:
             reachability_graph.append({
                 'name': export_names[int(export)],
                 'root': True,
@@ -115,45 +121,57 @@ def run_metadce(bin_type, wasm_file, lib_name, lib_obj):
         json.dump(reachability_graph, open(reachability_graph_path, 'w'), indent=2)        
     
     # Metadce
-    dce_path = '{}/{}/CG_tools_data/metadce/dce.wasm'.format(DATA_PATH, lib_name)
-    new_graph_path = '{}/{}/CG_tools_data/metadce/new-graph.txt'.format(DATA_PATH, lib_name)
-    tool_shell_output = '{}/{}/CG_tools_data/metadce/output.txt'.format(DATA_PATH, lib_name)
+    dce_path = '{}/{}/CG_tools_data/metadce/dce.wasm'.format(DATA_PATH, lib)
+    
+    # data/real-world-programs-raw-data/lib/tool-evaluation-data/metadce/callgraph.dot
+    new_graph_path = '{}/new-graph.txt'.format(raw_data_output)
+    tool_shell_output = '{}/output.txt'.format(raw_data_output)
+    
     metadce_command = 'wasm-metadce --dump -f {} {} -o {}'.format(reachability_graph_path, wasm_file, dce_path)
-    #print(metadce_command)
     status, output, exec_time = execute_command(metadce_command, "wasm-metadce", tool_shell_output, False)
     with open(new_graph_path, 'w') as f: 
         f.write(output)
     return (status, exec_time)
 
-def run_twiggy(wasm_file, lib): 
+def run_twiggy(wasm_file, lib, bin_type): 
     # Twiggy 
-    internal_ir_path = '{}/{}/CG_tools_data/twiggy/internal_ir.txt'.format(DATA_PATH, lib)
-    garbage_path = '{}/{}/CG_tools_data/twiggy/garbage.txt'.format(DATA_PATH, lib)
-    tool_shell_output = '{}/{}/CG_tools_data/twiggy/output.txt'.format(DATA_PATH, lib)
+    prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
+    raw_data_output = "{}/{}/{}/tool-evaluation-data/twiggy".format(DATA_PATH, prg_type, lib)
+    internal_ir_path = '{}/internal_ir.txt'.format(raw_data_output)
+    garbage_path = '{}/garbage.txt'.format(raw_data_output)
+    tool_shell_output = '{}/output.txt'.format(raw_data_output)
+    
     # dump internal IR 
     status_ir, dominators_output, exec_time = execute_command('twiggy dominators {}'.format(wasm_file), "twiggy IR", tool_shell_output, False)
     if status_ir:
         internal_ir = dominators_output[:dominators_output.index(" Retained Bytes")]
         with open(internal_ir_path, "w") as ir_f: ir_f.write(internal_ir)
+    
     # dump garbage.csv 
     status_garbage, garbage_output, _ = execute_command('twiggy garbage {}'.format(wasm_file), "twiggy garbage", tool_shell_output, False)
     with open(garbage_path, "w") as garbage_f: garbage_f.write(garbage_output) 
     return (status_ir and status_garbage, exec_time)
 
-def run_awsm(wasm_file, lib):    
+def run_awsm(wasm_file, lib, bin_type):    
     # LLVM - aWsm: save .ll file and .bc file 
-    awsm_bc_path = '{}/{}/CG_tools_data/aWsm/awsm.bc'.format(DATA_PATH, lib)
-    awsm_ll_path = '{}/{}/CG_tools_data/aWsm/awsm.ll'.format(DATA_PATH, lib)
-    tool_shell_output = '{}/{}/CG_tools_data/aWsm/output.txt'.format(DATA_PATH, lib)
+    prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
+    raw_data_output = "{}/{}/{}/tool-evaluation-data/aWsm".format(DATA_PATH, prg_type, lib)
+    awsm_bc_path = '{}/awsm.bc'.format(raw_data_output)
+    awsm_ll_path = '{}/awsm.ll'.format(raw_data_output)
+    tool_shell_output = '{}/output.txt'.format(raw_data_output)
+    
     status, _, exec_time = execute_command('awsm {} -o {}'.format(wasm_file, awsm_bc_path), "aWsm", tool_shell_output)
     if status: execute_command('llvm-dis-12 {} -o {}'.format(awsm_bc_path, awsm_ll_path), "llvm-dis", tool_shell_output)
     return (status, exec_time ) 
 
-def run_wavm(wasm_file, lib): 
+def run_wavm(wasm_file, lib, bin_type): 
     # LLVM - WAVM: save .ll file and .bc file 
-    wavm_bc_path = '{}/{}/CG_tools_data/WAVM/wavm.bc'.format(DATA_PATH, lib)
-    wavm_ll_path = '{}/{}/CG_tools_data/WAVM/wavm.ll'.format(DATA_PATH, lib)
-    tool_shell_output = '{}/{}/CG_tools_data/WAVM/output.txt'.format(DATA_PATH, lib)
+    prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
+    raw_data_output = "{}/{}/{}/tool-evaluation-data/WAVM".format(DATA_PATH, prg_type, lib)
+    wavm_bc_path = '{}/wavm.bc'.format(raw_data_output)
+    wavm_ll_path = '{}/wavm.ll'.format(raw_data_output)
+    tool_shell_output = '{}/output.txt'.format(raw_data_output)
+    
     status, _, exec_time = execute_command('wavm compile --format=unoptimized-llvmir {} {}'.format(wasm_file, wavm_ll_path), "wavm", tool_shell_output)
     if status: 
         execute_command('llvm-as-12 {} -o {}'.format(wavm_ll_path, wavm_bc_path), "llvm-as", tool_shell_output)
@@ -347,7 +365,7 @@ def process_metadce(new_graph_path, lib):
         if not str(child).isdigit(): 
             child = replace_name_with_id(child)
         # node == child is when their export nodes point to their internal function id nodes 
-        # What about recursive nodes! node_is_export makes sure that recursive edges are not removed
+        # TODO: What about recursive nodes! node_is_export makes sure that recursive edges are not removed
         if not node_is_export:
             reachable_edges_normalized.add((node, child))  
     
@@ -371,7 +389,7 @@ def process_twiggy(internal_ir_path, garbage_path, lib):
                 id_num1, id_num2, name, reaches = re.search(TWIGGY_IR_LINE_RE, line).groups()
                 targets = []
                 if reaches != "None": 
-                    # When you want matches of a pattern that is recursive (uses *, +), 
+                	# NOTE: When you want matches of a pattern that is recursive (uses *, +), 
                     # don't use re.search because it won't return all matches in * or +. 
                     # Instead, match on the individual recursive component 
                     # and split on it to get all elements.  
@@ -594,14 +612,15 @@ def main():
         data = json.load(open(MICROBENCH_DATA_JSON_PATH))
         lib_name = extract_lib(wasm_file)
         lib_obj = data[lib_name]
-    
+    prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
+        
     lib_obj["tools"] = []
 
-    wassail_status, wassail_time   = run_wassail(wasm_file, lib_name)
-    metadce_status, metadce_time   = run_metadce(bin_type, wasm_file, lib_name, lib_obj)
-    twiggy_status , twiggy_time    = run_twiggy (wasm_file, lib_name)
-    awsm_status   , awsm_time      = run_awsm   (wasm_file, lib_name)
-    wavm_status   , wavm_time      = run_wavm   (wasm_file, lib_name) 
+    wassail_status, wassail_time   = run_wassail(wasm_file, lib_name, bin_type)
+    metadce_status, metadce_time   = run_metadce(wasm_file, lib_name, lib_obj, bin_type)
+    twiggy_status , twiggy_time    = run_twiggy (wasm_file, lib_name, bin_type)
+    awsm_status   , awsm_time      = run_awsm   (wasm_file, lib_name, bin_type)
+    wavm_status   , wavm_time      = run_wavm   (wasm_file, lib_name, bin_type) 
     
     #wassail_status, wassail_time = False, 0
     #metadce_status, metadce_time = False, 0
@@ -609,12 +628,12 @@ def main():
     #awsm_status   , awsm_time    = False, 0 
     #wavm_status   , wavm_time    = False, 0
     
-    reachable_funcs_count = [None]*4
+    reachable_funcs_count = [None]*5
 
 
     print("Processing wassail...")                        
     if wassail_status: 
-        cg_path = "{}/{}/CG_tools_data/wassail/callgraph.dot".format(DATA_PATH, lib_name)
+        cg_path = "{}/{}/{}/tool-evaluation-data/wassail/callgraph.dot".format(DATA_PATH, prg_type, lib_name)
         graph, reachable_funcs, reachable_edges  = get_reachable_funcs_from_dot(cg_path, lib_obj)
         if real_update_json:
             lib_obj["tools"].append({
@@ -659,7 +678,7 @@ def main():
     
     print("Processing wavm...")                        
     if wavm_status:
-        wavm_dot_path = '{}/{}/CG_tools_data/WAVM/wavm.bc.callgraph.dot'.format(DATA_PATH, lib_name)
+        wavm_dot_path = "{}/{}/{}/tool-evaluation-data/WAVM/wavm.bc.callgraph.dot".format(DATA_PATH, prg_type, lib_name)
         graph, reachable_funcs, reachable_edges = process_wavm_dot(wavm_dot_path, lib_obj)
         if real_update_json:
             lib_obj["tools"].append({
@@ -705,7 +724,7 @@ def main():
     
     print("Processing metadce...")                        
     if metadce_status:
-        new_graph_path = '{}/{}/CG_tools_data/metadce/new-graph.txt'.format(DATA_PATH, lib_name)
+        new_graph_path = "{}/{}/{}/tool-evaluation-data/metadce/new-graph.txt".format(DATA_PATH, prg_type, lib_name)
         graph, reachable_funcs, reachable_edges, garbage_funcs = process_metadce(new_graph_path, lib_obj)
         if real_update_json:
             lib_obj["tools"].append({
@@ -758,8 +777,9 @@ def main():
  
     print("Processing twiggy...")                        
     if twiggy_status: 
-        internal_ir_path = '{}/{}/CG_tools_data/twiggy/internal_ir.txt'.format(DATA_PATH, lib_name)
-        garbage_path = '{}/{}/CG_tools_data/twiggy/garbage.txt'.format(DATA_PATH, lib_name)
+        internal_ir_path = "{}/{}/{}/tool-evaluation-data/twiggy/internal_ir.txt".format(DATA_PATH, prg_type, lib_name)
+        garbage_path = "{}/{}/{}/tool-evaluation-data/twiggy/garbage.txt".format(DATA_PATH, prg_type, lib_name)
+
         graph, reachable_funcs, reachable_edges, garbage_funcs = process_twiggy(internal_ir_path, garbage_path, lib_obj)
         if real_update_json:
             lib_obj["tools"].append({

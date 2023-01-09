@@ -1,4 +1,4 @@
-global.Wasabi = require("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/sql.js/load-saved-db/node_modules/sql.js/dist/sql-wasm.wasabi.js");
+global.Wasabi = require("./node_modules/sql.js/dist/sql-wasm.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
@@ -6,12 +6,11 @@ filename = filename.split("/").slice(-3)
 global.lib_name = filename[0]
 global.test_name = filename[1]
 
-
 const fs = require("fs");
 const initSqlJs = require('./node_modules/sql.js/dist/sql-wasm.js');
 const { exit } = require("process");
 
-const filebuffer = fs.readFileSync("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/sql.js/load-db/db.sqlite");
+const filebuffer = fs.readFileSync("./db.sqlite");
 
 initSqlJs().then(function(SQL){
 
@@ -41,8 +40,11 @@ INSERT INTO new_student VALUES (102, 'rachel', 23);";
   
   const binaryArray = db.export();
   
-  fs.writeFileSync("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/sql.js/load-db/db_new.sqlite", binaryArray)
+  fs.writeFileSync("./db_new.sqlite", binaryArray)
 
-require('./../../collect-data.js')
+  fs.writeFileSync("db_new.sqlite", binaryArray)
+  
+  require('./../../collect-data.js')
+
 });
 

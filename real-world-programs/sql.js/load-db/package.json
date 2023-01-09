@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+  	"build": "babel node_modules/sql.js/dist/sql-wasm.js --out-file babel/babel-sql-wasm.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,5 +12,8 @@
   "dependencies": {
     "sql.js": "^1.6.2",
     "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
   }
 }

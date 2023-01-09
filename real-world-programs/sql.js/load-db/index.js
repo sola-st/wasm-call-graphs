@@ -12,6 +12,6 @@ INSERT INTO hello VALUES (1, 'world');";
     db.run(sqlstr);
     const binaryArray = db.export();
 
-    fs.writeFileSync("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/sql.js/load-db/db.sqlite", binaryArray)
+    fs.writeFileSync("./db.sqlite", binaryArray)
 
 });

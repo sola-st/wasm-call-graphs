@@ -1,4 +1,4 @@
-aWsm error: INFO [awsm] running awsm("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/opencv-wasm/opencv.wasm", Some("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data/opencv-wasm/CG_tools_data/aWsm/awsm.bc"))
+aWsm error: INFO [awsm] running awsm("./../../real-world-programs/opencv-wasm/opencv.wasm", Some("./../../data/real-world-programs-raw-data/opencv-wasm/tool-evaluation-data/aWsm/awsm.bc"))
 INFO [awsm::wasm] Globals taking up 28 bytes
 INFO [awsm::wasm] Data initializers taking up 582782 bytes
 INFO [awsm::wasm] Function table entries 13920 (ignoring fragmentation)

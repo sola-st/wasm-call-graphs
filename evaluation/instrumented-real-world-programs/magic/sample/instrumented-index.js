@@ -1,4 +1,4 @@
-global.Wasabi = require("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/magic/sample/node_modules/@npcz/magic/dist/magic-js.wasabi.js");
+global.Wasabi = require("./node_modules/@npcz/magic/dist/magic-js.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
@@ -45,7 +45,8 @@ FileMagic.getInstance()
 
     // When we are done, close
     FileMagic.close();
-	require('./../../collect-data.js')
+    require('./../../collect-data.js')
+
   })
   .catch((error) => {
     console.error(err);

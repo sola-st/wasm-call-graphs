@@ -1,0 +1,9 @@
+digraph "Call graph: ./../../data/microbenchmarks-raw-data/entry-point-wasi/tool-evaluation-data/WAVM/wavm.bc" {
+	label="Call graph: ./../../data/microbenchmarks-raw-data/entry-point-wasi/tool-evaluation-data/WAVM/wavm.bc";
+
+	Node0x14afb60 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x14afbe0 [shape=record,label="{functionDef0}"];
+	Node0x14afbe0 -> Node0x14afc60;
+	Node0x14afc60 [shape=record,label="{functionDef1}"];
+	Node0x14afce0 [shape=record,label="{functionDef2}"];
+}

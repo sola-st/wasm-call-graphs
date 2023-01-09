@@ -3,8 +3,8 @@ import json
 from numpy import gradient
 from prettytable import PrettyTable
 
-REAL_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/test-suite-data.json"
-MICRO_JSON_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/microbench-data.json"
+REAL_JSON_PATH = "./../../data/real-world-processed-data.json"
+MICRO_JSON_PATH = "./../../data/microbenchmarks-processed-data.json"
 
 
 def recall_precision_latex_table(f, data):
@@ -315,19 +315,20 @@ def main():
     real_data = json.load(open(REAL_JSON_PATH))
     micro_data = json.load(open(MICRO_JSON_PATH))
 
-    with open(LATEX_MICRO_EVAL_TABLE, "w") as f_tab:
-        row_data = micro_eval_latex_table(f_tab, micro_data)
-        micro_eval_pretty_table(row_data)
-        print("\n")
-    
-    with open(LATEX_RECALL_TABLE, "w") as f_tab:
-        row_data = recall_precision_latex_table(f_tab, real_data)        
-        recall_precision_pretty_table(row_data)
-        print("\n")
 
-    with open(LATEX_COVERAGE_TABLE, "w") as f_tab:
-        row_data = coverage_latex_table(f_tab, real_data)
-        coverage_pretty_table(row_data)
+    #with open(LATEX_MICRO_EVAL_TABLE, "w") as f_tab:
+    #    row_data = micro_eval_latex_table(f_tab, micro_data)
+    #    micro_eval_pretty_table(row_data)
+    #    print("\n")
+    #
+    #with open(LATEX_RECALL_TABLE, "w") as f_tab:
+    #    row_data = recall_precision_latex_table(f_tab, real_data)        
+    #    recall_precision_pretty_table(row_data)
+    #    print("\n")
+    #
+    #with open(LATEX_COVERAGE_TABLE, "w") as f_tab:
+    #    row_data = coverage_latex_table(f_tab, real_data)
+    #    coverage_pretty_table(row_data)
     
     print("The LaTeX tables can be found in the paper repo.")
     

@@ -1,4 +1,4 @@
-global.Wasabi = require("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/opencv-wasm/template-matching/node_modules/opencv-wasm/opencv.wasabi.js");
+global.Wasabi = require("./node_modules/opencv-wasm/opencv.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
@@ -45,6 +45,8 @@ const { cv, cvTranslateError } = require('opencv-wasm'); // replace with require
             data: Buffer.from(src.data)
         })
             .write(__dirname + '/test-output/template-matching.png');
+      
+      require('./../../collect-data.js')
     
     } catch (err) {
         console.log(cvTranslateError(cv, err));
@@ -52,4 +54,4 @@ const { cv, cvTranslateError } = require('opencv-wasm'); // replace with require
 
 })();
 
-require('./../../collect-data.js')
+

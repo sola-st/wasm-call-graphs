@@ -1,4 +1,0 @@
- Bytes │ Size % │ Garbage Item
-───────┼────────┼────────────────────────────
-    23 ┊ 25.84% ┊ import host::element_offset
-    23 ┊ 25.84% ┊ Σ [1 Total Rows]

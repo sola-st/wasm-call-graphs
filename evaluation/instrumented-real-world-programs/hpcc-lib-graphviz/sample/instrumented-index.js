@@ -1,4 +1,4 @@
-global.Wasabi = require("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/hpcc-lib-graphviz/sample/node_modules/@hpcc-js/wasm/dist/graphvizlib.wasabi.js");
+global.Wasabi = require("./node_modules/@hpcc-js/wasm/dist/graphvizlib.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
@@ -42,7 +42,7 @@ const dot = `
 
 hpccWasm.graphvizSync().then(graphviz => {
     graphviz.layout(dot, "svg", "dot");
-	require('./../../collect-data.js')
+    require('./../../collect-data.js')
 });
 
 

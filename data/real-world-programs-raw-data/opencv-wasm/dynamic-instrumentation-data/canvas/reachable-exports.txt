@@ -6,3 +6,13 @@ _free
 _memset
 ___embind_register_native_and_builtin_types
 _rintf
+dynCall_iiiii
+dynCall_ii
+dynCall_iii
+dynCall_i
+dynCall_dii
+dynCall_vi
+dynCall_viii
+dynCall_viid
+dynCall_viiiiiiii
+dynCall_viiiidd

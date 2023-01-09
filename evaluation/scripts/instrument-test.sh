@@ -48,15 +48,14 @@ cp -v ./out/* . > /dev/null
 
 # save the full path of the wasabi file - we want to use it in our instrumented js file 
 wasabi_file=`find . -maxdepth 1 -type f -name "*.wasabi.js"`
-wasabi_file=`realpath $wasabi_file`
-
+wasabi_file=`realpath --relative-to=$CURR_PATH $wasabi_file`
 
 # cd to the test directory again 
 cd $CURR_PATH
 
 
 # create instrumented file 
-echo "global.Wasabi = require(\"$wasabi_file\");
+echo "global.Wasabi = require(\"./$wasabi_file\");
 let analysis = require(\"./../../analysis.js\");
 " > instrumented-index.js
 

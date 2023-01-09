@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-let DATA_PATH = "/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/data/library_data"
+let DATA_PATH = "./../../../../data/real-world-programs-raw-data"
 
 if (get_reachable_exports) {
     
@@ -17,7 +17,7 @@ if (get_reachable_exports) {
     
     console.log()
 	let results_path = DATA_PATH+"/"+
-    	lib_name+"/tests/"+
+    	lib_name+"/dynamic-instrumentation-data/"+
     	test_name+"/"+
     	"reachable-exports.txt"    
     console.log(count+" exported functions are reachable. Exported functions in "+lib_name+"/tests/"+test_name+"/reachable-exports.txt")
@@ -50,7 +50,7 @@ if (get_callsite_sensitive_cg) {
     
     console.log()
     let results_path = DATA_PATH+"/"+
-    	lib_name+"/tests/"+
+    	lib_name+"/dynamic-instrumentation-data/"+
     	test_name+
     	"/callsite_cg_dynamic.txt" 
     console.log(count+" callsites have been analyzed. Callsite info in "+lib_name+"/tests/"+test_name+"/callsite_cg_dynamic.txt")
@@ -72,9 +72,8 @@ if (get_lower_bound) {
     
     console.log()
     let results_path = DATA_PATH+"/"+
-    	lib_name+"/tests/"+
-    	test_name+
-    	"/lowerbound-reachable-functions.txt" 
+     	lib_name+"/dynamic-instrumentation-data/"+
+	   	test_name+"/lowerbound-reachable-functions.txt" 
     console.log(count+" functions are the lower bound for the analysis. Lowerbound of reachable functions in "+lib_name+"/tests/"+test_name+"/lowerbound-reachable-functions.txt")
     fs.writeFileSync(results_path, lowerbound);
 }

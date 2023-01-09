@@ -1,7 +1,0 @@
- Bytes │ Size % │ Garbage Item
-───────┼────────┼───────────────────────────────────────────
-     8 ┊  0.00% ┊ type[39]: (i32, i32, i32, i32, i64) -> nil
-     6 ┊  0.00% ┊ type[42]: (i32, i32, i64) -> nil
-     4 ┊  0.00% ┊ type[41]: (f64) -> nil
-    18 ┊  0.00% ┊ Σ [3 Total Rows]
- 57807 ┊  5.22% ┊ 256 potential false-positive data segments

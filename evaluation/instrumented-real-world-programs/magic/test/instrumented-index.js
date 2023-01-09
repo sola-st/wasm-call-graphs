@@ -1,4 +1,4 @@
-global.Wasabi = require("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/magic/test/node_modules/@npcz/magic/dist/magic-js.wasabi.js");
+global.Wasabi = require("./node_modules/@npcz/magic/dist/magic-js.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
@@ -46,6 +46,7 @@ createBindingModule().then((binding) => {
     });
   
     binding.MagicBinding.destroy();
-	require('./../../collect-data.js')
+    require('./../../collect-data.js')
+
   });
 

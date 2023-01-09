@@ -1,0 +1,11 @@
+=== graph ===
+root: main
+node: func$1$1
+  is function 1
+node: func$0$0
+  is function 0
+  reaches: importId$fimport$0$2
+node: main
+  is export main, 0
+  reaches: func$0$0
+=============

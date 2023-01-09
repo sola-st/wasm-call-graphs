@@ -1,4 +1,4 @@
-global.Wasabi = require("/home/michelle/Documents/sa-for-wasm/wasabi/lib/wasm/tests/callgraph-eval/test-suite/hpcc-lib-graphviz/test/node_modules/@hpcc-js/wasm/dist/graphvizlib.wasabi.js");
+global.Wasabi = require("./node_modules/@hpcc-js/wasm/dist/graphvizlib.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
@@ -53,8 +53,7 @@ const dot = `
 
 hpccWasm.graphvizSync().then(graphviz => {
     graphviz.layout(dot, "svg", "dot")
-    graphviz.layout('digraph { a[image="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"]; }', "svg", "dot", { images: [{ path: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", width: "272px", height: "92px" }] })    
- 
-require('./../../collect-data.js')
+    graphviz.layout('digraph { a[image="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"]; }', "svg", "dot", { images: [{ path: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", width: "272px", height: "92px" }] })  
+    require('./../../collect-data.js')  
+}); 
 
-});

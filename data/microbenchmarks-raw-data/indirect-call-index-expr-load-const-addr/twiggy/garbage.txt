@@ -1,4 +1,0 @@
- Bytes │ Size % │ Garbage Item
-───────┼────────┼──────────────────
-     2 ┊  2.35% ┊ memory[0]
-     2 ┊  2.35% ┊ Σ [1 Total Rows]
