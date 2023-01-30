@@ -1,0 +1,35 @@
+\begin{table}[h]
+\centering
+\caption{Overview of the real-world programs in our dataset.}
+\label{tab:real-world-programs}
+\begin{tabular}{llrr}
+    \toprule
+    \textbf{Library} & \textbf{Test Name} & \thead{\textbf{\%Reachable}\\\textbf{Exports}} & \thead{\textbf{\%Reachable}\\\textbf{Funcs}}\\
+    \midrule
+      & load-db & 32.69 & 31.05\\
+     \multirow{-2}{*}{sql.js} & load-saved-db & 42.31 & 31.86\\
+    \rowcolor{gray!20}  & sample & 4.73 & 6.31\\
+    \rowcolor{gray!20}  & canvas & 6.55 & 7.13\\
+    \rowcolor{gray!20}  & dilation & 2.91 & 5.85\\
+    \rowcolor{gray!20} \multirow{-4}{*}{opencv} & template-matching & 8.00 & 7.95\\
+     \multirow{-1}{*}{rsa} & sample & 68.00 & 35.13\\
+    \rowcolor{gray!20}  & sample & 21.43 & 21.25\\
+    \rowcolor{gray!20} \multirow{-2}{*}{blake} & concrete & 42.86 & 26.25\\
+      & sample & 28.57 & 30.96\\
+     \multirow{-2}{*}{magic} & test & 28.57 & 30.96\\
+    \rowcolor{gray!20}  & sample & 46.67 & 31.02\\
+    \rowcolor{gray!20} \multirow{-2}{*}{graphviz} & test & 53.33 & 39.72\\
+      & example-SourceMapConsumer & 16.67 & 40.00\\
+      & example-SourceMapGenerator & 0.00 & 0.00\\
+     \multirow{-3}{*}{source-map} & example-SourceNode & 12.50 & 20.00\\
+    \rowcolor{gray!20}  & example-basic & 53.85 & 40.67\\
+    \rowcolor{gray!20} \multirow{-2}{*}{shiki} & example-custom-rendering & 53.85 & 40.67\\
+      & example-read & 11.54 & 4.66\\
+      & example-write & 26.92 & 35.45\\
+     \multirow{-3}{*}{fonteditor} & example-ops & 11.54 & 4.66\\
+    \rowcolor{gray!20}  & audio & 66.67 & 49.70\\
+    \rowcolor{gray!20}  & voip & 66.67 & 49.70\\
+    \rowcolor{gray!20} \multirow{-3}{*}{opusscript} & lowdelay & 66.67 & 50.30\\
+    \bottomrule
+\end{tabular}
+\end {table}

@@ -1,0 +1,66 @@
+\newcommand{\BFall}{{$|\textbf{F}_{\textbf{all}}|$}}
+\newcommand{\BFreach}{{$|\textbf{F}_{\textbf{r}}|$}}
+\newcommand{\BE}{{$|\textbf{E}|$}}
+\newcommand{\Fall}{{$|\text{F}_{\text{all}}|$} }
+\newcommand{\Freach}{{$|\text{F}_{\text{r}}|$} }
+\newcommand{\E}{{$|\text{E}|$} }
+\begin{table*}[t]
+\captionsetup{justification=centering}
+\caption{
+    Overview of the microbenchmarks and results of different call graph analyses on them.
+    \Fall is the total number of functions in the binary.
+    \Freach is the number of functions reachable from the given entry point(s).
+    \E is the number of edges in the call graph.
+    S indicates if the analysis is sound and P indicates if the analysis is precise, compared to the ground truth.
+}
+\label{tab:microbenchmarks}
+\small
+\centering
+\captionsetup{justification=centering}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}r|p{19em}|p{5.6em}|rrr|rrrr|rrrr|rrr|rrr@{}}
+    \toprule
+    \multirow{2}{*}{\textbf{\#}} & 
+    \multirow{2}{*}{\textbf{Description}} & 
+    \multirow{2}{*}{\textbf{Challenges}} & 
+    \multicolumn{3}{@{}c|@{}}{\textbf{Ground Truth}} & 
+    \multicolumn{4}{@{}c|@{}}{\textbf{Wassail}} &
+    \multicolumn{4}{@{}c|@{}}{\textbf{WAVM+LLVM opt}} &
+    \multicolumn{3}{@{}c|@{}}{\textbf{Metadce}} & 
+    \multicolumn{3}{@{}c@{}}{\textbf{Twiggy}} \\
+    & & & 
+    \BFall & \BFreach & \BE &
+    \BFreach & \BE & \textbf{S} & \textbf{P} & 
+    \BFreach & \BE & \textbf{S} & \textbf{P} & 
+    \BFreach & \textbf{S} & \textbf{P} &
+    \BFreach & \textbf{S} & \textbf{P} \\
+    \midrule
+     1 & Simple direct call &  & 3 & 2 & 1 & 2 & 1 & \cmark & \cmark & 2 & 1 & \cmark & \cmark & 2 & \cmark & \cmark & 2 & \cmark & \cmark\\
+    \rowcolor{gray!15} 2 & Transitive direct call &  & 5 & 3 & 3 & 3 & 3 & \cmark & \cmark & 3 & 3 & \cmark & \cmark & 3 & \cmark & \cmark & 3 & \cmark & \cmark\\
+     3 & Direct call to imported function &  & 3 & 2 & 1 & 2 & 1 & \cmark & \cmark & 2 & 1 & \cmark & \cmark & 2 & \cmark & \cmark & 2 & \cmark & \cmark\\
+    \rowcolor{gray!15} 4 & Implicit entry point: WebAssembly start function & \challenge{EntryPoints} & 2 & 0 & 1 & 0 & 1 & \cmark & \cmark & 0 & 1 & \cmark & \cmark & 0 & \cmark & \cmark & \multicolumn{3}{c}{Crash}\\
+     5 & Implicit entry point: WASI start function & \challenge{EntryPoints} & 3 & 2 & 1 & 2 & 1 & \cmark & \cmark & 2 & 1 & \cmark & \cmark & 0 & \xmark & \xmark & 2 & \cmark & \cmark\\
+    \rowcolor{gray!15} 6 & Imported host code calls exported function & \challenge{HostCallbacks} & 7 & 6 & 3 & 6 & 3 & \cmark & \cmark & 6 & 3 & \cmark & \cmark & 2 & \xmark & \xmark & 6 & \cmark & \cmark\\
+     7 & Functions in an exported table can be reachable & \challenge{HostCallbacks} & 5 & 3 & 3 & 2 & 2 & \xmark & \xmark & 2 & 2 & \xmark & \xmark & 1 & \xmark & \xmark & 3 & \cmark & \cmark\\
+    \rowcolor{gray!15} 8 & Functions in an imported table can be reachable & \challenge{HostCallbacks} & 5 & 3 & 3 & 2 & 2 & \xmark & \xmark & 2 & 2 & \xmark & \xmark & 3 & \cmark & \cmark & 2 & \xmark & \xmark\\
+     9 & Table is mutated by host & \challenge{TableMutation} & 4 & 3 & 1 & 3 & 1 & \cmark & \xmark & 3 & 0 & \cmark & \xmark & 1 & \xmark & \xmark & 3 & \cmark & \cmark\\
+    \rowcolor{gray!15} 10 & Table init. offset is imported from host & \challenge{TableInitOffset} & 3 & 2 & 1 & \multicolumn{4}{c|}{Crash} & 1 & 0 & \xmark & \xmark & \multicolumn{3}{c|}{Crash} & 3 & \cmark & \xmark\\
+     11 & Memory init. offset is imported from host & \challenge{MemoryInitOffset} & 3 & 2 & 1 & 3 & 2 & \cmark & \xmark & 1 & 0 & \xmark & \xmark & \multicolumn{3}{c|}{Crash} & 3 & \cmark & \xmark\\
+    \rowcolor{gray!15} 12 & Functions must be in table for indirect call &  & 3 & 2 & 1 & 2 & 1 & \cmark & \cmark & 1 & 0 & \xmark & \xmark & 2 & \cmark & \cmark & 2 & \cmark & \cmark\\
+     13 & Types can constrain indirect call targets & \challenge{LowLevelTypes} & 3 & 2 & 1 & 2 & 1 & \cmark & \cmark & 1 & 0 & \xmark & \xmark & 3 & \cmark & \xmark & 3 & \cmark & \xmark\\
+    \rowcolor{gray!15} 14 & Constant table index value & \challenge{TableIndexValue} & 3 & 2 & 1 & 3 & 2 & \cmark & \xmark & 1 & 0 & \xmark & \xmark & 3 & \cmark & \xmark & 3 & \cmark & \xmark\\
+     15 & Index value data-flow through local variable & \challenge{TableIndexValue} & 3 & 2 & 1 & 3 & 2 & \cmark & \xmark & 1 & 0 & \xmark & \xmark & 3 & \cmark & \xmark & 3 & \cmark & \xmark\\
+    \rowcolor{gray!15} 16 & Masked index value & \challenge{TableIndexValue} & 4 & 3 & 2 & 4 & 3 & \cmark & \xmark & 2 & 1 & \xmark & \xmark & 4 & \cmark & \xmark & 4 & \cmark & \xmark\\
+     17 & Inter-procedural index value, parameter & \challenge{TableIndexValue} & 4 & 3 & 2 & 4 & 3 & \cmark & \xmark & 2 & 1 & \xmark & \xmark & 4 & \cmark & \xmark & 4 & \cmark & \xmark\\
+    \rowcolor{gray!15} 18 & Inter-procedural index value, function result & \challenge{TableIndexValue} & 4 & 3 & 2 & 4 & 3 & \cmark & \xmark & 2 & 1 & \xmark & \xmark & 4 & \cmark & \xmark & 4 & \cmark & \xmark\\
+     19 & Index from memory, constant address & \challenge{TableIndexValue} & 3 & 2 & 1 & 3 & 2 & \cmark & \xmark & 1 & 0 & \xmark & \xmark & 3 & \cmark & \xmark & 3 & \cmark & \xmark\\
+    \rowcolor{gray!15} 20 & Index from memory, address inter-procedural, parameter & \challenge{TableIndexValue} & 4 & 3 & 2 & 4 & 3 & \cmark & \xmark & 2 & 1 & \xmark & \xmark & 4 & \cmark & \xmark & 4 & \cmark & \xmark\\
+     21 & Index from memory, address inter-procedural, result & \challenge{TableIndexValue} & 4 & 3 & 2 & 4 & 3 & \cmark & \xmark & 2 & 1 & \xmark & \xmark & 4 & \cmark & \xmark & 4 & \cmark & \xmark\\
+    \rowcolor{gray!15} 22 & Index from memory, double indirect load & \challenge{TableIndexValue} & 3 & 2 & 1 & 3 & 2 & \cmark & \xmark & 1 & 0 & \xmark & \xmark & 3 & \cmark & \xmark & 3 & \cmark & \xmark\\
+     23 & Index from memory, memory is mutable & \challenge{MemoryMutable} & 3 & 2 & 1 & 3 & 2 & \cmark & \xmark & 1 & 0 & \xmark & \xmark & 3 & \cmark & \xmark & 3 & \cmark & \xmark\\
+    \rowcolor{gray!15} 24 & C++ virtual calls from unrelated classes & \challenge{MultiPL}, \challenge{MemoryMutable} & 23 & 23 & 20 & 23 & 24 & \cmark & \xmark & 19 & 16 & \xmark & \xmark & 23 & \cmark & \cmark & 23 & \cmark & \cmark\\
+    \midrule
+    \multicolumn{3}{l|}{\textit{Summary}} & 107 & 80 & 56 & 87 & 68 & 21 & 8 &60 & 35 & 7 & 6 &77 & 18 & 7 & 92 & 22 & 9 \\
+    \bottomrule
+\end{tabular}
+\end{table*}

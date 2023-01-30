@@ -1,0 +1,37 @@
+\setlength{\extrarowheight}{0.2em}
+\begin{table*}[t]
+\small
+\centering
+\captionsetup{justification=centering}
+\setlength{\tabcolsep}{2pt}\begin{tabular}{l|r|r|
+    rr@{~}rr@{~}r|
+    rr@{~}rr@{~}r|
+    rr@{~}rr@{~}r|
+    rr@{~}rr@{~}r}
+    \toprule
+    \multirow{2}{*}{\textbf{Library}} & \multirow{2}{*}{$|F_{\text{all}}|$} & \multirow{2}{*}{$|F_{\text{dyn}}|$} &
+    \multicolumn{5}{c|}{\textbf{Wassail}} &
+    \multicolumn{5}{c|}{\textbf{WAVM+LLVM}} & 
+    \multicolumn{5}{c|}{\textbf{MetaDCE}} & 
+    \multicolumn{5}{c}{\textbf{Twiggy}}\\
+    & & & 
+    $|F_\text{r}|$ & \multicolumn{2}{c}{$|F_{\text{unsound}}|$} & \multicolumn{2}{c|}{$|F_{\text{del}}|$} & 
+    $|F_\text{r}|$ & \multicolumn{2}{c}{$|F_{\text{unsound}}|$} & \multicolumn{2}{c|}{$|F_{\text{del}}|$} & 
+    $|F_\text{r}|$ & \multicolumn{2}{c}{$|F_{\text{unsound}}|$} & \multicolumn{2}{c|}{$|F_{\text{del}}|$} & 
+    $|F_\text{r}|$ & \multicolumn{2}{c}{$|F_{\text{unsound}}|$} & \multicolumn{2}{c} {$|F_{\text{del}}|$} \\
+    \midrule
+     sql.js & 1261 & 390 & 1257 & 0 & (0\%) &4 & (0\%) & 633 & \textcolor{red}{\textbf{124}} & \textcolor{red}{\textbf{(32\%)}} &628 & (50\%) & 1261 & 0 & (0\%) &0 & (0\%) & 1261 & 0 & (0\%) &0 & (0\%)\\
+    \rowcolor{gray!20} opencv & 10909 & 932 & \multicolumn{5}{c|}{Crash} & 822 & \textcolor{red}{\textbf{712}} & \textcolor{red}{\textbf{(76\%)}} &10087 & (92\%) & \multicolumn{5}{c|}{Crash} & 822 & \textcolor{red}{\textbf{712}} & \textcolor{red}{\textbf{(76\%)}} &10087 & (92\%)\\
+     rsa & 785 & 274 & 777 & 0 & (0\%) &8 & (1\%) & 564 & \textcolor{red}{\textbf{3}} & \textcolor{red}{\textbf{(1\%)}} &221 & (28\%) & 785 & 0 & (0\%) &0 & (0\%) & 785 & 0 & (0\%) &0 & (0\%)\\
+    \rowcolor{gray!20} blake & 81 & 21 & 76 & 0 & (0\%) &5 & (6\%) & 57 & 0 & (0\%) &24 & (30\%) & 81 & 0 & (0\%) &0 & (0\%) & 81 & 0 & (0\%) &0 & (0\%)\\
+     magic & 736 & 213 & 716 & 0 & (0\%) &20 & (3\%) & 88 & \textcolor{red}{\textbf{147}} & \textcolor{red}{\textbf{(69\%)}} &648 & (88\%) & 736 & 0 & (0\%) &0 & (0\%) & 736 & 0 & (0\%) &0 & (0\%)\\
+    \rowcolor{gray!20} graphviz & 2018 & 790 & 2006 & \textcolor{red}{\textbf{12}} & \textcolor{red}{\textbf{(2\%)}} &12 & (1\%) & 569 & \textcolor{red}{\textbf{355}} & \textcolor{red}{\textbf{(45\%)}} &1449 & (72\%) & 2018 & 0 & (0\%) &0 & (0\%) & 2018 & 0 & (0\%) &0 & (0\%)\\
+     source-map & 46 & 19 & 38 & 0 & (0\%) &8 & (17\%) & 38 & 0 & (0\%) &8 & (17\%) & 46 & 0 & (0\%) &0 & (0\%) & 46 & 0 & (0\%) &0 & (0\%)\\
+    \rowcolor{gray!20} shiki & 213 & 85 & 213 & 0 & (0\%) &0 & (0\%) & 154 & \textcolor{red}{\textbf{17}} & \textcolor{red}{\textbf{(20\%)}} &59 & (28\%) & 213 & 0 & (0\%) &0 & (0\%) & 213 & 0 & (0\%) &0 & (0\%)\\
+     fonteditor & 1118 & 380 & 1118 & 0 & (0\%) &0 & (0\%) & 345 & \textcolor{red}{\textbf{306}} & \textcolor{red}{\textbf{(81\%)}} &773 & (69\%) & \multicolumn{5}{c|}{Crash} & 345 & \textcolor{red}{\textbf{306}} & \textcolor{red}{\textbf{(81\%)}} &773 & (69\%)\\
+    \rowcolor{gray!20} opusscript & 356 & 169 & 49 & \textcolor{red}{\textbf{126}} & \textcolor{red}{\textbf{(75\%)}} &307 & (86\%) & 49 & \textcolor{red}{\textbf{126}} & \textcolor{red}{\textbf{(75\%)}} &307 & (86\%) & 356 & 0 & (0\%) &0 & (0\%) & 356 & 0 & (0\%) &0 & (0\%)\\
+    \bottomrule
+\end{tabular}
+\caption{Comparison of the reachable functions reported by each tool.\\The number of missing functions ($F_{\text{unsound}} = F_{\text{dyn}}-F_{\text{r}}$) and removed functions ($F_{\text{del}} = F_{\text{all}} - F_{\text{r}}$) are also reported.}
+\label{recall}
+\end{table*}
