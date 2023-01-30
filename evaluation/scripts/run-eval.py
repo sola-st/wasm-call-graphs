@@ -106,7 +106,7 @@ def main():
             else: 
                 help_message()
                 sys.exit()
-
+    
     # Start "fresh" by removing the old results and copying the skeleton json files into a new file in the data directory.
     if flag_real_fresh:
         execute_command("rm {}".format(TEST_SUITE_DATA_JSON_PATH))
@@ -128,6 +128,9 @@ def main():
         paths = extract_wasm_and_test_paths(REAL_TEST_SUITE_PATH)    
         
         for lib in paths:
+            
+            if paths[lib]["wasm_path"] == "": continue
+            
             wasm_file = paths[lib]["wasm_path"]
             
             if flag_real_eval[0]: execute_command("python3 get-static-data.py --real-update-json {}".format(wasm_file)); print("\n") 

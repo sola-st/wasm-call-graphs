@@ -1,12 +1,8 @@
 import os, sys
-from subprocess import PIPE, Popen
+from subprocess import PIPE, Popen, check_output
 import json, re 
 import time
 from itertools import count, groupby
-
-# Note: If you aren't Michelle, change variable 'wassail_path' in function run_wassail() to your wassail binary path. 
-# or see if the wassail command runs on the shell without any path being specified.  
-# Nevermind you have to change all the paths 
 
 TEST_SUITE_PATH = "./../../real-world-programs" 
 MICROBENCH_PATH = "./../../microbenchmarks"
@@ -46,6 +42,11 @@ def execute_command(command, program, output_file, write_stdout=True):
     output_file_pretty = output_file.split("/")
     output_file_pretty = "/".join(output_file_pretty[len(output_file_pretty)-4:])
     
+    # Wassail times out on opencv.wasm and python does not have a timeout option for Popen 
+    # So, I'm just skipping this 
+    # TODO: implement some kind of timeout 
+    if "wassail" in program and 'opencv' in command: return (False, "", 60*2)  
+
     time_started = time.time()
     p = Popen(command, shell=True, stdout=PIPE, stderr=PIPE)
     exec_time = (time.time() - time_started)*1000 #time in milliseconds
@@ -75,11 +76,12 @@ def execute_command(command, program, output_file, write_stdout=True):
     if flag_stderr: print("{} .....ERROR. Error recorded in {}.".format(program, output_file_pretty))
     else: print("{} ...SUCCESS. {:.2f}ms".format(program, exec_time))
         
-    return (not flag_stderr, stdout, exec_time)    
+    return (not flag_stderr, stdout, exec_time)  
     
 def run_wassail(wasm_file, lib, bin_type):
+    print("running wassail")
     # Wassail 
-    wassail_path = "/home/michelle/Documents/sa-for-wasm/wassail/_build/default/main.exe"
+    wassail_path = "./../../tools/wassail/_build/default/main.exe"
     
     # data/real-world-programs-raw-data/lib/tool-evaluation-data/wassail/callgraph.dot
     prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
@@ -93,7 +95,7 @@ def run_wassail(wasm_file, lib, bin_type):
 
 def run_metadce(wasm_file, lib, lib_obj, bin_type): 
     prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
-    raw_data_output = "{}/{}/{}/tool-evaluation-data/wassail".format(DATA_PATH, prg_type, lib)
+    raw_data_output = "{}/{}/{}/tool-evaluation-data/metadce".format(DATA_PATH, prg_type, lib)
     
     # Generate reachablity graph.
     # All exports (memory, variables, functions, tables) are made reachable. 
@@ -133,7 +135,23 @@ def run_metadce(wasm_file, lib, lib_obj, bin_type):
         f.write(output)
     return (status, exec_time)
 
+# We do not use the standard twiggy tool and instead make some changes to dump the internal IR.
+# The changes are documented below. 
+# - Clone Twiggy repo 
+# - Build using: cargo build --all --exclude twiggy-wasm-api
+# - The twiggy executable can be found at wasm-call-graphs/tools/twiggy/target/debug
+# - In twiggy/analyze/analyses/dominators/emit.rs, add the following code snippet at the end of the emit_text function
+#     for item in items.iter() {
+#         print!("{:?} | {} | ", item.id(), item.name());
+#         let mut neighbours : Vec<Id> = Vec::new();
+#         items.neighbors(item.id()).for_each(|n| neighbours.push(n)); 
+#         let neighbours = (!neighbours.is_empty()).then(|| neighbours);
+#         println!("{:?}", neighbours);
+#     }
+# - Rebuild twiggy 
 def run_twiggy(wasm_file, lib, bin_type): 
+    twiggy = "./../../tools/twiggy/target/debug/twiggy"
+    
     # Twiggy 
     prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 
     raw_data_output = "{}/{}/{}/tool-evaluation-data/twiggy".format(DATA_PATH, prg_type, lib)
@@ -142,13 +160,14 @@ def run_twiggy(wasm_file, lib, bin_type):
     tool_shell_output = '{}/output.txt'.format(raw_data_output)
     
     # dump internal IR 
-    status_ir, dominators_output, exec_time = execute_command('twiggy dominators {}'.format(wasm_file), "twiggy IR", tool_shell_output, False)
+    status_ir, dominators_output, exec_time = execute_command('{} dominators {}'.format(twiggy, wasm_file), "twiggy IR", tool_shell_output, False)
     if status_ir:
-        internal_ir = dominators_output[:dominators_output.index(" Retained Bytes")]
-        with open(internal_ir_path, "w") as ir_f: ir_f.write(internal_ir)
+        #print(dominators_output)
+        #internal_ir = dominators_output[:dominators_output.index(" Retained Bytes")]
+        with open(internal_ir_path, "w") as ir_f: ir_f.write(dominators_output)
     
     # dump garbage.csv 
-    status_garbage, garbage_output, _ = execute_command('twiggy garbage {}'.format(wasm_file), "twiggy garbage", tool_shell_output, False)
+    status_garbage, garbage_output, _ = execute_command('{} garbage {}'.format(twiggy, wasm_file), "twiggy garbage", tool_shell_output, False)
     with open(garbage_path, "w") as garbage_f: garbage_f.write(garbage_output) 
     return (status_ir and status_garbage, exec_time)
 
@@ -631,7 +650,6 @@ def main():
     reachable_funcs_count = [None]*5
 
 
-    print("Processing wassail...")                        
     if wassail_status: 
         cg_path = "{}/{}/{}/tool-evaluation-data/wassail/callgraph.dot".format(DATA_PATH, prg_type, lib_name)
         graph, reachable_funcs, reachable_edges  = get_reachable_funcs_from_dot(cg_path, lib_obj)
@@ -676,7 +694,6 @@ def main():
             "execution_time": None, 
         })        
     
-    print("Processing wavm...")                        
     if wavm_status:
         wavm_dot_path = "{}/{}/{}/tool-evaluation-data/WAVM/wavm.bc.callgraph.dot".format(DATA_PATH, prg_type, lib_name)
         graph, reachable_funcs, reachable_edges = process_wavm_dot(wavm_dot_path, lib_obj)
@@ -722,7 +739,6 @@ def main():
             "reachable_functions": None
         })
     
-    print("Processing metadce...")                        
     if metadce_status:
         new_graph_path = "{}/{}/{}/tool-evaluation-data/metadce/new-graph.txt".format(DATA_PATH, prg_type, lib_name)
         graph, reachable_funcs, reachable_edges, garbage_funcs = process_metadce(new_graph_path, lib_obj)
@@ -775,7 +791,6 @@ def main():
             "callgraph": None,
         })
  
-    print("Processing twiggy...")                        
     if twiggy_status: 
         internal_ir_path = "{}/{}/{}/tool-evaluation-data/twiggy/internal_ir.txt".format(DATA_PATH, prg_type, lib_name)
         garbage_path = "{}/{}/{}/tool-evaluation-data/twiggy/garbage.txt".format(DATA_PATH, prg_type, lib_name)

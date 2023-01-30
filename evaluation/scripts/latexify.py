@@ -6,6 +6,9 @@ from prettytable import PrettyTable
 REAL_JSON_PATH = "./../../data/real-world-processed-data.json"
 MICRO_JSON_PATH = "./../../data/microbenchmarks-processed-data.json"
 
+LATEX_MICRO_EVAL_TABLE = "./../../data/tables/micro-eval.tex"
+LATEX_RECALL_TABLE = "./../../data/tables/real-world-eval.tex"
+LATEX_COVERAGE_TABLE = "./../../data/tables/real-world-coverage.tex"
 
 def recall_precision_latex_table(f, data):
     
@@ -55,7 +58,6 @@ def recall_precision_latex_table(f, data):
         for tool in lib["tools"]:
             
             if tool["callgraph"] == None:
-                print(None)
                 #tool_recall_data += "& & & "
                 tool_recall_data += "\multicolumn{5}{c|}{Crash} & "
                 tool_ascii_data.append("DNE")
@@ -78,7 +80,8 @@ def recall_precision_latex_table(f, data):
                 #    missing_percent, 
                 #    tool['callgraph']['removed_functions']['percent'])
                 
-                tool_ascii_data.append("{:.2f}".format(tool["recall"]))
+                #tool_ascii_data.append("{:.2f}".format(tool["recall"]))
+                tool_ascii_data.append("{}".format(tool['callgraph']['reachable_functions']['count']))
 
         tool_recall_data = tool_recall_data[:-3]
         #tool_percent_data = tool_percent_data[:-3]
@@ -260,7 +263,6 @@ def micro_eval_latex_table(f, data):
         rows_data.append([microbench] + pretty_row) 
 
     f.write("    \\midrule\n")
-    print(summary)
     summary_line = ("    \multicolumn{3}{l|}{\\textit{Summary}} & "
                    f"{summary['ground_truth']['f_all']} & {summary['ground_truth']['f_r']} & {summary['ground_truth']['e']} & "
                    f"{summary['wassail']['f_r']} & {summary['wassail']['e']} & {summary['wassail']['s']} & {summary['wassail']['p']} &"
@@ -280,10 +282,10 @@ def recall_precision_pretty_table(data):
     table = PrettyTable()
     table.title = "Recall of every tool on each library"
     table.field_names = ["Library", "F_total", "F_dyn", 
-                         "Wassail Recall", 
-                         "Metadce Recall", 
-                         "Twiggy Recall",
-                         "WAVM Recall"] 
+                         "Wassail F_r", 
+                         "WAVM+LLVM F_r", 
+                         "MetaDCE F_r",
+                         "Twiggy F_r"] 
     table.add_rows(data)
     table.float_format = '.2'
     print(table)
@@ -299,8 +301,16 @@ def coverage_pretty_table(data):
 def micro_eval_pretty_table(data): 
     table = PrettyTable()
     table.title = "Evaluation of each tool against the microbenchmarks"
-    table.field_names = ["Name", "Wassail", "Metadce", "Twiggy", "WAVM"]
-    table.add_rows(data)
+    table.field_names = ["Name", "Wassail", "WAVM+LLVM", "MetaDCE", "Twiggy"]
+    data_pretty = []
+    for col in data: 
+        pretty_row = []
+        for row in col: 
+            if row == True: pretty_row.append("✓")
+            elif row == False: pretty_row.append("✕")
+            else: pretty_row.append(row)
+        data_pretty.append(pretty_row) 
+    table.add_rows(data_pretty)
     print(table)
 
 def main():
@@ -315,20 +325,19 @@ def main():
     real_data = json.load(open(REAL_JSON_PATH))
     micro_data = json.load(open(MICRO_JSON_PATH))
 
-
-    #with open(LATEX_MICRO_EVAL_TABLE, "w") as f_tab:
-    #    row_data = micro_eval_latex_table(f_tab, micro_data)
-    #    micro_eval_pretty_table(row_data)
-    #    print("\n")
-    #
-    #with open(LATEX_RECALL_TABLE, "w") as f_tab:
-    #    row_data = recall_precision_latex_table(f_tab, real_data)        
-    #    recall_precision_pretty_table(row_data)
-    #    print("\n")
-    #
-    #with open(LATEX_COVERAGE_TABLE, "w") as f_tab:
-    #    row_data = coverage_latex_table(f_tab, real_data)
-    #    coverage_pretty_table(row_data)
+    with open(LATEX_MICRO_EVAL_TABLE, "w") as f_tab:
+        row_data = micro_eval_latex_table(f_tab, micro_data)
+        micro_eval_pretty_table(row_data)
+        print("\n")
+    
+    with open(LATEX_RECALL_TABLE, "w") as f_tab:
+        row_data = recall_precision_latex_table(f_tab, real_data)        
+        recall_precision_pretty_table(row_data)
+        print("\n")
+    
+    with open(LATEX_COVERAGE_TABLE, "w") as f_tab:
+        row_data = coverage_latex_table(f_tab, real_data)
+        coverage_pretty_table(row_data)
     
     print("The LaTeX tables can be found in the paper repo.")
     
