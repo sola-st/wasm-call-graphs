@@ -2,3 +2,5 @@ node_modules
 *.wat
 *~
 *.ll
+tools/
+codeql-projects/ 
