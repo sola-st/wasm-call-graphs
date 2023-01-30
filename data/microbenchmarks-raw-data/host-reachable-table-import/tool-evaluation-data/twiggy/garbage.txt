@@ -1,0 +1,8 @@
+ Bytes │ Size % │ Garbage Item
+───────┼────────┼───────────────────
+    15 ┊ 16.13% ┊ import host::table
+     6 ┊  6.45% ┊ elem[0]
+     6 ┊  6.45% ┊ code[2]
+     4 ┊  4.30% ┊ code[1]
+     4 ┊  4.30% ┊ code[3]
+    35 ┊ 37.63% ┊ Σ [5 Total Rows]

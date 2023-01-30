@@ -1,0 +1,2 @@
+wasm-metadce error: Failed opening './../../data/fonteditor-core/CG_tools_data/metadce/dce.wasm'
+

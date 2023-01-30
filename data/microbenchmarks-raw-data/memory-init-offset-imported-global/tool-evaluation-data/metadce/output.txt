@@ -1,0 +1,2 @@
+wasm-metadce error: Failed opening './../../data/memory-init-offset-imported-global/CG_tools_data/metadce/dce.wasm'
+

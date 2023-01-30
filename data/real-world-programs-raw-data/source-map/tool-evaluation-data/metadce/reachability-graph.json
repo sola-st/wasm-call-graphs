@@ -1,0 +1,127 @@
+[
+  {
+    "name": "memory",
+    "root": true,
+    "export": "memory"
+  },
+  {
+    "name": "__lesf2",
+    "root": true,
+    "export": "__lesf2"
+  },
+  {
+    "name": "__gesf2",
+    "root": true,
+    "export": "__gesf2"
+  },
+  {
+    "name": "__unordsf2",
+    "root": true,
+    "export": "__unordsf2"
+  },
+  {
+    "name": "__eqsf2",
+    "root": true,
+    "export": "__eqsf2"
+  },
+  {
+    "name": "__ltsf2",
+    "root": true,
+    "export": "__ltsf2"
+  },
+  {
+    "name": "__nesf2",
+    "root": true,
+    "export": "__nesf2"
+  },
+  {
+    "name": "__gtsf2",
+    "root": true,
+    "export": "__gtsf2"
+  },
+  {
+    "name": "__ledf2",
+    "root": true,
+    "export": "__ledf2"
+  },
+  {
+    "name": "__gedf2",
+    "root": true,
+    "export": "__gedf2"
+  },
+  {
+    "name": "__unorddf2",
+    "root": true,
+    "export": "__unorddf2"
+  },
+  {
+    "name": "__eqdf2",
+    "root": true,
+    "export": "__eqdf2"
+  },
+  {
+    "name": "__ltdf2",
+    "root": true,
+    "export": "__ltdf2"
+  },
+  {
+    "name": "__nedf2",
+    "root": true,
+    "export": "__nedf2"
+  },
+  {
+    "name": "__gtdf2",
+    "root": true,
+    "export": "__gtdf2"
+  },
+  {
+    "name": "get_last_error",
+    "root": true,
+    "export": "get_last_error"
+  },
+  {
+    "name": "allocate_mappings",
+    "root": true,
+    "export": "allocate_mappings"
+  },
+  {
+    "name": "parse_mappings",
+    "root": true,
+    "export": "parse_mappings"
+  },
+  {
+    "name": "free_mappings",
+    "root": true,
+    "export": "free_mappings"
+  },
+  {
+    "name": "by_generated_location",
+    "root": true,
+    "export": "by_generated_location"
+  },
+  {
+    "name": "compute_column_spans",
+    "root": true,
+    "export": "compute_column_spans"
+  },
+  {
+    "name": "by_original_location",
+    "root": true,
+    "export": "by_original_location"
+  },
+  {
+    "name": "original_location_for",
+    "root": true,
+    "export": "original_location_for"
+  },
+  {
+    "name": "generated_location_for",
+    "root": true,
+    "export": "generated_location_for"
+  },
+  {
+    "name": "all_generated_locations_for",
+    "root": true,
+    "export": "all_generated_locations_for"
+  }
+]

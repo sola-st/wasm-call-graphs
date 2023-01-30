@@ -1,4 +1,5 @@
 === graph ===
+root: func$2$2
 root: func$1$1
 root: main
 node: func$2$2
@@ -11,4 +12,3 @@ node: main
   is export main, 0
   reaches: func$0$0
 =============
-unused: func$2$2

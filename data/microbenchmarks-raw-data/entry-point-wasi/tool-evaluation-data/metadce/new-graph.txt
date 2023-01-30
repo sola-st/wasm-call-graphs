@@ -12,8 +12,3 @@ node: func$0$0
   is function 0
   reaches: func$1$1
 =============
-unused: export$_start$3
-unused: export$memory$4
-unused: func$0$0
-unused: func$1$1
-unused: func$2$2

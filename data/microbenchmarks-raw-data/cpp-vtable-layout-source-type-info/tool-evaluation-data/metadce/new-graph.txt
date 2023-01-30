@@ -1,29 +1,37 @@
 === graph ===
-root: func$0$0
 root: func$7$7
 root: func$6$6
-root: func$4$4
 root: func$5$5
 root: stackAlloc
 root: stackRestore
+root: func$0$0
 root: stackSave
 root: __errno_location
+root: func$4$4
 root: _start
 node: export$__indirect_function_table$25
   is export __indirect_function_table, 0
-node: global$global$0$20
-  is global global$0
+node: export$memory$24
+  is export memory, 0
 node: func$19$19
   is function 19
-node: func$18$18
-  is function 18
-  reaches: global$global$0$20
+node: func$15$15
+  is function 15
+node: func$14$14
+  is function 14
+  reaches: func$15$15
+  reaches: func$13$13
+  reaches: func$15$15
+  reaches: func$12$12
+node: func$16$16
+  is function 16
   reaches: global$global$0$20
 node: func$12$12
   is function 12
   reaches: importId$fimport$2$23
-node: func$16$16
-  is function 16
+node: func$18$18
+  is function 18
+  reaches: global$global$0$20
   reaches: global$global$0$20
 node: func$11$11
   is function 11
@@ -51,58 +59,48 @@ node: func$8$8
 node: func$13$13
   is function 13
   reaches: func$15$15
-node: __errno_location
-  is export __errno_location, 19
-  reaches: func$19$19
-node: stackSave
-  is export stackSave, 16
-  reaches: func$16$16
-node: func$5$5
-  is function 5
-node: func$17$17
-  is function 17
-  reaches: global$global$0$20
-node: func$3$3
-  is function 3
-  reaches: func$1$1
-  reaches: func$2$2
-node: func$1$1
-  is function 1
-  reaches: global$global$0$20
-  reaches: global$global$0$20
-  reaches: global$global$0$20
-node: func$15$15
-  is function 15
-node: func$14$14
-  is function 14
-  reaches: func$15$15
-  reaches: func$13$13
-  reaches: func$15$15
-  reaches: func$12$12
+node: _start
+  is export _start, 8
+  reaches: func$8$8
+node: func$4$4
+  is function 4
 node: func$2$2
   is function 2
   reaches: global$global$0$20
   reaches: global$global$0$20
   reaches: global$global$0$20
+node: __errno_location
+  is export __errno_location, 19
+  reaches: func$19$19
+node: func$3$3
+  is function 3
+  reaches: func$1$1
+  reaches: func$2$2
+node: stackRestore
+  is export stackRestore, 17
+  reaches: func$17$17
+node: func$17$17
+  is function 17
+  reaches: global$global$0$20
 node: stackAlloc
   is export stackAlloc, 18
   reaches: func$18$18
-node: func$4$4
-  is function 4
-node: export$memory$24
-  is export memory, 0
-node: _start
-  is export _start, 8
-  reaches: func$8$8
+node: func$1$1
+  is function 1
+  reaches: global$global$0$20
+  reaches: global$global$0$20
+  reaches: global$global$0$20
+node: func$5$5
+  is function 5
+node: stackSave
+  is export stackSave, 16
+  reaches: func$16$16
 node: func$0$0
   is function 0
 node: func$6$6
   is function 6
-node: stackRestore
-  is export stackRestore, 17
-  reaches: func$17$17
+node: global$global$0$20
+  is global global$0
 node: func$7$7
   is function 7
 =============
-unused: export$__indirect_function_table$25
-unused: export$memory$24

@@ -1,29 +1,23 @@
 === graph ===
 root: func$1$1
 root: table
-node: export$export1$5
-  is export export1, 1
-  reaches: func$1$1
-node: export$main$4
-  is export main, 0
-  reaches: func$0$0
 node: export$export2$6
   is export export2, 2
   reaches: func$2$2
-node: func$2$2
-  is function 2
+node: export$export1$5
+  is export export1, 1
+  reaches: func$1$1
 node: func$3$3
   is function 3
-node: func$1$1
-  is function 1
+node: func$2$2
+  is function 2
+node: export$main$4
+  is export main, 0
+  reaches: func$0$0
 node: func$0$0
   is function 0
+node: func$1$1
+  is function 1
 node: table
   is export table, 0
 =============
-unused: export$export1$5
-unused: export$export2$6
-unused: export$main$4
-unused: func$0$0
-unused: func$2$2
-unused: func$3$3

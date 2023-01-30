@@ -4,4 +4,6 @@ node1 [shape=record, label="{1}"];
 node2 [shape=record, label="{2}"];
 node0 -> node1;
 
+node0 -> node2;
+
 }

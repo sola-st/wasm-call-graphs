@@ -1,0 +1,132 @@
+[
+  {
+    "name": "__ZSt18uncaught_exceptionv",
+    "root": true,
+    "export": "__ZSt18uncaught_exceptionv"
+  },
+  {
+    "name": "___cxa_demangle",
+    "root": true,
+    "export": "___cxa_demangle"
+  },
+  {
+    "name": "___embind_register_native_and_builtin_types",
+    "root": true,
+    "export": "___embind_register_native_and_builtin_types"
+  },
+  {
+    "name": "___getTypeName",
+    "root": true,
+    "export": "___getTypeName"
+  },
+  {
+    "name": "_fflush",
+    "root": true,
+    "export": "_fflush"
+  },
+  {
+    "name": "_free",
+    "root": true,
+    "export": "_free"
+  },
+  {
+    "name": "_malloc",
+    "root": true,
+    "export": "_malloc"
+  },
+  {
+    "name": "dynCall_i",
+    "root": true,
+    "export": "dynCall_i"
+  },
+  {
+    "name": "dynCall_ii",
+    "root": true,
+    "export": "dynCall_ii"
+  },
+  {
+    "name": "dynCall_iidiiii",
+    "root": true,
+    "export": "dynCall_iidiiii"
+  },
+  {
+    "name": "dynCall_iii",
+    "root": true,
+    "export": "dynCall_iii"
+  },
+  {
+    "name": "dynCall_iiii",
+    "root": true,
+    "export": "dynCall_iiii"
+  },
+  {
+    "name": "dynCall_iiiii",
+    "root": true,
+    "export": "dynCall_iiiii"
+  },
+  {
+    "name": "dynCall_jiji",
+    "root": true,
+    "export": "dynCall_jiji"
+  },
+  {
+    "name": "dynCall_v",
+    "root": true,
+    "export": "dynCall_v"
+  },
+  {
+    "name": "dynCall_vi",
+    "root": true,
+    "export": "dynCall_vi"
+  },
+  {
+    "name": "dynCall_vii",
+    "root": true,
+    "export": "dynCall_vii"
+  },
+  {
+    "name": "dynCall_viii",
+    "root": true,
+    "export": "dynCall_viii"
+  },
+  {
+    "name": "dynCall_viiii",
+    "root": true,
+    "export": "dynCall_viiii"
+  },
+  {
+    "name": "dynCall_viiiii",
+    "root": true,
+    "export": "dynCall_viiiii"
+  },
+  {
+    "name": "dynCall_viiiiii",
+    "root": true,
+    "export": "dynCall_viiiiii"
+  },
+  {
+    "name": "establishStackSpace",
+    "root": true,
+    "export": "establishStackSpace"
+  },
+  {
+    "name": "globalCtors",
+    "root": true,
+    "export": "globalCtors"
+  },
+  {
+    "name": "stackAlloc",
+    "root": true,
+    "export": "stackAlloc"
+  },
+  {
+    "name": "stackRestore",
+    "root": true,
+    "export": "stackRestore"
+  },
+  {
+    "name": "stackSave",
+    "root": true,
+    "export": "stackSave"
+  }
+]

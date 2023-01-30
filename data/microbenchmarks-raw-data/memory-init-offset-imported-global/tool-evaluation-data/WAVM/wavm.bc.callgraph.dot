@@ -1,10 +1,10 @@
 digraph "Call graph: ./../../data/microbenchmarks-raw-data/memory-init-offset-imported-global/tool-evaluation-data/WAVM/wavm.bc" {
 	label="Call graph: ./../../data/microbenchmarks-raw-data/memory-init-offset-imported-global/tool-evaluation-data/WAVM/wavm.bc";
 
-	Node0x18be360 [shape=record,label="{__gxx_personality_v0}"];
-	Node0x18be440 [shape=record,label="{functionDef0}"];
-	Node0x18be440 -> Node0x18be4c0;
-	Node0x18be540 [shape=record,label="{functionDef1}"];
-	Node0x18be5c0 [shape=record,label="{functionDef2}"];
-	Node0x18be4c0 [shape=record,label="{callIndirectFail}"];
+	Node0x1a6e360 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x1a6e440 [shape=record,label="{functionDef0}"];
+	Node0x1a6e440 -> Node0x1a6e4c0;
+	Node0x1a6e540 [shape=record,label="{functionDef1}"];
+	Node0x1a6e5c0 [shape=record,label="{functionDef2}"];
+	Node0x1a6e4c0 [shape=record,label="{callIndirectFail}"];
 }

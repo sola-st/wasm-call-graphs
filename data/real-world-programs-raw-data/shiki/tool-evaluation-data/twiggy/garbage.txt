@@ -1,0 +1,5 @@
+ Bytes  │ Size % │ Garbage Item
+────────┼────────┼───────────────────────────────────────────
+      4 ┊  0.00% ┊ type[17]: () -> f64
+      4 ┊  0.00% ┊ Σ [1 Total Rows]
+ 300320 ┊ 64.36% ┊ 157 potential false-positive data segments

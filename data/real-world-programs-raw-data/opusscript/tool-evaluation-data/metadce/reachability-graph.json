@@ -1,0 +1,42 @@
+[
+  {
+    "name": "u",
+    "root": true,
+    "export": "u"
+  },
+  {
+    "name": "v",
+    "root": true,
+    "export": "v"
+  },
+  {
+    "name": "w",
+    "root": true,
+    "export": "w"
+  },
+  {
+    "name": "x",
+    "root": true,
+    "export": "x"
+  },
+  {
+    "name": "y",
+    "root": true,
+    "export": "y"
+  },
+  {
+    "name": "z",
+    "root": true,
+    "export": "z"
+  },
+  {
+    "name": "A",
+    "root": true,
+    "export": "A"
+  },
+  {
+    "name": "B",
+    "root": true,
+    "export": "B"
+  }
+]

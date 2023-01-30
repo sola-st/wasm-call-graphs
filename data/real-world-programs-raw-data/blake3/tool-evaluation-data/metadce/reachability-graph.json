@@ -1,0 +1,77 @@
+[
+  {
+    "name": "memory",
+    "root": true,
+    "export": "memory"
+  },
+  {
+    "name": "hash",
+    "root": true,
+    "export": "hash"
+  },
+  {
+    "name": "create_hasher",
+    "root": true,
+    "export": "create_hasher"
+  },
+  {
+    "name": "create_keyed",
+    "root": true,
+    "export": "create_keyed"
+  },
+  {
+    "name": "create_derive",
+    "root": true,
+    "export": "create_derive"
+  },
+  {
+    "name": "__wbg_blake3hash_free",
+    "root": true,
+    "export": "__wbg_blake3hash_free"
+  },
+  {
+    "name": "blake3hash_reader",
+    "root": true,
+    "export": "blake3hash_reader"
+  },
+  {
+    "name": "blake3hash_update",
+    "root": true,
+    "export": "blake3hash_update"
+  },
+  {
+    "name": "blake3hash_digest",
+    "root": true,
+    "export": "blake3hash_digest"
+  },
+  {
+    "name": "__wbg_hashreader_free",
+    "root": true,
+    "export": "__wbg_hashreader_free"
+  },
+  {
+    "name": "hashreader_fill",
+    "root": true,
+    "export": "hashreader_fill"
+  },
+  {
+    "name": "hashreader_set_position",
+    "root": true,
+    "export": "hashreader_set_position"
+  },
+  {
+    "name": "__wbindgen_malloc",
+    "root": true,
+    "export": "__wbindgen_malloc"
+  },
+  {
+    "name": "__wbindgen_free",
+    "root": true,
+    "export": "__wbindgen_free"
+  },
+  {
+    "name": "__wbindgen_realloc",
+    "root": true,
+    "export": "__wbindgen_realloc"
+  }
+]

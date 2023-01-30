@@ -1,0 +1,4 @@
+aWsm error: INFO [awsm] running awsm("./../../real-world-programs/shiki/onig.wasm", Some("./../../data/real-world-programs-raw-data/shiki/tool-evaluation-data/aWsm/awsm.bc"))
+thread 'main' panicked at 'Have not implemented export kind Table', src/wasm.rs:1238:26
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+

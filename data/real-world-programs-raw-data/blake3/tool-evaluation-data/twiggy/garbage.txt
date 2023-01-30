@@ -1,0 +1,5 @@
+ Bytes │ Size % │ Garbage Item
+───────┼────────┼─────────────────────────────────────────
+   113 ┊  0.33% ┊ custom section 'producers'
+   113 ┊  0.33% ┊ Σ [1 Total Rows]
+  1886 ┊  5.48% ┊ 1 potential false-positive data segments

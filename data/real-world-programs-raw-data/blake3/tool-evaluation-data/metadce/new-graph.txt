@@ -1,41 +1,39 @@
 === graph ===
 root: func$65$65
 root: func$70$70
-root: hashreader_fill
-root: create_derive
-root: create_keyed
-root: func$16$16
 root: __wbg_hashreader_free
-root: func$60$60
-root: func$77$77
-root: blake3hash_reader
-root: blake3hash_update
-root: func$41$41
-root: hashreader_set_position
-root: create_hasher
+root: create_keyed
+root: __wbindgen_malloc
 root: func$43$43
+root: func$77$77
+root: blake3hash_update
+root: blake3hash_reader
 root: __wbg_blake3hash_free
+root: create_derive
+root: func$61$61
+root: create_hasher
+root: func$71$71
+root: hashreader_set_position
+root: func$23$23
+root: blake3hash_digest
+root: func$16$16
+root: hash
+root: func$64$64
 root: memory
+root: func$41$41
+root: __wbindgen_free
+root: hashreader_fill
+root: func$76$76
 root: __wbindgen_realloc
+root: func$60$60
 root: func$78$78
 root: func$68$68
 root: func$79$79
-root: __wbindgen_free
-root: func$64$64
-root: func$76$76
-root: func$61$61
-root: blake3hash_digest
-root: hash
-root: func$23$23
-root: __wbindgen_malloc
 root: func$28$28
-root: func$71$71
-node: global$global$0$80
-  is global global$0
 node: func$78$78
   is function 78
-node: func$77$77
-  is function 77
+node: func$76$76
+  is function 76
 node: func$75$75
   is function 75
 node: func$74$74
@@ -55,6 +53,30 @@ node: func$70$70
 node: func$69$69
   is function 69
   reaches: func$48$48
+node: func$68$68
+  is function 68
+  reaches: func$6$6
+node: func$66$66
+  is function 66
+  reaches: func$17$17
+  reaches: func$0$0
+node: func$65$65
+  is function 65
+node: func$64$64
+  is function 64
+  reaches: func$25$25
+node: func$63$63
+  is function 63
+  reaches: func$5$5
+node: func$62$62
+  is function 62
+  reaches: func$42$42
+node: func$61$61
+  is function 61
+  reaches: func$5$5
+node: func$60$60
+  is function 60
+  reaches: func$5$5
 node: func$59$59
   is function 59
   reaches: func$62$62
@@ -65,6 +87,11 @@ node: func$57$57
   reaches: global$global$0$80
   reaches: global$global$0$80
   reaches: func$50$50
+node: func$56$56
+  is function 56
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$54$54
 node: func$55$55
   is function 55
   reaches: func$5$5
@@ -78,6 +105,37 @@ node: func$54$54
 node: func$53$53
   is function 53
   reaches: func$66$66
+node: func$52$52
+  is function 52
+node: func$51$51
+  is function 51
+  reaches: func$30$30
+  reaches: func$72$72
+  reaches: func$73$73
+node: func$50$50
+  is function 50
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$48$48
+  reaches: func$48$48
+  reaches: func$56$56
+node: func$67$67
+  is function 67
+  reaches: func$4$4
+node: func$48$48
+  is function 48
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$57$57
+node: func$45$45
+  is function 45
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$67$67
+  reaches: func$30$30
+  reaches: global$global$0$80
+  reaches: func$72$72
+  reaches: func$73$73
 node: func$44$44
   is function 44
   reaches: global$global$0$80
@@ -88,48 +146,58 @@ node: func$44$44
   reaches: func$30$30
   reaches: func$5$5
   reaches: global$global$0$80
-node: func$66$66
-  is function 66
-  reaches: func$17$17
+node: func$13$13
+  is function 13
+  reaches: func$10$10
+  reaches: func$19$19
+  reaches: func$10$10
   reaches: func$0$0
-node: func$12$12
-  is function 12
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$35$35
-  reaches: func$35$35
-  reaches: func$35$35
-  reaches: global$global$0$80
-node: func$60$60
-  is function 60
+  reaches: func$52$52
   reaches: func$5$5
-node: func$6$6
-  is function 6
+node: func$11$11
+  is function 11
+  reaches: func$46$46
+  reaches: func$46$46
+  reaches: func$46$46
+  reaches: func$46$46
+node: func$10$10
+  is function 10
+  reaches: func$19$19
+  reaches: func$19$19
+node: hashreader_fill
+  is export hashreader_fill, 51
+  reaches: func$51$51
 node: func$5$5
   is function 5
   reaches: func$19$19
   reaches: func$19$19
-node: func$79$79
-  is function 79
-node: func$2$2
-  is function 2
-node: func$68$68
-  is function 68
-  reaches: func$6$6
-node: func$1$1
-  is function 1
-node: func$23$23
-  is function 23
+node: func$28$28
+  is function 28
   reaches: global$global$0$80
   reaches: global$global$0$80
   reaches: func$12$12
   reaches: func$5$5
-  reaches: func$66$66
-  reaches: func$75$75
   reaches: global$global$0$80
-node: func$62$62
-  is function 62
-  reaches: func$42$42
+node: func$1$1
+  is function 1
+node: func$27$27
+  is function 27
+  reaches: func$58$58
+node: func$26$26
+  is function 26
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$27$27
+  reaches: func$5$5
+  reaches: func$52$52
+  reaches: func$66$66
+  reaches: func$52$52
+  reaches: global$global$0$80
+  reaches: func$39$39
+  reaches: func$75$75
+node: __wbindgen_realloc
+  is export __wbindgen_realloc, 59
+  reaches: func$59$59
 node: func$8$8
   is function 8
   reaches: global$global$0$80
@@ -139,6 +207,51 @@ node: func$8$8
   reaches: func$48$48
   reaches: func$48$48
   reaches: func$34$34
+node: func$2$2
+  is function 2
+node: __wbindgen_free
+  is export __wbindgen_free, 63
+  reaches: func$63$63
+node: func$7$7
+  is function 7
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$18$18
+  reaches: func$58$58
+  reaches: func$20$20
+  reaches: func$2$2
+  reaches: func$58$58
+  reaches: global$global$0$80
+node: blake3hash_digest
+  is export blake3hash_digest, 45
+  reaches: func$45$45
+node: func$16$16
+  is function 16
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$62$62
+  reaches: func$69$69
+  reaches: func$66$66
+  reaches: func$75$75
+  reaches: func$25$25
+  reaches: global$global$0$80
+node: func$42$42
+  is function 42
+  reaches: func$17$17
+  reaches: func$0$0
+  reaches: func$13$13
+  reaches: func$52$52
+  reaches: func$5$5
+node: func$6$6
+  is function 6
+node: func$79$79
+  is function 79
+node: func$0$0
+  is function 0
+  reaches: func$19$19
+node: hashreader_set_position
+  is export hashreader_set_position, 49
+  reaches: func$49$49
 node: func$3$3
   is function 3
   reaches: global$global$0$80
@@ -162,108 +275,133 @@ node: func$3$3
   reaches: func$34$34
   reaches: func$37$37
   reaches: func$34$34
-node: hash
-  is export hash, 44
-  reaches: func$44$44
+node: func$46$46
+  is function 46
 node: func$29$29
   is function 29
   reaches: global$global$0$80
   reaches: global$global$0$80
   reaches: global$global$0$80
   reaches: global$global$0$80
-node: func$76$76
-  is function 76
-node: __wbindgen_realloc
-  is export __wbindgen_realloc, 59
-  reaches: func$59$59
-node: func$67$67
-  is function 67
-  reaches: func$4$4
-node: func$13$13
-  is function 13
-  reaches: func$10$10
-  reaches: func$19$19
-  reaches: func$10$10
-  reaches: func$0$0
+node: create_hasher
+  is export create_hasher, 40
+  reaches: func$40$40
+node: create_derive
+  is export create_derive, 33
+  reaches: func$33$33
+node: func$31$31
+  is function 31
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$67$67
   reaches: func$52$52
-  reaches: func$5$5
-node: __wbindgen_free
-  is export __wbindgen_free, 63
-  reaches: func$63$63
-node: func$64$64
-  is function 64
-  reaches: func$25$25
-node: func$10$10
-  is function 10
-  reaches: func$19$19
-  reaches: func$19$19
-node: memory
-  is export memory, 0
-node: func$65$65
-  is function 65
-node: func$11$11
-  is function 11
-  reaches: func$46$46
-  reaches: func$46$46
-  reaches: func$46$46
-  reaches: func$46$46
-node: func$0$0
-  is function 0
-  reaches: func$19$19
-node: hashreader_set_position
-  is export hashreader_set_position, 49
-  reaches: func$49$49
-node: func$17$17
-  is function 17
-  reaches: func$0$0
-  reaches: func$10$10
-  reaches: func$10$10
-node: func$52$52
-  is function 52
-node: func$43$43
-  is function 43
+  reaches: func$66$66
+  reaches: func$52$52
+  reaches: global$global$0$80
+  reaches: func$72$72
+  reaches: func$73$73
+  reaches: func$75$75
+node: __wbg_blake3hash_free
+  is export __wbg_blake3hash_free, 55
+  reaches: func$55$55
+node: func$12$12
+  is function 12
   reaches: global$global$0$80
   reaches: global$global$0$80
-  reaches: func$38$38
+  reaches: func$35$35
+  reaches: func$35$35
+  reaches: func$35$35
   reaches: global$global$0$80
-node: func$61$61
-  is function 61
-  reaches: func$5$5
-node: func$7$7
-  is function 7
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$18$18
-  reaches: func$58$58
-  reaches: func$20$20
-  reaches: func$2$2
-  reaches: func$58$58
-  reaches: global$global$0$80
-node: func$56$56
-  is function 56
+node: func$36$36
+  is function 36
   reaches: global$global$0$80
   reaches: global$global$0$80
-  reaches: func$54$54
+  reaches: func$57$57
 node: blake3hash_reader
   is export blake3hash_reader, 31
   reaches: func$31$31
-node: func$33$33
-  is function 33
+node: blake3hash_update
+  is export blake3hash_update, 47
+  reaches: func$47$47
+node: func$34$34
+  is function 34
   reaches: global$global$0$80
   reaches: global$global$0$80
-  reaches: func$7$7
-  reaches: func$5$5
+  reaches: func$57$57
+node: func$9$9
+  is function 9
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$15$15
+  reaches: func$34$34
+  reaches: func$58$58
+  reaches: func$20$20
+  reaches: func$2$2
+  reaches: global$global$0$80
+  reaches: func$36$36
+node: global$global$0$80
+  is global global$0
+node: __wbindgen_malloc
+  is export __wbindgen_malloc, 53
+  reaches: func$53$53
+node: func$21$21
+  is function 21
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$34$34
+  reaches: func$24$24
+  reaches: global$global$0$80
+  reaches: func$37$37
+  reaches: func$36$36
+  reaches: func$39$39
+node: func$4$4
+  is function 4
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$2$2
+  reaches: func$52$52
+  reaches: func$35$35
+  reaches: func$35$35
+  reaches: global$global$0$80
+node: create_keyed
+  is export create_keyed, 26
+  reaches: func$26$26
+node: func$37$37
+  is function 37
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$57$57
+node: func$77$77
+  is function 77
+node: memory
+  is export memory, 0
+node: __wbg_hashreader_free
+  is export __wbg_hashreader_free, 55
+  reaches: func$55$55
+node: func$14$14
+  is function 14
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$58$58
+  reaches: func$15$15
+  reaches: func$9$9
+  reaches: func$14$14
+  reaches: func$14$14
+  reaches: func$21$21
+  reaches: func$48$48
+  reaches: func$36$36
+  reaches: func$36$36
+  reaches: global$global$0$80
+node: func$40$40
+  is function 40
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$32$32
   reaches: func$52$52
   reaches: func$66$66
   reaches: func$75$75
   reaches: func$52$52
   reaches: global$global$0$80
-node: blake3hash_update
-  is export blake3hash_update, 47
-  reaches: func$47$47
-node: create_hasher
-  is export create_hasher, 40
-  reaches: func$40$40
 node: func$15$15
   is function 15
   reaches: global$global$0$80
@@ -285,38 +423,26 @@ node: func$15$15
   reaches: func$2$2
   reaches: func$2$2
   reaches: global$global$0$80
-node: func$50$50
-  is function 50
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$48$48
-  reaches: func$48$48
-  reaches: func$56$56
 node: func$41$41
   is function 41
   reaches: global$global$0$80
   reaches: global$global$0$80
   reaches: func$12$12
   reaches: global$global$0$80
-node: func$4$4
-  is function 4
+node: func$17$17
+  is function 17
+  reaches: func$0$0
+  reaches: func$10$10
+  reaches: func$10$10
+node: func$43$43
+  is function 43
   reaches: global$global$0$80
   reaches: global$global$0$80
-  reaches: func$2$2
-  reaches: func$52$52
-  reaches: func$35$35
-  reaches: func$35$35
+  reaches: func$38$38
   reaches: global$global$0$80
-node: func$28$28
-  is function 28
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$12$12
-  reaches: func$5$5
-  reaches: global$global$0$80
-node: __wbindgen_malloc
-  is export __wbindgen_malloc, 53
-  reaches: func$53$53
+node: hash
+  is export hash, 44
+  reaches: func$44$44
 node: func$18$18
   is function 18
   reaches: global$global$0$80
@@ -328,96 +454,14 @@ node: func$18$18
   reaches: func$36$36
   reaches: func$36$36
   reaches: func$36$36
-node: func$63$63
-  is function 63
-  reaches: func$5$5
-node: func$9$9
-  is function 9
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$15$15
-  reaches: func$34$34
-  reaches: func$58$58
-  reaches: func$20$20
-  reaches: func$2$2
-  reaches: global$global$0$80
-  reaches: func$36$36
-node: __wbg_hashreader_free
-  is export __wbg_hashreader_free, 55
-  reaches: func$55$55
-node: create_derive
-  is export create_derive, 33
-  reaches: func$33$33
+node: func$19$19
+  is function 19
 node: func$47$47
   is function 47
   reaches: func$3$3
   reaches: func$5$5
   reaches: func$72$72
   reaches: func$73$73
-node: func$38$38
-  is function 38
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$12$12
-  reaches: global$global$0$80
-node: hashreader_fill
-  is export hashreader_fill, 51
-  reaches: func$51$51
-node: func$14$14
-  is function 14
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$58$58
-  reaches: func$15$15
-  reaches: func$9$9
-  reaches: func$14$14
-  reaches: func$14$14
-  reaches: func$21$21
-  reaches: func$48$48
-  reaches: func$36$36
-  reaches: func$36$36
-  reaches: global$global$0$80
-node: func$49$49
-  is function 49
-  reaches: func$72$72
-  reaches: func$73$73
-node: func$40$40
-  is function 40
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$32$32
-  reaches: func$52$52
-  reaches: func$66$66
-  reaches: func$75$75
-  reaches: func$52$52
-  reaches: global$global$0$80
-node: create_keyed
-  is export create_keyed, 26
-  reaches: func$26$26
-node: func$16$16
-  is function 16
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$62$62
-  reaches: func$69$69
-  reaches: func$66$66
-  reaches: func$75$75
-  reaches: func$25$25
-  reaches: global$global$0$80
-node: func$51$51
-  is function 51
-  reaches: func$30$30
-  reaches: func$72$72
-  reaches: func$73$73
-node: func$42$42
-  is function 42
-  reaches: func$17$17
-  reaches: func$0$0
-  reaches: func$13$13
-  reaches: func$52$52
-  reaches: func$5$5
-node: func$19$19
-  is function 19
 node: func$20$20
   is function 20
   reaches: func$52$52
@@ -427,24 +471,20 @@ node: func$20$20
   reaches: func$52$52
   reaches: func$37$37
   reaches: func$37$37
-node: blake3hash_digest
-  is export blake3hash_digest, 45
-  reaches: func$45$45
-node: func$21$21
-  is function 21
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$34$34
-  reaches: func$24$24
-  reaches: global$global$0$80
-  reaches: func$37$37
-  reaches: func$36$36
-  reaches: func$39$39
 node: func$22$22
   is function 22
   reaches: global$global$0$80
   reaches: global$global$0$80
   reaches: func$11$11
+  reaches: global$global$0$80
+node: func$23$23
+  is function 23
+  reaches: global$global$0$80
+  reaches: global$global$0$80
+  reaches: func$12$12
+  reaches: func$5$5
+  reaches: func$66$66
+  reaches: func$75$75
   reaches: global$global$0$80
 node: func$24$24
   is function 24
@@ -459,21 +499,6 @@ node: func$25$25
   reaches: func$66$66
   reaches: func$75$75
   reaches: func$52$52
-node: func$26$26
-  is function 26
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$27$27
-  reaches: func$5$5
-  reaches: func$52$52
-  reaches: func$66$66
-  reaches: func$52$52
-  reaches: global$global$0$80
-  reaches: func$39$39
-  reaches: func$75$75
-node: func$27$27
-  is function 27
-  reaches: func$58$58
 node: func$30$30
   is function 30
   reaches: global$global$0$80
@@ -482,60 +507,35 @@ node: func$30$30
   reaches: func$52$52
   reaches: global$global$0$80
   reaches: func$37$37
-node: __wbg_blake3hash_free
-  is export __wbg_blake3hash_free, 55
-  reaches: func$55$55
-node: func$31$31
-  is function 31
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$67$67
-  reaches: func$52$52
-  reaches: func$66$66
-  reaches: func$52$52
-  reaches: global$global$0$80
-  reaches: func$72$72
-  reaches: func$73$73
-  reaches: func$75$75
 node: func$32$32
   is function 32
   reaches: func$58$58
-node: func$34$34
-  is function 34
+node: func$33$33
+  is function 33
   reaches: global$global$0$80
   reaches: global$global$0$80
-  reaches: func$57$57
+  reaches: func$7$7
+  reaches: func$5$5
+  reaches: func$52$52
+  reaches: func$66$66
+  reaches: func$75$75
+  reaches: func$52$52
+  reaches: global$global$0$80
 node: func$35$35
   is function 35
   reaches: global$global$0$80
   reaches: global$global$0$80
   reaches: func$57$57
-node: func$45$45
-  is function 45
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$67$67
-  reaches: func$30$30
-  reaches: global$global$0$80
+node: func$49$49
+  is function 49
   reaches: func$72$72
   reaches: func$73$73
-node: func$36$36
-  is function 36
+node: func$38$38
+  is function 38
   reaches: global$global$0$80
   reaches: global$global$0$80
-  reaches: func$57$57
-node: func$46$46
-  is function 46
-node: func$37$37
-  is function 37
+  reaches: func$12$12
   reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$57$57
-node: func$48$48
-  is function 48
-  reaches: global$global$0$80
-  reaches: global$global$0$80
-  reaches: func$57$57
 node: func$39$39
   is function 39
   reaches: global$global$0$80

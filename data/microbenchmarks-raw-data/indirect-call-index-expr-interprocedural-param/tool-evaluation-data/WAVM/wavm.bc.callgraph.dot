@@ -1,12 +1,12 @@
 digraph "Call graph: ./../../data/microbenchmarks-raw-data/indirect-call-index-expr-interprocedural-param/tool-evaluation-data/WAVM/wavm.bc" {
 	label="Call graph: ./../../data/microbenchmarks-raw-data/indirect-call-index-expr-interprocedural-param/tool-evaluation-data/WAVM/wavm.bc";
 
-	Node0xfdbe50 [shape=record,label="{__gxx_personality_v0}"];
-	Node0xfdbf30 [shape=record,label="{functionDef0}"];
-	Node0xfdbf30 -> Node0xfdbfb0;
-	Node0xfdbfb0 [shape=record,label="{functionDef1}"];
-	Node0xfdbfb0 -> Node0xfdc030;
-	Node0xfdc0e0 [shape=record,label="{functionDef2}"];
-	Node0xfdc160 [shape=record,label="{functionDef3}"];
-	Node0xfdc030 [shape=record,label="{callIndirectFail}"];
+	Node0x16e1e50 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x16e1f30 [shape=record,label="{functionDef0}"];
+	Node0x16e1f30 -> Node0x16e1fb0;
+	Node0x16e1fb0 [shape=record,label="{functionDef1}"];
+	Node0x16e1fb0 -> Node0x16e2030;
+	Node0x16e20e0 [shape=record,label="{functionDef2}"];
+	Node0x16e2160 [shape=record,label="{functionDef3}"];
+	Node0x16e2030 [shape=record,label="{callIndirectFail}"];
 }

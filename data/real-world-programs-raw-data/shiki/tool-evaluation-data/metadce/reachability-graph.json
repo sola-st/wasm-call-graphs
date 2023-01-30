@@ -1,0 +1,77 @@
+[
+  {
+    "name": "memory",
+    "root": true,
+    "export": "memory"
+  },
+  {
+    "name": "__wasm_call_ctors",
+    "root": true,
+    "export": "__wasm_call_ctors"
+  },
+  {
+    "name": "__indirect_function_table",
+    "root": true,
+    "export": "__indirect_function_table"
+  },
+  {
+    "name": "__errno_location",
+    "root": true,
+    "export": "__errno_location"
+  },
+  {
+    "name": "omalloc",
+    "root": true,
+    "export": "omalloc"
+  },
+  {
+    "name": "ofree",
+    "root": true,
+    "export": "ofree"
+  },
+  {
+    "name": "getLastOnigError",
+    "root": true,
+    "export": "getLastOnigError"
+  },
+  {
+    "name": "createOnigScanner",
+    "root": true,
+    "export": "createOnigScanner"
+  },
+  {
+    "name": "freeOnigScanner",
+    "root": true,
+    "export": "freeOnigScanner"
+  },
+  {
+    "name": "findNextOnigScannerMatch",
+    "root": true,
+    "export": "findNextOnigScannerMatch"
+  },
+  {
+    "name": "findNextOnigScannerMatchDbg",
+    "root": true,
+    "export": "findNextOnigScannerMatchDbg"
+  },
+  {
+    "name": "stackSave",
+    "root": true,
+    "export": "stackSave"
+  },
+  {
+    "name": "stackRestore",
+    "root": true,
+    "export": "stackRestore"
+  },
+  {
+    "name": "stackAlloc",
+    "root": true,
+    "export": "stackAlloc"
+  },
+  {
+    "name": "dynCall_jiji",
+    "root": true,
+    "export": "dynCall_jiji"
+  }
+]

@@ -11,4 +11,3 @@ node: main
   is export main, 0
   reaches: func$0$0
 =============
-unused: func$2$2

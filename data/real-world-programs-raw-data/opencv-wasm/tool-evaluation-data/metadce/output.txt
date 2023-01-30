@@ -1,1 +1,2 @@
-wasm-metadce error: 
+wasm-metadce error: Failed opening './../../data/opencv-wasm/CG_tools_data/metadce/dce.wasm'
+

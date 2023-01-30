@@ -1,9 +1,9 @@
 digraph "Call graph: ./../../data/microbenchmarks-raw-data/direct-call-imported-func/tool-evaluation-data/WAVM/wavm.bc" {
 	label="Call graph: ./../../data/microbenchmarks-raw-data/direct-call-imported-func/tool-evaluation-data/WAVM/wavm.bc";
 
-	Node0xd3e6e0 [shape=record,label="{__gxx_personality_v0}"];
-	Node0xd3e7c0 [shape=record,label="{functionImport0}"];
-	Node0xd3e840 [shape=record,label="{functionDef0}"];
-	Node0xd3e840 -> Node0xd3e7c0;
-	Node0xd3e8f0 [shape=record,label="{functionDef1}"];
+	Node0x14646e0 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x14647c0 [shape=record,label="{functionImport0}"];
+	Node0x1464840 [shape=record,label="{functionDef0}"];
+	Node0x1464840 -> Node0x14647c0;
+	Node0x14648f0 [shape=record,label="{functionDef1}"];
 }

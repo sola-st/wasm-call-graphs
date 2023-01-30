@@ -1,0 +1,132 @@
+[
+  {
+    "name": "memory",
+    "root": true,
+    "export": "memory"
+  },
+  {
+    "name": "__wbg_rsaprivatekeypair_free",
+    "root": true,
+    "export": "__wbg_rsaprivatekeypair_free"
+  },
+  {
+    "name": "rsaprivatekeypair_new",
+    "root": true,
+    "export": "rsaprivatekeypair_new"
+  },
+  {
+    "name": "rsaprivatekeypair_generate",
+    "root": true,
+    "export": "rsaprivatekeypair_generate"
+  },
+  {
+    "name": "rsaprivatekeypair_generate_from",
+    "root": true,
+    "export": "rsaprivatekeypair_generate_from"
+  },
+  {
+    "name": "rsaprivatekeypair_sign_message",
+    "root": true,
+    "export": "rsaprivatekeypair_sign_message"
+  },
+  {
+    "name": "rsaprivatekeypair_decrypt",
+    "root": true,
+    "export": "rsaprivatekeypair_decrypt"
+  },
+  {
+    "name": "rsaprivatekeypair_get_e",
+    "root": true,
+    "export": "rsaprivatekeypair_get_e"
+  },
+  {
+    "name": "rsaprivatekeypair_get_d",
+    "root": true,
+    "export": "rsaprivatekeypair_get_d"
+  },
+  {
+    "name": "rsaprivatekeypair_get_n",
+    "root": true,
+    "export": "rsaprivatekeypair_get_n"
+  },
+  {
+    "name": "rsaprivatekeypair_get_primes",
+    "root": true,
+    "export": "rsaprivatekeypair_get_primes"
+  },
+  {
+    "name": "rsaprivatekeypair_to_pkcs8_pem",
+    "root": true,
+    "export": "rsaprivatekeypair_to_pkcs8_pem"
+  },
+  {
+    "name": "rsaprivatekeypair_from_pkcs8_pem",
+    "root": true,
+    "export": "rsaprivatekeypair_from_pkcs8_pem"
+  },
+  {
+    "name": "__wbg_rsapublickeypair_free",
+    "root": true,
+    "export": "__wbg_rsapublickeypair_free"
+  },
+  {
+    "name": "rsapublickeypair_new",
+    "root": true,
+    "export": "rsapublickeypair_new"
+  },
+  {
+    "name": "rsapublickeypair_create",
+    "root": true,
+    "export": "rsapublickeypair_create"
+  },
+  {
+    "name": "rsapublickeypair_encrypt",
+    "root": true,
+    "export": "rsapublickeypair_encrypt"
+  },
+  {
+    "name": "rsapublickeypair_verify_message",
+    "root": true,
+    "export": "rsapublickeypair_verify_message"
+  },
+  {
+    "name": "rsapublickeypair_get_e",
+    "root": true,
+    "export": "rsapublickeypair_get_e"
+  },
+  {
+    "name": "rsapublickeypair_get_n",
+    "root": true,
+    "export": "rsapublickeypair_get_n"
+  },
+  {
+    "name": "rsapublickeypair_to_pkcs8_pem",
+    "root": true,
+    "export": "rsapublickeypair_to_pkcs8_pem"
+  },
+  {
+    "name": "rsapublickeypair_from_pkcs8_pem",
+    "root": true,
+    "export": "rsapublickeypair_from_pkcs8_pem"
+  },
+  {
+    "name": "__wbindgen_malloc",
+    "root": true,
+    "export": "__wbindgen_malloc"
+  },
+  {
+    "name": "__wbindgen_realloc",
+    "root": true,
+    "export": "__wbindgen_realloc"
+  },
+  {
+    "name": "__wbindgen_add_to_stack_pointer",
+    "root": true,
+    "export": "__wbindgen_add_to_stack_pointer"
+  },
+  {
+    "name": "__wbindgen_free",
+    "root": true,
+    "export": "__wbindgen_free"
+  }
+]

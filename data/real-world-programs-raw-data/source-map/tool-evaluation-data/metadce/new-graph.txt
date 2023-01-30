@@ -1,0 +1,431 @@
+=== graph ===
+root: func$10$10
+root: func$12$12
+root: func$9$9
+root: func$3$3
+root: __eqdf2
+root: __ledf2
+root: __gtsf2
+root: __eqsf2
+root: by_original_location
+root: by_generated_location
+root: __unordsf2
+root: __gesf2
+root: __gtdf2
+root: __ltdf2
+root: __gedf2
+root: func$5$5
+root: func$8$8
+root: __lesf2
+root: memory
+root: func$11$11
+root: get_last_error
+root: allocate_mappings
+root: parse_mappings
+root: func$44$44
+root: func$7$7
+root: free_mappings
+root: __unorddf2
+root: __nedf2
+root: compute_column_spans
+root: original_location_for
+root: __nesf2
+root: generated_location_for
+root: __ltsf2
+root: func$6$6
+root: all_generated_locations_for
+root: func$4$4
+node: func$44$44
+  is function 44
+node: func$43$43
+  is function 43
+node: func$42$42
+  is function 42
+  reaches: func$11$11
+  reaches: func$11$11
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+node: func$41$41
+  is function 41
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+node: func$40$40
+  is function 40
+  reaches: func$38$38
+  reaches: func$42$42
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$42$42
+  reaches: func$11$11
+  reaches: func$43$43
+  reaches: func$43$43
+  reaches: func$43$43
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$41$41
+  reaches: func$11$11
+  reaches: func$11$11
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$11$11
+  reaches: func$11$11
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$40$40
+  reaches: func$40$40
+  reaches: func$11$11
+  reaches: func$5$5
+  reaches: func$5$5
+  reaches: func$11$11
+  reaches: func$8$8
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$5$5
+  reaches: func$41$41
+node: func$39$39
+  is function 39
+node: func$38$38
+  is function 38
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$11$11
+  reaches: func$11$11
+node: func$36$36
+  is function 36
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+node: func$35$35
+  is function 35
+  reaches: func$38$38
+  reaches: func$37$37
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$37$37
+  reaches: func$11$11
+  reaches: func$39$39
+  reaches: func$39$39
+  reaches: func$39$39
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$36$36
+  reaches: func$11$11
+  reaches: func$11$11
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$11$11
+  reaches: func$11$11
+  reaches: func$11$11
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$5$5
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$35$35
+  reaches: func$35$35
+  reaches: func$36$36
+  reaches: func$5$5
+  reaches: func$5$5
+  reaches: func$11$11
+  reaches: func$8$8
+node: func$34$34
+  is function 34
+  reaches: func$0$0
+  reaches: func$2$2
+  reaches: importId$fimport$0$45
+  reaches: importId$fimport$0$45
+  reaches: func$11$11
+  reaches: func$8$8
+node: func$3$3
+  is function 3
+node: __gesf2
+  is export __gesf2, 15
+  reaches: func$15$15
+node: func$32$32
+  is function 32
+  reaches: importId$fimport$0$45
+  reaches: func$8$8
+  reaches: func$11$11
+node: func$37$37
+  is function 37
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$11$11
+  reaches: func$11$11
+node: __nesf2
+  is export __nesf2, 15
+  reaches: func$15$15
+node: func$2$2
+  is function 2
+  reaches: func$40$40
+  reaches: func$19$19
+node: original_location_for
+  is export original_location_for, 32
+  reaches: func$32$32
+node: compute_column_spans
+  is export compute_column_spans, 30
+  reaches: func$30$30
+node: __nedf2
+  is export __nedf2, 16
+  reaches: func$16$16
+node: free_mappings
+  is export free_mappings, 28
+  reaches: func$28$28
+node: func$7$7
+  is function 7
+node: func$20$20
+  is function 20
+  reaches: func$17$17
+  reaches: func$18$18
+  reaches: func$18$18
+node: parse_mappings
+  is export parse_mappings, 27
+  reaches: func$27$27
+node: func$13$13
+  is function 13
+node: all_generated_locations_for
+  is export all_generated_locations_for, 34
+  reaches: func$34$34
+node: func$26$26
+  is function 26
+  reaches: func$17$17
+  reaches: func$8$8
+  reaches: func$8$8
+node: allocate_mappings
+  is export allocate_mappings, 26
+  reaches: func$26$26
+node: get_last_error
+  is export get_last_error, 25
+  reaches: func$25$25
+node: func$11$11
+  is function 11
+node: func$24$24
+  is function 24
+  reaches: func$21$21
+  reaches: func$17$17
+  reaches: func$8$8
+node: func$1$1
+  is function 1
+node: func$14$14
+  is function 14
+node: memory
+  is export memory, 0
+node: func$0$0
+  is function 0
+  reaches: func$1$1
+  reaches: func$23$23
+  reaches: func$24$24
+  reaches: func$19$19
+  reaches: func$19$19
+  reaches: func$11$11
+node: func$29$29
+  is function 29
+  reaches: importId$fimport$0$45
+  reaches: func$8$8
+node: func$16$16
+  is function 16
+node: __lesf2
+  is export __lesf2, 15
+  reaches: func$15$15
+node: func$8$8
+  is function 8
+node: __gtdf2
+  is export __gtdf2, 16
+  reaches: func$16$16
+node: __ltsf2
+  is export __ltsf2, 15
+  reaches: func$15$15
+node: __unorddf2
+  is export __unorddf2, 16
+  reaches: func$16$16
+node: func$19$19
+  is function 19
+node: by_generated_location
+  is export by_generated_location, 29
+  reaches: func$29$29
+node: func$28$28
+  is function 28
+  reaches: func$19$19
+  reaches: func$19$19
+  reaches: func$19$19
+  reaches: func$19$19
+node: func$15$15
+  is function 15
+node: by_original_location
+  is export by_original_location, 31
+  reaches: func$31$31
+node: func$21$21
+  is function 21
+  reaches: func$20$20
+  reaches: func$13$13
+  reaches: func$19$19
+  reaches: func$18$18
+  reaches: func$17$17
+  reaches: func$13$13
+  reaches: func$19$19
+  reaches: func$18$18
+node: __ltdf2
+  is export __ltdf2, 16
+  reaches: func$16$16
+node: __eqsf2
+  is export __eqsf2, 15
+  reaches: func$15$15
+node: __gtsf2
+  is export __gtsf2, 15
+  reaches: func$15$15
+node: generated_location_for
+  is export generated_location_for, 33
+  reaches: func$33$33
+node: __ledf2
+  is export __ledf2, 16
+  reaches: func$16$16
+node: __unordsf2
+  is export __unordsf2, 15
+  reaches: func$15$15
+node: func$6$6
+  is function 6
+node: __eqdf2
+  is export __eqdf2, 16
+  reaches: func$16$16
+node: __gedf2
+  is export __gedf2, 16
+  reaches: func$16$16
+node: func$4$4
+  is function 4
+  reaches: func$19$19
+node: func$17$17
+  is function 17
+node: func$5$5
+  is function 5
+node: func$18$18
+  is function 18
+node: func$9$9
+  is function 9
+  reaches: func$19$19
+  reaches: func$19$19
+node: func$22$22
+  is function 22
+node: func$10$10
+  is function 10
+node: func$23$23
+  is function 23
+  reaches: func$21$21
+  reaches: func$17$17
+  reaches: func$8$8
+node: func$12$12
+  is function 12
+node: func$25$25
+  is function 25
+node: func$27$27
+  is function 27
+  reaches: func$17$17
+  reaches: func$22$22
+  reaches: func$35$35
+  reaches: func$22$22
+  reaches: func$22$22
+  reaches: func$22$22
+  reaches: func$22$22
+  reaches: func$24$24
+  reaches: func$35$35
+  reaches: func$19$19
+  reaches: func$19$19
+  reaches: func$17$17
+  reaches: func$8$8
+  reaches: func$8$8
+node: func$30$30
+  is function 30
+  reaches: func$1$1
+  reaches: func$8$8
+node: func$31$31
+  is function 31
+  reaches: func$0$0
+  reaches: func$8$8
+  reaches: importId$fimport$0$45
+  reaches: func$40$40
+  reaches: func$19$19
+  reaches: func$19$19
+node: func$33$33
+  is function 33
+  reaches: func$0$0
+  reaches: func$2$2
+  reaches: func$0$0
+  reaches: func$2$2
+  reaches: func$2$2
+  reaches: func$0$0
+  reaches: func$2$2
+  reaches: func$0$0
+  reaches: func$2$2
+  reaches: func$0$0
+  reaches: func$2$2
+  reaches: func$2$2
+  reaches: importId$fimport$0$45
+  reaches: func$8$8
+  reaches: func$11$11
+=============

@@ -1,0 +1,6 @@
+ Bytes │ Size % │ Garbage Item
+───────┼────────┼─────────────────────────────────────────
+    20 ┊ 18.69% ┊ import host::data_offset
+     2 ┊  1.87% ┊ memory[0]
+    22 ┊ 20.56% ┊ Σ [2 Total Rows]
+     9 ┊  8.41% ┊ 1 potential false-positive data segments
