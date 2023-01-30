@@ -160,6 +160,127 @@
 					"description": ""	
 				}
 			]
-		}
+		}, 
+		{
+			"library_name": "source-map",
+			"pretty_name": "source-map",
+			"metadata": {
+				"github-link": "https://github.com/mozilla/source-map",
+				"version": "", 
+				"wasm_version": 1,
+				"wasm_extensions": null,
+				"custom_sections": null,
+				"source_language": "",
+				"compiler": "", 
+				"compiler_version": ""
+			},
+			"tests":[
+				{
+					"test_name": "example-SourceMapConsumer",
+					"id": 0,
+					"description": ""	
+				},
+				{
+					"test_name": "example-SourceMapGenerator",
+					"id": 1,
+					"description": ""	
+				}, 
+				{
+					"test_name": "example-SourceNode",
+					"id": 2,
+					"description": ""	
+				}
+			]
+		}, 
+		{
+			"library_name": "shiki",
+			"pretty_name": "shiki",
+			"metadata": {
+				"github-link": "https://github.com/shikijs/shiki",
+				"version": "", 
+				"wasm_version": 1,
+				"wasm_extensions": null,
+				"custom_sections": null,
+				"source_language": "",
+				"compiler": "", 
+				"compiler_version": ""
+			},
+			"tests":[
+				{
+					"test_name": "example-basic",
+					"id": 0,
+					"description": ""	
+				},
+				{
+					"test_name": "example-custom-rendering",
+					"id": 1,
+					"description": ""	
+				}			]
+		},
+		{
+			"library_name": "fonteditor-core",
+			"pretty_name": "fonteditor",
+			"metadata": {
+				"github-link": "https://github.com/kekee000/fonteditor-core",
+				"version": "", 
+				"wasm_version": 1,
+				"wasm_extensions": null,
+				"custom_sections": null,
+				"source_language": "",
+				"compiler": "", 
+				"compiler_version": ""
+			},
+			"tests":[
+				{
+					"test_name": "example-read",
+					"id": 0,
+					"description": ""	
+				},
+				{
+					"test_name": "example-write",
+					"id": 1,
+					"description": ""	
+				},
+				{
+					"test_name": "example-ops",
+					"id": 2,
+					"description": ""	
+				}			
+			
+			]
+		},
+		{
+			"library_name": "opusscript",
+			"pretty_name": "opusscript",
+			"metadata": {
+				"github-link": "https://github.com/abalabahaha/opusscript",
+				"version": "", 
+				"wasm_version": 1,
+				"wasm_extensions": null,
+				"custom_sections": null,
+				"source_language": "",
+				"compiler": "", 
+				"compiler_version": ""
+			},
+			"tests":[
+				{
+					"test_name": "audio",
+					"id": 0,
+					"description": ""	
+				},
+				{
+					"test_name": "voip",
+					"id": 1,
+					"description": ""	
+				},
+				{
+					"test_name": "lowdelay",
+					"id": 2,
+					"description": ""	
+				}			
+			
+			]
+		}  
+		
 	]
 }
