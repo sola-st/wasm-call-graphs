@@ -3,4 +3,6 @@ node_modules
 *~
 *.ll
 tools/
-codeql-projects/ 
+challenges-prevalence/WasmBench-filtered-binaries-metadata/
+challenges-prevalence/data/
+challenges-prevalence/wasmbench-static-info.json
