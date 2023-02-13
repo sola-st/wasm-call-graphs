@@ -6,3 +6,4 @@ tools/
 challenges-prevalence/WasmBench-filtered-binaries-metadata/
 challenges-prevalence/data/
 challenges-prevalence/wasmbench-static-info.json
+cloc/
