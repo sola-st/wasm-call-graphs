@@ -1,13 +1,13 @@
 digraph "Call graph: ./../../data/microbenchmarks-raw-data/direct-call-transitive/tool-evaluation-data/WAVM/wavm.bc" {
 	label="Call graph: ./../../data/microbenchmarks-raw-data/direct-call-transitive/tool-evaluation-data/WAVM/wavm.bc";
 
-	Node0xa09be0 [shape=record,label="{__gxx_personality_v0}"];
-	Node0xa1c1a0 [shape=record,label="{functionDef0}"];
-	Node0xa1c1a0 -> Node0xa1c220;
-	Node0xa1c220 [shape=record,label="{functionDef1}"];
-	Node0xa1c220 -> Node0xa1c2a0;
-	Node0xa1c2a0 [shape=record,label="{functionDef2}"];
-	Node0xa1c350 [shape=record,label="{functionDef3}"];
-	Node0xa1c350 -> Node0xa1c520;
-	Node0xa1c520 [shape=record,label="{functionDef4}"];
+	Node0xb65be0 [shape=record,label="{__gxx_personality_v0}"];
+	Node0xb781a0 [shape=record,label="{functionDef0}"];
+	Node0xb781a0 -> Node0xb78220;
+	Node0xb78220 [shape=record,label="{functionDef1}"];
+	Node0xb78220 -> Node0xb782a0;
+	Node0xb782a0 [shape=record,label="{functionDef2}"];
+	Node0xb78350 [shape=record,label="{functionDef3}"];
+	Node0xb78350 -> Node0xb78520;
+	Node0xb78520 [shape=record,label="{functionDef4}"];
 }

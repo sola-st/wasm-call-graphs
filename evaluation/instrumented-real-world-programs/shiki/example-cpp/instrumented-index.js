@@ -13,6 +13,6 @@ shiki
     theme: 'nord'
   })
   .then(highlighter => {
-    console.log(highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' }))
+    console.log(highlighter.codeToHtml(`console.log('shiki');`, { lang: 'cpp' }))
     require('./../../collect-data.js')
   })

@@ -207,15 +207,21 @@
 			},
 			"tests":[
 				{
-					"test_name": "example-basic",
+					"test_name": "example-js",
 					"id": 0,
 					"description": ""	
 				},
 				{
-					"test_name": "example-custom-rendering",
+					"test_name": "example-cpp",
 					"id": 1,
 					"description": ""	
-				}			]
+				},
+				{
+					"test_name": "example-bash",
+					"id": 1,
+					"description": ""	
+				}			
+			]
 		},
 		{
 			"library_name": "fonteditor-core",

@@ -1,0 +1,7 @@
+__wasm_call_ctors
+omalloc
+createOnigScanner
+getLastOnigError
+ofree
+findNextOnigScannerMatchDbg
+findNextOnigScannerMatch

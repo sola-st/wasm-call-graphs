@@ -9,11 +9,21 @@ global.test_name = filename[1]
 const {Font, woff2} = require('fonteditor-core');
 const fs = require('fs')
 
+const convertFromVecToUint8arr=(vec)=>{
+  let ttfarr = []
+  for (let i = 0; i < vec.size(); i++) {
+      ttfarr.push(vec.get(i))
+
+  }
+  return new Uint8Array(ttfarr)
+}
+
 woff2.init().then(() => {
     const font =  Font.create(Font.buffer, {
       type: 'woff2'
     });
     
+
     // to base64 str
     font.toBase64({
       // support ttf, woff, woff2, eot, svg
