@@ -1,6 +1,6 @@
 # That’s a Tough Call: Studying the Challenges of Call Graph Construction for WebAssembly
 
-This repository contains the supplementary material for the paper "That’s a Tough Call: On Static Call Graph Construction for WebAssembly Binaries" (under submission).
+This repository contains the supplementary material for the paper "That’s a Tough Call: On Static Call Graph Construction for WebAssembly Binaries" (ISSTA'23).
 
 ## Overview
 
