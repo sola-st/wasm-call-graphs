@@ -12,7 +12,7 @@ cd wasm-call-graphs
 chmod +x setup.sh && ./setup.sh
 docker build -t toughcall .
 ```
-The image itself is TODO GB and takes TODO minutes to build. 
+The image itself is about 4 GB on disk and takes between 15 and 30 minutes to build, depending on hardware and network connection.
 
 ### Running the Image 
 
