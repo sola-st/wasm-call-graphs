@@ -39,7 +39,6 @@ def extract_wasm_file_paths_in_dir(TEST_DIR, filename):
             file = os.path.join(subdir, file)
             if os.path.splitext(file)[1] == ".wasm" and os.path.basename(file) == filename:
                 paths.append(file)
-    print(paths)
     return paths 
 
 
@@ -182,16 +181,14 @@ def main():
                     for path in org_wasm_paths_in_test: 
                         _ = execute_command("cp {} {}".format(instrumented_wasm_file, path), print_stdout=False)
 
-                    print(instrumented_wasm_file)
-                    
-                    #run_instrumented_tests_command = "node ./instrumented-index.js --reachable-exports --callsite-sensitive-cg --lower-bound"
-                    #stdout = execute_command(run_instrumented_tests_command, print_stdout=False)
-                    #stdout = stdout.split("\n")
-                    #results = [re.search("(\d+) ",x).groups()[0].strip() for x in stdout[len(stdout)-6:] if x != '']
-                    #print("{} exported functions are reachable.".format(results[0]))  
-                    #print("{} callsites have been analyzed.".format(results[1]))          
-                    #print("{} functions are the lower bound for the analysis.".format(results[2]))
-                    #print("\n")
+                    run_instrumented_tests_command = "node ./instrumented-index.js --reachable-exports --callsite-sensitive-cg --lower-bound"
+                    stdout = execute_command(run_instrumented_tests_command, print_stdout=False)
+                    stdout = stdout.split("\n")
+                    results = [re.search("(\d+) ",x).groups()[0].strip() for x in stdout[len(stdout)-6:] if x != '']
+                    print("{} exported functions are reachable.".format(results[0]))  
+                    print("{} callsites have been analyzed.".format(results[1]))          
+                    print("{} functions are the lower bound for the analysis.".format(results[2]))
+                    print("\n")
 
                     os.chdir(cwd)
 
