@@ -4,74 +4,127 @@ root: func$166$166
 root: func$167$167
 root: func$161$161
 root: func$110$110
-root: func$158$158
 root: func$108$108
-root: func$156$156
-root: func$155$155
 root: func$129$129
+root: func$158$158
 root: func$11$11
+root: stackRestore
 root: func$107$107
 root: findNextOnigScannerMatch
-root: func$154$154
 root: func$6$6
 root: func$1$1
 root: func$7$7
 root: func$111$111
-root: func$159$159
-root: func$43$43
-root: func$153$153
 root: dynCall_jiji
 root: memory
+root: func$43$43
 root: getLastOnigError
-root: func$151$151
 root: __indirect_function_table
-root: func$122$122
+root: func$142$142
 root: func$113$113
 root: findNextOnigScannerMatchDbg
 root: createOnigScanner
+root: func$183$183
 root: omalloc
 root: freeOnigScanner
+root: func$154$154
 root: func$125$125
 root: stackAlloc
 root: ofree
-root: func$148$148
+root: func$182$182
 root: func$112$112
-root: func$160$160
 root: __errno_location
-root: func$157$157
 root: stackSave
-root: func$142$142
-root: func$4$4
-root: func$119$119
+root: func$159$159
+root: func$185$185
 root: func$2$2
-root: stackRestore
-root: func$152$152
 root: func$3$3
+root: func$4$4
 root: func$109$109
 root: func$5$5
 root: func$24$24
-root: func$183$183
+root: func$153$153
 root: func$124$124
-root: func$185$185
+root: func$155$155
 root: func$126$126
-root: __wasm_call_ctors
-root: func$127$127
-root: func$182$182
-root: func$123$123
 root: func$120$120
+root: func$122$122
+root: func$151$151
 root: func$121$121
 root: func$128$128
+root: func$157$157
+root: func$123$123
+root: func$152$152
+root: __wasm_call_ctors
+root: func$127$127
+root: func$156$156
+root: func$119$119
+root: func$148$148
 root: func$147$147
+root: func$160$160
 node: global$global$1$210
   is global global$1
 node: global$global$0$209
   is global global$0
+node: func$208$208
+  is function 208
+  reaches: global$global$1$210
+node: func$206$206
+  is function 206
+  reaches: global$global$0$209
+node: func$205$205
+  is function 205
+  reaches: global$global$0$209
+node: func$204$204
+  is function 204
+  reaches: importId$fimport$3$214
+node: func$203$203
+  is function 203
+  reaches: func$199$199
+  reaches: func$164$164
+node: func$202$202
+  is function 202
+node: func$201$201
+  is function 201
+  reaches: func$199$199
+  reaches: func$202$202
+  reaches: func$202$202
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$200$200
+node: func$199$199
+  is function 199
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$204$204
+  reaches: func$204$204
+  reaches: func$204$204
+  reaches: func$204$204
+  reaches: func$204$204
+  reaches: func$204$204
+  reaches: func$204$204
+  reaches: global$global$0$209
 node: func$186$186
   is function 186
+node: func$198$198
+  is function 198
+  reaches: func$169$169
+  reaches: func$174$174
+  reaches: func$174$174
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$170$170
+  reaches: global$global$0$209
 node: func$185$185
   is function 185
   reaches: func$162$162
   reaches: func$162$162
+node: func$197$197
+  is function 197
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$175$175
+  reaches: global$global$0$209
 node: func$184$184
   is function 184
   reaches: global$global$0$209
@@ -79,10 +132,31 @@ node: func$184$184
   reaches: func$164$164
   reaches: func$175$175
   reaches: global$global$0$209
+node: func$196$196
+  is function 196
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$175$175
+  reaches: global$global$0$209
 node: func$183$183
   is function 183
   reaches: global$global$0$209
   reaches: global$global$0$209
+  reaches: global$global$0$209
+node: func$195$195
+  is function 195
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$196$196
+  reaches: func$198$198
+  reaches: func$196$196
+  reaches: importId$fimport$1$212
+  reaches: func$191$191
+  reaches: importId$fimport$1$212
+  reaches: func$197$197
+  reaches: func$197$197
+  reaches: func$198$198
+  reaches: func$198$198
   reaches: global$global$0$209
 node: func$182$182
   is function 182
@@ -119,6 +193,43 @@ node: func$182$182
   reaches: func$177$177
   reaches: func$181$181
   reaches: global$global$0$209
+node: func$194$194
+  is function 194
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$191$191
+  reaches: func$199$199
+  reaches: func$201$201
+  reaches: func$199$199
+  reaches: func$164$164
+  reaches: func$99$99
+  reaches: func$98$98
+  reaches: func$117$117
+  reaches: func$199$199
+  reaches: func$100$100
+  reaches: func$115$115
+  reaches: func$199$199
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$199$199
+  reaches: func$103$103
+  reaches: func$103$103
+  reaches: func$103$103
+  reaches: func$100$100
+  reaches: func$103$103
+  reaches: func$100$100
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: global$global$0$209
+  reaches: func$200$200
+  reaches: func$98$98
+  reaches: func$200$200
+  reaches: func$98$98
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: global$global$0$209
 node: func$181$181
   is function 181
   reaches: global$global$0$209
@@ -127,838 +238,26 @@ node: func$181$181
   reaches: func$177$177
   reaches: func$177$177
   reaches: global$global$0$209
-node: func$208$208
-  is function 208
-  reaches: global$global$1$210
+node: func$193$193
+  is function 193
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$98$98
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$59$59
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$98$98
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
 node: func$180$180
   is function 180
-node: func$206$206
-  is function 206
-  reaches: global$global$0$209
-node: func$178$178
-  is function 178
-  reaches: func$171$171
-  reaches: func$171$171
-node: func$205$205
-  is function 205
-  reaches: global$global$0$209
-node: func$177$177
-  is function 177
-  reaches: func$174$174
-node: func$204$204
-  is function 204
-  reaches: importId$fimport$3$214
-node: func$176$176
-  is function 176
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$177$177
-  reaches: func$171$171
-  reaches: func$171$171
-  reaches: func$178$178
-  reaches: func$171$171
-  reaches: func$178$178
-  reaches: func$179$179
-  reaches: func$180$180
-  reaches: func$181$181
-  reaches: func$187$187
-  reaches: func$181$181
-  reaches: func$187$187
-  reaches: func$177$177
-  reaches: func$181$181
-  reaches: func$179$179
-  reaches: func$181$181
-  reaches: func$177$177
-  reaches: func$181$181
-  reaches: func$181$181
-  reaches: func$177$177
-  reaches: func$181$181
-  reaches: global$global$0$209
-node: func$203$203
-  is function 203
-  reaches: func$199$199
-  reaches: func$164$164
-node: func$175$175
-  is function 175
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$164$164
-  reaches: func$176$176
-  reaches: func$170$170
-  reaches: func$176$176
-  reaches: global$global$0$209
-node: func$202$202
-  is function 202
-node: func$174$174
-  is function 174
-  reaches: func$170$170
-  reaches: func$162$162
-node: func$201$201
-  is function 201
-  reaches: func$199$199
-  reaches: func$202$202
-  reaches: func$202$202
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$200$200
-node: func$173$173
-  is function 173
-  reaches: func$173$173
-node: func$199$199
-  is function 199
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$204$204
-  reaches: func$204$204
-  reaches: func$204$204
-  reaches: func$204$204
-  reaches: func$204$204
-  reaches: func$204$204
-  reaches: func$204$204
-  reaches: global$global$0$209
-node: func$171$171
-  is function 171
-node: func$198$198
-  is function 198
-  reaches: func$169$169
-  reaches: func$174$174
-  reaches: func$174$174
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$170$170
-  reaches: global$global$0$209
-node: func$170$170
-  is function 170
-node: func$141$141
-  is function 141
-  reaches: func$200$200
-node: func$140$140
-  is function 140
-  reaches: func$137$137
-  reaches: func$203$203
-  reaches: func$200$200
-  reaches: func$199$199
-node: func$139$139
-  is function 139
-node: func$138$138
-  is function 138
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-node: func$137$137
-  is function 137
-node: func$136$136
-  is function 136
-  reaches: func$137$137
-  reaches: func$199$199
-  reaches: func$203$203
-  reaches: func$200$200
-node: func$135$135
-  is function 135
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$184$184
-  reaches: func$169$169
-  reaches: func$118$118
-  reaches: func$165$165
-  reaches: func$118$118
-  reaches: func$165$165
-  reaches: func$118$118
-  reaches: global$global$0$209
-node: func$133$133
-  is function 133
-node: func$132$132
-  is function 132
-node: func$131$131
-  is function 131
-node: func$127$127
-  is function 127
-node: func$126$126
-  is function 126
-node: func$125$125
-  is function 125
-node: func$124$124
-  is function 124
-node: func$123$123
-  is function 123
-node: func$121$121
-  is function 121
-node: func$120$120
-  is function 120
-node: func$119$119
-  is function 119
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-node: func$118$118
-  is function 118
-node: func$117$117
-  is function 117
-node: func$113$113
-  is function 113
-  reaches: func$10$10
-  reaches: func$10$10
-  reaches: func$10$10
-node: findNextOnigScannerMatchDbg
-  is export findNextOnigScannerMatchDbg, 195
-  reaches: func$195$195
-node: __indirect_function_table
-  is export __indirect_function_table, 0
-node: func$35$35
-  is function 35
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$36$36
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$203$203
-  reaches: func$36$36
-  reaches: func$12$12
-  reaches: func$203$203
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: global$global$0$209
-node: func$23$23
-  is function 23
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$35$35
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$203$203
-  reaches: func$22$22
-  reaches: func$35$35
-  reaches: func$12$12
-  reaches: func$203$203
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: global$global$0$209
-node: func$31$31
-  is function 31
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$31$31
-  reaches: func$31$31
-  reaches: global$global$0$209
-node: func$116$116
-  is function 116
-node: func$29$29
-  is function 29
-node: func$92$92
-  is function 92
-  reaches: func$92$92
-  reaches: func$92$92
-  reaches: func$92$92
-  reaches: func$92$92
-node: func$34$34
-  is function 34
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$139$139
-  reaches: global$global$0$209
-node: func$26$26
-  is function 26
-node: stackRestore
-  is export stackRestore, 206
-  reaches: func$206$206
-node: func$21$21
-  is function 21
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$200$200
-  reaches: func$201$201
-  reaches: func$163$163
-  reaches: func$163$163
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-node: func$8$8
-  is function 8
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$9$9
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$139$139
-  reaches: func$139$139
-  reaches: func$136$136
-  reaches: func$199$199
-  reaches: func$114$114
-  reaches: func$200$200
-  reaches: func$199$199
-  reaches: func$140$140
-  reaches: func$200$200
-  reaches: global$global$0$209
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$200$200
-  reaches: func$201$201
-  reaches: func$164$164
-  reaches: func$114$114
-  reaches: global$global$0$209
-node: func$20$20
-  is function 20
-  reaches: func$203$203
-  reaches: func$21$21
-node: func$10$10
-  is function 10
-node: func$207$207
-  is function 207
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-node: func$179$179
-  is function 179
-node: func$17$17
-  is function 17
-  reaches: func$203$203
-node: func$200$200
-  is function 200
-node: func$172$172
-  is function 172
-node: func$15$15
-  is function 15
-  reaches: func$162$162
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$201$201
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$162$162
-node: func$65$65
-  is function 65
-  reaches: func$65$65
-  reaches: func$65$65
-  reaches: func$65$65
-node: createOnigScanner
-  is export createOnigScanner, 192
-  reaches: func$192$192
-node: func$79$79
-  is function 79
-node: __errno_location
-  is export __errno_location, 172
-  reaches: func$172$172
-node: func$143$143
-  is function 143
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-node: func$94$94
-  is function 94
-  reaches: func$61$61
-  reaches: func$61$61
-  reaches: func$61$61
-  reaches: func$61$61
-  reaches: func$162$162
-node: func$18$18
-  is function 18
-  reaches: func$203$203
-  reaches: func$15$15
-  reaches: func$13$13
-  reaches: func$200$200
-node: func$74$74
-  is function 74
-  reaches: func$74$74
-  reaches: func$74$74
-  reaches: func$74$74
-node: ofree
-  is export ofree, 189
-  reaches: func$189$189
-node: stackAlloc
-  is export stackAlloc, 207
-  reaches: func$207$207
-node: func$150$150
-  is function 150
-  reaches: func$133$133
-  reaches: func$133$133
-  reaches: func$133$133
-  reaches: func$132$132
-node: func$40$40
-  is function 40
-  reaches: func$199$199
-  reaches: func$201$201
-  reaches: func$164$164
-node: func$101$101
-  is function 101
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$201$201
-  reaches: func$101$101
-node: freeOnigScanner
-  is export freeOnigScanner, 193
-  reaches: func$193$193
-node: func$84$84
-  is function 84
-  reaches: func$84$84
-  reaches: func$84$84
-  reaches: func$84$84
-  reaches: func$84$84
-  reaches: func$84$84
-node: omalloc
-  is export omalloc, 188
-  reaches: func$188$188
-node: func$151$151
-  is function 151
-node: func$41$41
-  is function 41
-  reaches: func$203$203
-  reaches: func$41$41
-  reaches: func$13$13
-  reaches: func$200$200
-node: func$102$102
-  is function 102
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$201$201
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$162$162
-node: func$33$33
-  is function 33
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$30$30
-  reaches: global$global$0$209
-node: func$115$115
-  is function 115
-node: func$28$28
-  is function 28
-node: func$64$64
-  is function 64
-  reaches: func$64$64
-  reaches: func$64$64
-  reaches: func$64$64
-  reaches: func$64$64
-  reaches: func$64$64
-  reaches: func$64$64
-node: func$19$19
-  is function 19
-  reaches: func$13$13
-  reaches: func$200$200
-node: func$77$77
-  is function 77
-  reaches: func$201$201
-  reaches: func$201$201
-node: __wasm_call_ctors
-  is export __wasm_call_ctors, 0
-  reaches: func$0$0
-node: getLastOnigError
-  is export getLastOnigError, 190
-  reaches: func$190$190
-node: func$153$153
-  is function 153
-node: func$43$43
-  is function 43
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$80$80
-  reaches: func$21$21
-  reaches: func$80$80
-  reaches: func$150$150
-  reaches: func$203$203
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$203$203
-  reaches: func$15$15
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$15$15
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$41$41
-  reaches: func$203$203
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: global$global$0$209
-node: func$14$14
-  is function 14
-  reaches: func$203$203
-  reaches: func$15$15
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$200$200
-  reaches: func$162$162
-  reaches: func$13$13
-  reaches: func$200$200
-node: func$104$104
-  is function 104
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$201$201
-  reaches: func$199$199
-  reaches: func$164$164
-  reaches: func$99$99
-  reaches: func$98$98
-  reaches: func$117$117
-  reaches: func$100$100
-  reaches: func$115$115
-  reaches: func$103$103
-  reaches: func$100$100
-  reaches: func$103$103
-  reaches: func$100$100
-  reaches: func$100$100
-  reaches: func$100$100
-  reaches: func$116$116
-  reaches: func$106$106
-  reaches: func$100$100
-  reaches: func$116$116
-  reaches: func$116$116
-  reaches: func$106$106
-  reaches: func$100$100
-  reaches: func$116$116
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$98$98
-  reaches: global$global$0$209
-node: dynCall_jiji
-  is export dynCall_jiji, 208
-  reaches: func$208$208
-node: func$0$0
-  is function 0
-node: stackSave
-  is export stackSave, 205
-  reaches: func$205$205
-node: func$12$12
-  is function 12
-  reaches: func$13$13
-  reaches: func$200$200
-node: func$67$67
-  is function 67
-  reaches: func$67$67
-  reaches: func$67$67
-  reaches: func$67$67
-  reaches: func$83$83
-node: func$6$6
-  is function 6
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-node: func$147$147
-  is function 147
-  reaches: func$79$79
-  reaches: func$79$79
-node: func$37$37
-  is function 37
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$9$9
-  reaches: func$54$54
-  reaches: func$57$57
-  reaches: func$58$58
-  reaches: func$55$55
-  reaches: func$114$114
-  reaches: func$203$203
-  reaches: func$200$200
-  reaches: global$global$0$209
-node: func$98$98
-  is function 98
-  reaches: func$98$98
-  reaches: func$200$200
-  reaches: func$200$200
-node: func$134$134
-  is function 134
-node: func$25$25
-  is function 25
-node: func$122$122
-  is function 122
-node: func$2$2
-  is function 2
-node: func$30$30
-  is function 30
-node: func$16$16
-  is function 16
-  reaches: func$203$203
-node: func$3$3
-  is function 3
-node: func$68$68
-  is function 68
-  reaches: func$68$68
-  reaches: func$68$68
-  reaches: func$84$84
-  reaches: func$68$68
-  reaches: func$68$68
-  reaches: func$68$68
-node: findNextOnigScannerMatch
-  is export findNextOnigScannerMatch, 194
-  reaches: func$194$194
-node: func$32$32
-  is function 32
-node: func$114$114
-  is function 114
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$164$164
-node: func$27$27
-  is function 27
-node: func$11$11
-  is function 11
-  reaches: func$200$200
-node: func$70$70
-  is function 70
-  reaches: func$70$70
-  reaches: func$86$86
-  reaches: func$70$70
-  reaches: func$70$70
-node: func$187$187
-  is function 187
-node: func$4$4
-  is function 4
-node: func$7$7
-  is function 7
-node: func$9$9
-  is function 9
-node: func$154$154
-  is function 154
-node: func$105$105
-  is function 105
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$104$104
-  reaches: func$200$200
-  reaches: global$global$0$209
-node: func$44$44
-  is function 44
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: global$global$0$209
-node: func$155$155
-  is function 155
-node: func$106$106
-  is function 106
-  reaches: func$116$116
-  reaches: func$116$116
-  reaches: func$116$116
-  reaches: func$116$116
-  reaches: func$115$115
-node: func$45$45
-  is function 45
-  reaches: func$13$13
-  reaches: func$200$200
-node: func$156$156
-  is function 156
-node: func$107$107
-  is function 107
-node: func$46$46
-  is function 46
-  reaches: func$46$46
-  reaches: func$46$46
-node: func$157$157
-  is function 157
-  reaches: func$149$149
-node: func$108$108
-  is function 108
-node: func$1$1
-  is function 1
-node: func$47$47
-  is function 47
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$26$26
-  reaches: func$28$28
-  reaches: func$29$29
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$26$26
-  reaches: global$global$0$209
-  reaches: func$29$29
-  reaches: func$28$28
-  reaches: func$31$31
-  reaches: func$48$48
-  reaches: func$29$29
-  reaches: global$global$0$209
-node: func$158$158
-  is function 158
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$149$149
-  reaches: func$149$149
-  reaches: func$149$149
-  reaches: func$133$133
-  reaches: func$133$133
-  reaches: func$133$133
-  reaches: func$132$132
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$133$133
-  reaches: func$133$133
-  reaches: func$132$132
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$150$150
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: func$150$150
-  reaches: func$162$162
-  reaches: global$global$0$209
-node: func$109$109
-  is function 109
-  reaches: func$10$10
-node: func$48$48
-  is function 48
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$135$135
-  reaches: global$global$0$209
-node: func$159$159
-  is function 159
-node: func$110$110
-  is function 110
-  reaches: func$111$111
-node: func$49$49
-  is function 49
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$21$21
-node: func$188$188
-  is function 188
-  reaches: func$199$199
-node: func$160$160
-  is function 160
-node: func$111$111
-  is function 111
-  reaches: func$10$10
-node: func$50$50
-  is function 50
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$200$200
-  reaches: func$51$51
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$200$200
-  reaches: func$51$51
-  reaches: func$162$162
-  reaches: func$21$21
-  reaches: func$162$162
-node: func$189$189
-  is function 189
-  reaches: func$200$200
-node: func$161$161
-  is function 161
-node: func$112$112
-  is function 112
-  reaches: func$10$10
-  reaches: func$10$10
-node: func$51$51
-  is function 51
-  reaches: func$21$21
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$21$21
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$21$21
-node: func$190$190
-  is function 190
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$165$165
-  reaches: func$165$165
-  reaches: func$165$165
-  reaches: func$165$165
-  reaches: func$165$165
-  reaches: func$165$165
-  reaches: func$162$162
-  reaches: func$134$134
-  reaches: func$162$162
-  reaches: func$134$134
-  reaches: func$118$118
-  reaches: func$162$162
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-node: func$162$162
-  is function 162
-  reaches: importId$fimport$0$211
-node: func$52$52
-  is function 52
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$200$200
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$200$200
-  reaches: func$21$21
-  reaches: func$21$21
-  reaches: func$50$50
-  reaches: func$21$21
-  reaches: func$162$162
-  reaches: func$162$162
-  reaches: func$51$51
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: global$global$0$209
-node: func$191$191
-  is function 191
-  reaches: func$105$105
-  reaches: func$105$105
-node: func$163$163
-  is function 163
-  reaches: func$162$162
-node: func$53$53
-  is function 53
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$203$203
-  reaches: func$203$203
-  reaches: func$203$203
-  reaches: func$41$41
-  reaches: func$41$41
-  reaches: func$203$203
-  reaches: func$203$203
-  reaches: func$203$203
-  reaches: func$203$203
-  reaches: func$41$41
-  reaches: func$41$41
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: global$global$0$209
 node: func$192$192
   is function 192
   reaches: global$global$0$209
@@ -1057,600 +356,358 @@ node: func$192$192
   reaches: func$200$200
   reaches: func$199$199
   reaches: global$global$0$209
-node: func$164$164
-  is function 164
-node: func$54$54
-  is function 54
-  reaches: func$57$57
-  reaches: func$199$199
-  reaches: func$201$201
-node: func$193$193
-  is function 193
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$98$98
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$59$59
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$98$98
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-node: func$165$165
-  is function 165
+node: func$179$179
+  is function 179
+node: func$191$191
+  is function 191
+  reaches: func$105$105
+  reaches: func$105$105
+node: func$178$178
+  is function 178
+  reaches: func$171$171
+  reaches: func$171$171
+node: func$190$190
+  is function 190
   reaches: global$global$0$209
   reaches: global$global$0$209
-  reaches: func$184$184
-  reaches: global$global$0$209
-node: func$55$55
-  is function 55
   reaches: global$global$0$209
   reaches: global$global$0$209
-  reaches: func$57$57
-  reaches: func$136$136
-  reaches: func$57$57
-  reaches: func$139$139
-  reaches: func$199$199
-  reaches: func$140$140
-  reaches: func$200$200
-  reaches: global$global$0$209
-node: func$194$194
-  is function 194
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$191$191
-  reaches: func$199$199
-  reaches: func$201$201
-  reaches: func$199$199
-  reaches: func$164$164
-  reaches: func$99$99
-  reaches: func$98$98
-  reaches: func$117$117
-  reaches: func$199$199
-  reaches: func$100$100
-  reaches: func$115$115
-  reaches: func$199$199
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$199$199
-  reaches: func$103$103
-  reaches: func$103$103
-  reaches: func$103$103
-  reaches: func$100$100
-  reaches: func$103$103
-  reaches: func$100$100
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: global$global$0$209
-  reaches: func$200$200
-  reaches: func$98$98
-  reaches: func$200$200
-  reaches: func$98$98
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: global$global$0$209
-node: func$166$166
-  is function 166
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: importId$fimport$2$213
-  reaches: func$186$186
-  reaches: importId$fimport$2$213
-  reaches: func$186$186
-  reaches: global$global$0$209
-node: func$56$56
-  is function 56
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$139$139
-  reaches: func$139$139
-  reaches: global$global$0$209
-node: func$195$195
-  is function 195
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$196$196
-  reaches: func$198$198
-  reaches: func$196$196
-  reaches: importId$fimport$1$212
-  reaches: func$191$191
-  reaches: importId$fimport$1$212
-  reaches: func$197$197
-  reaches: func$197$197
-  reaches: func$198$198
-  reaches: func$198$198
-  reaches: global$global$0$209
-node: func$167$167
-  is function 167
-node: func$57$57
-  is function 57
-  reaches: func$199$199
-node: func$196$196
-  is function 196
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$175$175
-  reaches: global$global$0$209
-node: func$168$168
-  is function 168
-node: func$58$58
-  is function 58
-  reaches: func$199$199
-  reaches: func$114$114
-node: func$197$197
-  is function 197
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$175$175
-  reaches: global$global$0$209
-node: func$169$169
-  is function 169
-node: func$59$59
-  is function 59
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$141$141
-  reaches: func$138$138
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$141$141
-  reaches: func$138$138
-node: func$60$60
-  is function 60
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$164$164
-  reaches: func$60$60
-  reaches: func$94$94
-  reaches: func$60$60
+  reaches: func$165$165
+  reaches: func$165$165
+  reaches: func$165$165
+  reaches: func$165$165
+  reaches: func$165$165
+  reaches: func$165$165
   reaches: func$162$162
-  reaches: func$95$95
-  reaches: func$60$60
-  reaches: func$60$60
-  reaches: func$60$60
-  reaches: func$94$94
-  reaches: func$60$60
-  reaches: func$94$94
-  reaches: func$60$60
-  reaches: func$95$95
-  reaches: func$60$60
+  reaches: func$134$134
   reaches: func$162$162
-  reaches: func$60$60
-  reaches: func$91$91
-  reaches: func$96$96
-  reaches: func$60$60
+  reaches: func$134$134
+  reaches: func$118$118
   reaches: func$162$162
   reaches: global$global$0$209
-node: func$61$61
-  is function 61
-node: func$62$62
-  is function 62
-  reaches: func$62$62
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$76$76
-  reaches: func$76$76
-  reaches: func$76$76
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$199$199
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$199$199
-  reaches: func$199$199
-  reaches: func$162$162
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$199$199
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$75$75
-  reaches: func$62$62
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$62$62
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$75$75
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$75$75
-  reaches: func$77$77
-  reaches: func$62$62
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$62$62
-  reaches: func$77$77
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$75$75
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$62$62
-  reaches: func$77$77
-  reaches: func$75$75
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$62$62
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
   reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$89$89
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$62$62
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
+node: func$177$177
+  is function 177
+  reaches: func$174$174
+node: func$145$145
+  is function 145
+node: func$144$144
+  is function 144
   reaches: global$global$0$209
   reaches: global$global$0$209
   reaches: global$global$0$209
-  reaches: func$75$75
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$75$75
-  reaches: func$89$89
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: global$global$0$209
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$77$77
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$199$199
-  reaches: func$201$201
-  reaches: func$78$78
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$78$78
-  reaches: func$77$77
-  reaches: func$77$77
-  reaches: func$78$78
-  reaches: func$77$77
-node: func$5$5
-  is function 5
-node: func$63$63
-  is function 63
-  reaches: func$63$63
-  reaches: func$15$15
-  reaches: func$12$12
-  reaches: func$63$63
-  reaches: func$63$63
-  reaches: func$63$63
-  reaches: func$63$63
-  reaches: func$63$63
-  reaches: func$63$63
-node: func$66$66
-  is function 66
+node: func$143$143
+  is function 143
   reaches: global$global$0$209
   reaches: global$global$0$209
-  reaches: func$66$66
-  reaches: func$66$66
-  reaches: func$66$66
-  reaches: func$25$25
+  reaches: global$global$0$209
+node: func$142$142
+  is function 142
+  reaches: func$143$143
+  reaches: func$143$143
+  reaches: func$144$144
+  reaches: func$144$144
   reaches: global$global$0$209
   reaches: global$global$0$209
-  reaches: func$139$139
   reaches: global$global$0$209
-  reaches: func$25$25
-  reaches: func$25$25
-  reaches: global$global$0$209
-node: func$24$24
-  is function 24
-node: func$69$69
-  is function 69
-  reaches: func$69$69
-  reaches: func$85$85
-  reaches: func$69$69
-  reaches: func$69$69
-node: func$71$71
-  is function 71
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$71$71
-  reaches: func$87$87
-  reaches: func$131$131
+node: func$140$140
+  is function 140
+  reaches: func$137$137
   reaches: func$203$203
-  reaches: global$global$0$209
-  reaches: func$88$88
-  reaches: func$71$71
-  reaches: func$89$89
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$14$14
-  reaches: global$global$0$209
-  reaches: func$71$71
-  reaches: func$90$90
-  reaches: func$14$14
-  reaches: func$91$91
-  reaches: func$92$92
-  reaches: func$71$71
-  reaches: func$15$15
-  reaches: func$12$12
-  reaches: func$87$87
-  reaches: func$71$71
-  reaches: func$71$71
-  reaches: func$71$71
-  reaches: func$71$71
-  reaches: func$18$18
-  reaches: func$16$16
-  reaches: func$15$15
-  reaches: func$18$18
-  reaches: func$16$16
-  reaches: func$15$15
-  reaches: func$20$20
-  reaches: func$16$16
-  reaches: func$18$18
-  reaches: func$17$17
-  reaches: func$12$12
-  reaches: func$20$20
-  reaches: func$18$18
-  reaches: func$12$12
-  reaches: func$15$15
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$17$17
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$16$16
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$12$12
-  reaches: func$71$71
-  reaches: global$global$0$209
-node: func$72$72
-  is function 72
-  reaches: func$72$72
-  reaches: func$72$72
-  reaches: func$72$72
-node: func$73$73
-  is function 73
-  reaches: func$73$73
-  reaches: func$73$73
-  reaches: func$73$73
-node: func$75$75
-  is function 75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-  reaches: func$75$75
-node: func$76$76
-  is function 76
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$114$114
-  reaches: func$114$114
-  reaches: func$162$162
-node: func$78$78
-  is function 78
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$62$62
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-  reaches: func$201$201
-node: func$80$80
-  is function 80
-node: memory
-  is export memory, 0
-node: func$81$81
-  is function 81
-  reaches: func$81$81
-  reaches: func$81$81
-  reaches: func$19$19
-  reaches: func$81$81
-  reaches: func$12$12
-  reaches: func$81$81
-  reaches: func$81$81
-  reaches: func$81$81
-  reaches: func$81$81
-  reaches: func$81$81
-  reaches: func$81$81
-node: func$82$82
-  is function 82
-  reaches: func$82$82
-  reaches: func$82$82
-  reaches: func$82$82
-  reaches: func$82$82
-node: func$83$83
-  is function 83
-  reaches: func$83$83
-  reaches: func$83$83
-  reaches: func$83$83
-  reaches: func$83$83
-node: func$85$85
-  is function 85
-  reaches: func$85$85
-  reaches: func$91$91
-  reaches: func$85$85
-  reaches: func$85$85
-  reaches: func$85$85
-  reaches: func$85$85
-  reaches: func$91$91
-  reaches: func$85$85
-  reaches: func$85$85
+  reaches: func$200$200
+  reaches: func$199$199
+node: func$139$139
+  is function 139
+node: func$138$138
+  is function 138
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+node: func$137$137
+  is function 137
+node: func$136$136
+  is function 136
+  reaches: func$137$137
+  reaches: func$199$199
+  reaches: func$203$203
+  reaches: func$200$200
+node: func$133$133
+  is function 133
+node: func$132$132
+  is function 132
+node: func$131$131
+  is function 131
+node: func$130$130
+  is function 130
 node: func$128$128
   is function 128
-node: func$86$86
-  is function 86
-  reaches: func$86$86
-  reaches: func$86$86
-  reaches: func$86$86
-  reaches: func$86$86
+node: func$127$127
+  is function 127
+node: func$126$126
+  is function 126
+node: func$125$125
+  is function 125
+node: func$124$124
+  is function 124
+node: func$123$123
+  is function 123
+node: func$121$121
+  is function 121
+node: func$120$120
+  is function 120
+node: func$119$119
+  is function 119
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+node: func$118$118
+  is function 118
+node: func$117$117
+  is function 117
+node: func$113$113
+  is function 113
+  reaches: func$10$10
+  reaches: func$10$10
+  reaches: func$10$10
+node: func$189$189
+  is function 189
+  reaches: func$200$200
+node: func$176$176
+  is function 176
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$177$177
+  reaches: func$171$171
+  reaches: func$171$171
+  reaches: func$178$178
+  reaches: func$171$171
+  reaches: func$178$178
+  reaches: func$179$179
+  reaches: func$180$180
+  reaches: func$181$181
+  reaches: func$187$187
+  reaches: func$181$181
+  reaches: func$187$187
+  reaches: func$177$177
+  reaches: func$181$181
+  reaches: func$179$179
+  reaches: func$181$181
+  reaches: func$177$177
+  reaches: func$181$181
+  reaches: func$181$181
+  reaches: func$177$177
+  reaches: func$181$181
+  reaches: global$global$0$209
+node: func$112$112
+  is function 112
+  reaches: func$10$10
+  reaches: func$10$10
+node: func$153$153
+  is function 153
+node: func$43$43
+  is function 43
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$80$80
+  reaches: func$21$21
+  reaches: func$80$80
+  reaches: func$150$150
+  reaches: func$203$203
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$203$203
+  reaches: func$15$15
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$15$15
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$41$41
+  reaches: func$203$203
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: global$global$0$209
+node: func$31$31
+  is function 31
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$31$31
+  reaches: func$31$31
+  reaches: global$global$0$209
+node: func$170$170
+  is function 170
+node: func$106$106
+  is function 106
+  reaches: func$116$116
+  reaches: func$116$116
+  reaches: func$116$116
+  reaches: func$116$116
+  reaches: func$115$115
+node: func$152$152
+  is function 152
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$118$118
+  reaches: func$8$8
+  reaches: func$118$118
+  reaches: func$8$8
+  reaches: func$118$118
+  reaches: func$8$8
+  reaches: func$118$118
+  reaches: func$8$8
+  reaches: func$118$118
+  reaches: func$8$8
+  reaches: func$118$118
+  reaches: func$8$8
+  reaches: func$118$118
+  reaches: func$8$8
+  reaches: global$global$0$209
+node: func$42$42
+  is function 42
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$47$47
+  reaches: func$47$47
+  reaches: func$135$135
+  reaches: func$203$203
+  reaches: func$47$47
+  reaches: func$164$164
+  reaches: func$47$47
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$130$130
+  reaches: func$44$44
+  reaches: func$44$44
+  reaches: func$47$47
+  reaches: func$48$48
+  reaches: func$47$47
+  reaches: func$135$135
+  reaches: func$135$135
+  reaches: func$47$47
+  reaches: func$48$48
+  reaches: func$48$48
+  reaches: func$49$49
+  reaches: func$42$42
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$21$21
+  reaches: func$50$50
+  reaches: func$51$51
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$49$49
+  reaches: func$52$52
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$49$49
+  reaches: func$52$52
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$21$21
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$130$130
+  reaches: func$44$44
+  reaches: func$135$135
+  reaches: func$21$21
+  reaches: func$49$49
+  reaches: func$47$47
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: global$global$0$209
+node: func$151$151
+  is function 151
+node: func$41$41
+  is function 41
+  reaches: func$203$203
+  reaches: func$41$41
+  reaches: func$13$13
+  reaches: func$200$200
+node: getLastOnigError
+  is export getLastOnigError, 190
+  reaches: func$190$190
+node: func$35$35
+  is function 35
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$36$36
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$203$203
+  reaches: func$36$36
+  reaches: func$12$12
+  reaches: func$203$203
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: global$global$0$209
+node: func$23$23
+  is function 23
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$35$35
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$203$203
+  reaches: func$22$22
+  reaches: func$35$35
+  reaches: func$12$12
+  reaches: func$203$203
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: global$global$0$209
+node: func$174$174
+  is function 174
+  reaches: func$170$170
+  reaches: func$162$162
+node: func$110$110
+  is function 110
+  reaches: func$111$111
+node: func$116$116
+  is function 116
+node: func$29$29
+  is function 29
+node: func$148$148
+  is function 148
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$139$139
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+node: func$38$38
+  is function 38
+  reaches: func$203$203
+  reaches: func$162$162
+  reaches: func$199$199
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$162$162
+node: ofree
+  is export ofree, 189
+  reaches: func$189$189
+node: stackAlloc
+  is export stackAlloc, 207
+  reaches: func$207$207
 node: func$129$129
   is function 129
 node: func$22$22
@@ -1681,16 +738,199 @@ node: func$22$22
   reaches: func$34$34
   reaches: func$29$29
   reaches: global$global$0$209
+node: func$60$60
+  is function 60
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$164$164
+  reaches: func$60$60
+  reaches: func$94$94
+  reaches: func$60$60
+  reaches: func$162$162
+  reaches: func$95$95
+  reaches: func$60$60
+  reaches: func$60$60
+  reaches: func$60$60
+  reaches: func$94$94
+  reaches: func$60$60
+  reaches: func$94$94
+  reaches: func$60$60
+  reaches: func$95$95
+  reaches: func$60$60
+  reaches: func$162$162
+  reaches: func$60$60
+  reaches: func$91$91
+  reaches: func$96$96
+  reaches: func$60$60
+  reaches: func$162$162
+  reaches: global$global$0$209
+node: func$34$34
+  is function 34
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$139$139
+  reaches: global$global$0$209
+node: func$156$156
+  is function 156
+node: func$46$46
+  is function 46
+  reaches: func$46$46
+  reaches: func$46$46
+node: func$173$173
+  is function 173
+  reaches: func$173$173
+node: func$109$109
+  is function 109
+  reaches: func$10$10
+node: func$26$26
+  is function 26
+node: func$8$8
+  is function 8
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$9$9
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$139$139
+  reaches: func$139$139
+  reaches: func$136$136
+  reaches: func$199$199
+  reaches: func$114$114
+  reaches: func$200$200
+  reaches: func$199$199
+  reaches: func$140$140
+  reaches: func$200$200
+  reaches: global$global$0$209
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$200$200
+  reaches: func$201$201
+  reaches: func$164$164
+  reaches: func$114$114
+  reaches: global$global$0$209
+node: func$147$147
+  is function 147
+  reaches: func$79$79
+  reaches: func$79$79
+node: func$37$37
+  is function 37
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$9$9
+  reaches: func$54$54
+  reaches: func$57$57
+  reaches: func$58$58
+  reaches: func$55$55
+  reaches: func$114$114
+  reaches: func$203$203
+  reaches: func$200$200
+  reaches: global$global$0$209
+node: func$135$135
+  is function 135
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$184$184
+  reaches: func$169$169
+  reaches: func$118$118
+  reaches: func$165$165
+  reaches: func$118$118
+  reaches: func$165$165
+  reaches: func$118$118
+  reaches: global$global$0$209
+node: func$20$20
+  is function 20
+  reaches: func$203$203
+  reaches: func$21$21
+node: func$207$207
+  is function 207
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+node: func$17$17
+  is function 17
+  reaches: func$203$203
+node: func$200$200
+  is function 200
+node: func$187$187
+  is function 187
+node: func$15$15
+  is function 15
+  reaches: func$162$162
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$201$201
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$162$162
+node: __errno_location
+  is export __errno_location, 172
+  reaches: func$172$172
 node: func$87$87
   is function 87
-node: func$130$130
-  is function 130
-node: func$88$88
-  is function 88
-  reaches: func$88$88
-  reaches: func$88$88
-  reaches: func$88$88
-  reaches: func$93$93
+node: func$141$141
+  is function 141
+  reaches: func$200$200
+node: func$18$18
+  is function 18
+  reaches: func$203$203
+  reaches: func$15$15
+  reaches: func$13$13
+  reaches: func$200$200
+node: omalloc
+  is export omalloc, 188
+  reaches: func$188$188
+node: func$149$149
+  is function 149
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$133$133
+  reaches: func$133$133
+  reaches: func$133$133
+  reaches: global$global$0$209
+node: func$39$39
+  is function 39
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$56$56
+  reaches: func$162$162
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$162$162
+  reaches: func$114$114
+  reaches: func$9$9
+  reaches: func$200$200
+  reaches: global$global$0$209
+  reaches: func$56$56
+  reaches: func$162$162
+  reaches: func$54$54
+  reaches: func$57$57
+  reaches: func$58$58
+  reaches: func$55$55
+  reaches: func$203$203
+  reaches: func$200$200
+  reaches: global$global$0$209
+node: func$33$33
+  is function 33
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$30$30
+  reaches: global$global$0$209
+node: func$155$155
+  is function 155
+node: func$45$45
+  is function 45
+  reaches: func$13$13
+  reaches: func$200$200
+node: createOnigScanner
+  is export createOnigScanner, 192
+  reaches: func$192$192
+node: func$68$68
+  is function 68
+  reaches: func$68$68
+  reaches: func$68$68
+  reaches: func$84$84
+  reaches: func$68$68
+  reaches: func$68$68
+  reaches: func$68$68
 node: func$89$89
   is function 89
   reaches: global$global$0$209
@@ -1709,80 +949,37 @@ node: func$89$89
   reaches: func$89$89
   reaches: func$89$89
   reaches: global$global$0$209
-node: func$13$13
-  is function 13
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$200$200
-node: func$90$90
-  is function 90
-  reaches: func$90$90
-  reaches: func$90$90
-node: func$91$91
-  is function 91
-  reaches: func$91$91
-  reaches: func$91$91
-  reaches: func$91$91
-  reaches: func$91$91
-  reaches: func$91$91
-  reaches: func$91$91
-  reaches: func$91$91
-  reaches: func$91$91
-  reaches: func$91$91
-node: func$142$142
-  is function 142
-  reaches: func$143$143
-  reaches: func$143$143
-  reaches: func$144$144
-  reaches: func$144$144
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-node: func$93$93
-  is function 93
-  reaches: func$93$93
-  reaches: func$93$93
-  reaches: func$93$93
-  reaches: func$93$93
-  reaches: func$93$93
-  reaches: func$93$93
-  reaches: func$93$93
-node: func$144$144
-  is function 144
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-node: func$95$95
-  is function 95
-  reaches: func$97$97
-  reaches: func$97$97
-  reaches: func$97$97
-  reaches: func$164$164
-node: func$145$145
-  is function 145
-node: func$96$96
-  is function 96
-  reaches: func$96$96
-  reaches: func$96$96
-  reaches: func$96$96
-  reaches: func$96$96
-  reaches: func$96$96
-  reaches: func$96$96
-  reaches: func$96$96
-  reaches: func$96$96
+node: findNextOnigScannerMatchDbg
+  is export findNextOnigScannerMatchDbg, 195
+  reaches: func$195$195
+node: stackRestore
+  is export stackRestore, 206
+  reaches: func$206$206
+node: func$64$64
+  is function 64
+  reaches: func$64$64
+  reaches: func$64$64
+  reaches: func$64$64
+  reaches: func$64$64
+  reaches: func$64$64
+  reaches: func$64$64
+node: func$115$115
+  is function 115
+node: func$28$28
+  is function 28
+node: __indirect_function_table
+  is export __indirect_function_table, 0
+node: func$63$63
+  is function 63
+  reaches: func$63$63
+  reaches: func$15$15
+  reaches: func$12$12
+  reaches: func$63$63
+  reaches: func$63$63
+  reaches: func$63$63
+  reaches: func$63$63
+  reaches: func$63$63
+  reaches: func$63$63
 node: func$146$146
   is function 146
 node: func$36$36
@@ -2034,24 +1231,245 @@ node: func$36$36
   reaches: func$200$200
   reaches: func$203$203
   reaches: global$global$0$209
-node: func$97$97
-  is function 97
-node: func$148$148
-  is function 148
+node: __wasm_call_ctors
+  is export __wasm_call_ctors, 0
+  reaches: func$0$0
+node: memory
+  is export memory, 0
+node: dynCall_jiji
+  is export dynCall_jiji, 208
+  reaches: func$208$208
+node: func$0$0
+  is function 0
+node: func$150$150
+  is function 150
+  reaches: func$133$133
+  reaches: func$133$133
+  reaches: func$133$133
+  reaches: func$132$132
+node: func$40$40
+  is function 40
+  reaches: func$199$199
+  reaches: func$201$201
+  reaches: func$164$164
+node: stackSave
+  is export stackSave, 205
+  reaches: func$205$205
+node: func$12$12
+  is function 12
+  reaches: func$13$13
+  reaches: func$200$200
+node: func$172$172
+  is function 172
+node: func$108$108
+  is function 108
+node: func$1$1
+  is function 1
+node: func$6$6
+  is function 6
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+node: func$134$134
+  is function 134
+node: func$25$25
+  is function 25
+node: func$122$122
+  is function 122
+node: func$2$2
+  is function 2
+node: func$30$30
+  is function 30
+node: func$16$16
+  is function 16
+  reaches: func$203$203
+node: func$3$3
+  is function 3
+node: findNextOnigScannerMatch
+  is export findNextOnigScannerMatch, 194
+  reaches: func$194$194
+node: func$32$32
+  is function 32
+node: func$154$154
+  is function 154
+node: func$44$44
+  is function 44
   reaches: global$global$0$209
   reaches: global$global$0$209
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: global$global$0$209
+node: func$171$171
+  is function 171
+node: func$107$107
+  is function 107
+node: func$114$114
+  is function 114
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$164$164
+node: func$27$27
+  is function 27
+node: func$11$11
+  is function 11
+  reaches: func$200$200
+node: func$4$4
+  is function 4
+node: func$158$158
+  is function 158
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$149$149
+  reaches: func$149$149
+  reaches: func$149$149
+  reaches: func$133$133
+  reaches: func$133$133
+  reaches: func$133$133
+  reaches: func$132$132
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$133$133
+  reaches: func$133$133
+  reaches: func$132$132
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$150$150
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: func$150$150
+  reaches: func$162$162
+  reaches: global$global$0$209
+node: func$94$94
+  is function 94
+  reaches: func$61$61
+  reaches: func$61$61
+  reaches: func$61$61
+  reaches: func$61$61
+  reaches: func$162$162
+node: func$48$48
+  is function 48
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$135$135
+  reaches: global$global$0$209
+node: func$188$188
+  is function 188
+  reaches: func$199$199
+node: func$175$175
+  is function 175
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$164$164
+  reaches: func$176$176
+  reaches: func$170$170
+  reaches: func$176$176
+  reaches: global$global$0$209
+node: func$111$111
+  is function 111
+  reaches: func$10$10
+node: func$9$9
+  is function 9
+node: func$166$166
+  is function 166
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: importId$fimport$2$213
+  reaches: func$186$186
+  reaches: importId$fimport$2$213
+  reaches: func$186$186
+  reaches: global$global$0$209
+node: func$102$102
+  is function 102
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$201$201
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$162$162
+node: func$56$56
+  is function 56
   reaches: global$global$0$209
   reaches: global$global$0$209
   reaches: func$139$139
+  reaches: func$139$139
   reaches: global$global$0$209
-  reaches: global$global$0$209
-node: func$38$38
-  is function 38
-  reaches: func$203$203
-  reaches: func$162$162
-  reaches: func$199$199
+node: func$13$13
+  is function 13
   reaches: func$13$13
   reaches: func$200$200
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$13$13
+  reaches: func$200$200
+node: func$162$162
+  is function 162
+  reaches: importId$fimport$0$211
+node: func$98$98
+  is function 98
+  reaches: func$98$98
+  reaches: func$200$200
+  reaches: func$200$200
+node: func$52$52
+  is function 52
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$200$200
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$200$200
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$50$50
+  reaches: func$21$21
+  reaches: func$162$162
+  reaches: func$162$162
+  reaches: func$51$51
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: global$global$0$209
+node: func$163$163
+  is function 163
   reaches: func$162$162
 node: func$99$99
   is function 99
@@ -2059,36 +1477,32 @@ node: func$99$99
   reaches: func$199$199
   reaches: func$201$201
   reaches: func$201$201
-node: func$149$149
-  is function 149
+node: func$53$53
+  is function 53
   reaches: global$global$0$209
   reaches: global$global$0$209
-  reaches: func$133$133
-  reaches: func$133$133
-  reaches: func$133$133
-  reaches: global$global$0$209
-node: func$39$39
-  is function 39
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$56$56
-  reaches: func$162$162
-  reaches: global$global$0$209
-  reaches: global$global$0$209
-  reaches: func$162$162
-  reaches: func$114$114
-  reaches: func$9$9
-  reaches: func$200$200
-  reaches: global$global$0$209
-  reaches: func$56$56
-  reaches: func$162$162
-  reaches: func$54$54
-  reaches: func$57$57
-  reaches: func$58$58
-  reaches: func$55$55
   reaches: func$203$203
+  reaches: func$203$203
+  reaches: func$203$203
+  reaches: func$41$41
+  reaches: func$41$41
+  reaches: func$203$203
+  reaches: func$203$203
+  reaches: func$203$203
+  reaches: func$203$203
+  reaches: func$41$41
+  reaches: func$41$41
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$13$13
+  reaches: func$200$200
+  reaches: func$13$13
   reaches: func$200$200
   reaches: global$global$0$209
+node: func$164$164
+  is function 164
 node: func$100$100
   is function 100
   reaches: global$global$0$209
@@ -2194,96 +1608,682 @@ node: func$100$100
   reaches: func$199$199
   reaches: func$162$162
   reaches: global$global$0$209
-node: func$152$152
-  is function 152
+node: func$54$54
+  is function 54
+  reaches: func$57$57
+  reaches: func$199$199
+  reaches: func$201$201
+node: func$165$165
+  is function 165
   reaches: global$global$0$209
   reaches: global$global$0$209
-  reaches: func$118$118
-  reaches: func$8$8
-  reaches: func$118$118
-  reaches: func$8$8
-  reaches: func$118$118
-  reaches: func$8$8
-  reaches: func$118$118
-  reaches: func$8$8
-  reaches: func$118$118
-  reaches: func$8$8
-  reaches: func$118$118
-  reaches: func$8$8
-  reaches: func$118$118
-  reaches: func$8$8
+  reaches: func$184$184
   reaches: global$global$0$209
-node: func$42$42
-  is function 42
+node: func$101$101
+  is function 101
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$201$201
+  reaches: func$101$101
+node: func$55$55
+  is function 55
   reaches: global$global$0$209
   reaches: global$global$0$209
-  reaches: func$47$47
-  reaches: func$47$47
-  reaches: func$135$135
-  reaches: func$203$203
-  reaches: func$47$47
-  reaches: func$164$164
-  reaches: func$47$47
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$130$130
-  reaches: func$44$44
-  reaches: func$44$44
-  reaches: func$47$47
-  reaches: func$48$48
-  reaches: func$47$47
-  reaches: func$135$135
-  reaches: func$135$135
-  reaches: func$47$47
-  reaches: func$48$48
-  reaches: func$48$48
-  reaches: func$49$49
-  reaches: func$42$42
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$21$21
-  reaches: func$50$50
-  reaches: func$51$51
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$49$49
-  reaches: func$52$52
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$49$49
-  reaches: func$52$52
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$21$21
-  reaches: func$200$200
-  reaches: func$200$200
-  reaches: func$13$13
-  reaches: func$200$200
-  reaches: func$130$130
-  reaches: func$44$44
-  reaches: func$135$135
-  reaches: func$21$21
-  reaches: func$49$49
-  reaches: func$47$47
-  reaches: func$200$200
+  reaches: func$57$57
+  reaches: func$136$136
+  reaches: func$57$57
+  reaches: func$139$139
+  reaches: func$199$199
+  reaches: func$140$140
   reaches: func$200$200
   reaches: global$global$0$209
+node: func$167$167
+  is function 167
 node: func$103$103
   is function 103
   reaches: func$115$115
   reaches: func$116$116
   reaches: func$115$115
+node: func$57$57
+  is function 57
+  reaches: func$199$199
+node: func$168$168
+  is function 168
+node: func$104$104
+  is function 104
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$201$201
+  reaches: func$199$199
+  reaches: func$164$164
+  reaches: func$99$99
+  reaches: func$98$98
+  reaches: func$117$117
+  reaches: func$100$100
+  reaches: func$115$115
+  reaches: func$103$103
+  reaches: func$100$100
+  reaches: func$103$103
+  reaches: func$100$100
+  reaches: func$100$100
+  reaches: func$100$100
+  reaches: func$116$116
+  reaches: func$106$106
+  reaches: func$100$100
+  reaches: func$116$116
+  reaches: func$116$116
+  reaches: func$106$106
+  reaches: func$100$100
+  reaches: func$116$116
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$98$98
+  reaches: global$global$0$209
+node: func$14$14
+  is function 14
+  reaches: func$203$203
+  reaches: func$15$15
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$200$200
+  reaches: func$162$162
+  reaches: func$13$13
+  reaches: func$200$200
+node: func$58$58
+  is function 58
+  reaches: func$199$199
+  reaches: func$114$114
+node: func$169$169
+  is function 169
+node: func$105$105
+  is function 105
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$104$104
+  reaches: func$200$200
+  reaches: global$global$0$209
+node: func$59$59
+  is function 59
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$141$141
+  reaches: func$138$138
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$141$141
+  reaches: func$138$138
+node: func$7$7
+  is function 7
+node: func$61$61
+  is function 61
+node: func$62$62
+  is function 62
+  reaches: func$62$62
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$76$76
+  reaches: func$76$76
+  reaches: func$76$76
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$199$199
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$162$162
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$199$199
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$75$75
+  reaches: func$62$62
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$62$62
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$75$75
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$75$75
+  reaches: func$77$77
+  reaches: func$62$62
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$62$62
+  reaches: func$77$77
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$75$75
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$62$62
+  reaches: func$77$77
+  reaches: func$75$75
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$62$62
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$89$89
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$62$62
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$75$75
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$75$75
+  reaches: func$89$89
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: global$global$0$209
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$77$77
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$199$199
+  reaches: func$201$201
+  reaches: func$78$78
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$78$78
+  reaches: func$77$77
+  reaches: func$77$77
+  reaches: func$78$78
+  reaches: func$77$77
+node: func$65$65
+  is function 65
+  reaches: func$65$65
+  reaches: func$65$65
+  reaches: func$65$65
+node: func$66$66
+  is function 66
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$66$66
+  reaches: func$66$66
+  reaches: func$66$66
+  reaches: func$25$25
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$139$139
+  reaches: global$global$0$209
+  reaches: func$25$25
+  reaches: func$25$25
+  reaches: global$global$0$209
+node: func$67$67
+  is function 67
+  reaches: func$67$67
+  reaches: func$67$67
+  reaches: func$67$67
+  reaches: func$83$83
+node: func$69$69
+  is function 69
+  reaches: func$69$69
+  reaches: func$85$85
+  reaches: func$69$69
+  reaches: func$69$69
+node: func$70$70
+  is function 70
+  reaches: func$70$70
+  reaches: func$86$86
+  reaches: func$70$70
+  reaches: func$70$70
+node: func$21$21
+  is function 21
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$200$200
+  reaches: func$201$201
+  reaches: func$163$163
+  reaches: func$163$163
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+node: func$71$71
+  is function 71
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$71$71
+  reaches: func$87$87
+  reaches: func$131$131
+  reaches: func$203$203
+  reaches: global$global$0$209
+  reaches: func$88$88
+  reaches: func$71$71
+  reaches: func$89$89
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$14$14
+  reaches: global$global$0$209
+  reaches: func$71$71
+  reaches: func$90$90
+  reaches: func$14$14
+  reaches: func$91$91
+  reaches: func$92$92
+  reaches: func$71$71
+  reaches: func$15$15
+  reaches: func$12$12
+  reaches: func$87$87
+  reaches: func$71$71
+  reaches: func$71$71
+  reaches: func$71$71
+  reaches: func$71$71
+  reaches: func$18$18
+  reaches: func$16$16
+  reaches: func$15$15
+  reaches: func$18$18
+  reaches: func$16$16
+  reaches: func$15$15
+  reaches: func$20$20
+  reaches: func$16$16
+  reaches: func$18$18
+  reaches: func$17$17
+  reaches: func$12$12
+  reaches: func$20$20
+  reaches: func$18$18
+  reaches: func$12$12
+  reaches: func$15$15
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$17$17
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$16$16
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$12$12
+  reaches: func$71$71
+  reaches: global$global$0$209
+node: func$72$72
+  is function 72
+  reaches: func$72$72
+  reaches: func$72$72
+  reaches: func$72$72
+node: freeOnigScanner
+  is export freeOnigScanner, 193
+  reaches: func$193$193
+node: func$73$73
+  is function 73
+  reaches: func$73$73
+  reaches: func$73$73
+  reaches: func$73$73
+node: func$74$74
+  is function 74
+  reaches: func$74$74
+  reaches: func$74$74
+  reaches: func$74$74
+node: func$75$75
+  is function 75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+  reaches: func$75$75
+node: func$76$76
+  is function 76
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$114$114
+  reaches: func$114$114
+  reaches: func$162$162
+node: func$77$77
+  is function 77
+  reaches: func$201$201
+  reaches: func$201$201
+node: func$5$5
+  is function 5
+node: func$78$78
+  is function 78
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$62$62
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+  reaches: func$201$201
+node: func$19$19
+  is function 19
+  reaches: func$13$13
+  reaches: func$200$200
+node: func$79$79
+  is function 79
+node: func$80$80
+  is function 80
+node: func$81$81
+  is function 81
+  reaches: func$81$81
+  reaches: func$81$81
+  reaches: func$19$19
+  reaches: func$81$81
+  reaches: func$12$12
+  reaches: func$81$81
+  reaches: func$81$81
+  reaches: func$81$81
+  reaches: func$81$81
+  reaches: func$81$81
+  reaches: func$81$81
+node: func$82$82
+  is function 82
+  reaches: func$82$82
+  reaches: func$82$82
+  reaches: func$82$82
+  reaches: func$82$82
+node: func$83$83
+  is function 83
+  reaches: func$83$83
+  reaches: func$83$83
+  reaches: func$83$83
+  reaches: func$83$83
+node: func$24$24
+  is function 24
+node: func$84$84
+  is function 84
+  reaches: func$84$84
+  reaches: func$84$84
+  reaches: func$84$84
+  reaches: func$84$84
+  reaches: func$84$84
+node: func$85$85
+  is function 85
+  reaches: func$85$85
+  reaches: func$91$91
+  reaches: func$85$85
+  reaches: func$85$85
+  reaches: func$85$85
+  reaches: func$85$85
+  reaches: func$91$91
+  reaches: func$85$85
+  reaches: func$85$85
+node: func$86$86
+  is function 86
+  reaches: func$86$86
+  reaches: func$86$86
+  reaches: func$86$86
+  reaches: func$86$86
+node: func$157$157
+  is function 157
+  reaches: func$149$149
+node: func$47$47
+  is function 47
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$26$26
+  reaches: func$28$28
+  reaches: func$29$29
+  reaches: global$global$0$209
+  reaches: global$global$0$209
+  reaches: func$26$26
+  reaches: global$global$0$209
+  reaches: func$29$29
+  reaches: func$28$28
+  reaches: func$31$31
+  reaches: func$48$48
+  reaches: func$29$29
+  reaches: global$global$0$209
+node: func$93$93
+  is function 93
+  reaches: func$93$93
+  reaches: func$93$93
+  reaches: func$93$93
+  reaches: func$93$93
+  reaches: func$93$93
+  reaches: func$93$93
+  reaches: func$93$93
+node: func$88$88
+  is function 88
+  reaches: func$88$88
+  reaches: func$88$88
+  reaches: func$88$88
+  reaches: func$93$93
+node: func$159$159
+  is function 159
+node: func$49$49
+  is function 49
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$21$21
+node: func$95$95
+  is function 95
+  reaches: func$97$97
+  reaches: func$97$97
+  reaches: func$97$97
+  reaches: func$164$164
+node: func$10$10
+  is function 10
+node: func$90$90
+  is function 90
+  reaches: func$90$90
+  reaches: func$90$90
+node: func$91$91
+  is function 91
+  reaches: func$91$91
+  reaches: func$91$91
+  reaches: func$91$91
+  reaches: func$91$91
+  reaches: func$91$91
+  reaches: func$91$91
+  reaches: func$91$91
+  reaches: func$91$91
+  reaches: func$91$91
+node: func$92$92
+  is function 92
+  reaches: func$92$92
+  reaches: func$92$92
+  reaches: func$92$92
+  reaches: func$92$92
+node: func$160$160
+  is function 160
+node: func$50$50
+  is function 50
+  reaches: func$21$21
+  reaches: func$21$21
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$200$200
+  reaches: func$51$51
+  reaches: func$199$199
+  reaches: func$199$199
+  reaches: func$200$200
+  reaches: func$51$51
+  reaches: func$162$162
+  reaches: func$21$21
+  reaches: func$162$162
+node: func$96$96
+  is function 96
+  reaches: func$96$96
+  reaches: func$96$96
+  reaches: func$96$96
+  reaches: func$96$96
+  reaches: func$96$96
+  reaches: func$96$96
+  reaches: func$96$96
+  reaches: func$96$96
+node: func$161$161
+  is function 161
+node: func$51$51
+  is function 51
+  reaches: func$21$21
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$21$21
+  reaches: func$200$200
+  reaches: func$200$200
+  reaches: func$21$21
+node: func$97$97
+  is function 97
 =============

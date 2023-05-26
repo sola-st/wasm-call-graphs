@@ -21,8 +21,6 @@ root: memory
 root: func$11$11
 root: get_last_error
 root: allocate_mappings
-root: parse_mappings
-root: func$44$44
 root: func$7$7
 root: free_mappings
 root: __unorddf2
@@ -35,6 +33,8 @@ root: __ltsf2
 root: func$6$6
 root: all_generated_locations_for
 root: func$4$4
+root: parse_mappings
+root: func$44$44
 node: func$44$44
   is function 44
 node: func$43$43
@@ -46,93 +46,32 @@ node: func$42$42
   reaches: func$13$13
   reaches: func$14$14
   reaches: func$13$13
-node: func$41$41
-  is function 41
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-node: func$40$40
-  is function 40
-  reaches: func$38$38
-  reaches: func$42$42
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$42$42
-  reaches: func$11$11
-  reaches: func$43$43
-  reaches: func$43$43
-  reaches: func$43$43
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$41$41
-  reaches: func$11$11
-  reaches: func$11$11
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$11$11
-  reaches: func$11$11
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$40$40
-  reaches: func$40$40
-  reaches: func$11$11
-  reaches: func$5$5
-  reaches: func$5$5
-  reaches: func$11$11
+node: func$3$3
+  is function 3
+node: __gesf2
+  is export __gesf2, 15
+  reaches: func$15$15
+node: func$32$32
+  is function 32
+  reaches: importId$fimport$0$45
   reaches: func$8$8
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$5$5
-  reaches: func$41$41
-node: func$39$39
-  is function 39
-node: func$38$38
-  is function 38
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
   reaches: func$11$11
-  reaches: func$11$11
-node: func$36$36
-  is function 36
-  reaches: func$13$13
-  reaches: func$13$13
-  reaches: func$13$13
+node: __nesf2
+  is export __nesf2, 15
+  reaches: func$15$15
+node: func$2$2
+  is function 2
+  reaches: func$40$40
+  reaches: func$19$19
+node: original_location_for
+  is export original_location_for, 32
+  reaches: func$32$32
+node: compute_column_spans
+  is export compute_column_spans, 30
+  reaches: func$30$30
+node: __nedf2
+  is export __nedf2, 16
+  reaches: func$16$16
 node: func$35$35
   is function 35
   reaches: func$38$38
@@ -194,50 +133,6 @@ node: func$35$35
   reaches: func$5$5
   reaches: func$11$11
   reaches: func$8$8
-node: func$34$34
-  is function 34
-  reaches: func$0$0
-  reaches: func$2$2
-  reaches: importId$fimport$0$45
-  reaches: importId$fimport$0$45
-  reaches: func$11$11
-  reaches: func$8$8
-node: func$3$3
-  is function 3
-node: __gesf2
-  is export __gesf2, 15
-  reaches: func$15$15
-node: func$32$32
-  is function 32
-  reaches: importId$fimport$0$45
-  reaches: func$8$8
-  reaches: func$11$11
-node: func$37$37
-  is function 37
-  reaches: func$13$13
-  reaches: func$14$14
-  reaches: func$13$13
-  reaches: func$11$11
-  reaches: func$11$11
-node: __nesf2
-  is export __nesf2, 15
-  reaches: func$15$15
-node: func$2$2
-  is function 2
-  reaches: func$40$40
-  reaches: func$19$19
-node: original_location_for
-  is export original_location_for, 32
-  reaches: func$32$32
-node: compute_column_spans
-  is export compute_column_spans, 30
-  reaches: func$30$30
-node: __nedf2
-  is export __nedf2, 16
-  reaches: func$16$16
-node: free_mappings
-  is export free_mappings, 28
-  reaches: func$28$28
 node: func$7$7
   is function 7
 node: func$20$20
@@ -248,6 +143,12 @@ node: func$20$20
 node: parse_mappings
   is export parse_mappings, 27
   reaches: func$27$27
+node: func$41$41
+  is function 41
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
 node: func$13$13
   is function 13
 node: all_generated_locations_for
@@ -264,6 +165,8 @@ node: allocate_mappings
 node: get_last_error
   is export get_last_error, 25
   reaches: func$25$25
+node: func$39$39
+  is function 39
 node: func$11$11
   is function 11
 node: func$24$24
@@ -294,6 +197,11 @@ node: func$16$16
 node: __lesf2
   is export __lesf2, 15
   reaches: func$15$15
+node: func$36$36
+  is function 36
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
 node: func$8$8
   is function 8
 node: __gtdf2
@@ -346,6 +254,14 @@ node: generated_location_for
 node: __ledf2
   is export __ledf2, 16
   reaches: func$16$16
+node: func$34$34
+  is function 34
+  reaches: func$0$0
+  reaches: func$2$2
+  reaches: importId$fimport$0$45
+  reaches: importId$fimport$0$45
+  reaches: func$11$11
+  reaches: func$8$8
 node: __unordsf2
   is export __unordsf2, 15
   reaches: func$15$15
@@ -366,12 +282,32 @@ node: func$5$5
   is function 5
 node: func$18$18
   is function 18
+node: func$37$37
+  is function 37
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$11$11
+  reaches: func$11$11
 node: func$9$9
   is function 9
   reaches: func$19$19
   reaches: func$19$19
 node: func$22$22
   is function 22
+node: func$38$38
+  is function 38
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$11$11
+  reaches: func$11$11
 node: func$10$10
   is function 10
 node: func$23$23
@@ -379,6 +315,67 @@ node: func$23$23
   reaches: func$21$21
   reaches: func$17$17
   reaches: func$8$8
+node: func$40$40
+  is function 40
+  reaches: func$38$38
+  reaches: func$42$42
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$42$42
+  reaches: func$11$11
+  reaches: func$43$43
+  reaches: func$43$43
+  reaches: func$43$43
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$41$41
+  reaches: func$11$11
+  reaches: func$11$11
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$11$11
+  reaches: func$11$11
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$40$40
+  reaches: func$40$40
+  reaches: func$11$11
+  reaches: func$5$5
+  reaches: func$5$5
+  reaches: func$11$11
+  reaches: func$8$8
+  reaches: func$13$13
+  reaches: func$14$14
+  reaches: func$13$13
+  reaches: func$5$5
+  reaches: func$41$41
 node: func$12$12
   is function 12
 node: func$25$25
@@ -411,6 +408,9 @@ node: func$31$31
   reaches: func$40$40
   reaches: func$19$19
   reaches: func$19$19
+node: free_mappings
+  is export free_mappings, 28
+  reaches: func$28$28
 node: func$33$33
   is function 33
   reaches: func$0$0

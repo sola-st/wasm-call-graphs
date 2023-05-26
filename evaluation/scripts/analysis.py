@@ -166,7 +166,6 @@ def main():
         #   funcs_convered = (|dyn_funcs| / |total_funcs|)*100
         # } 
         for lib in data["library_data"]:
-            print(lib['static_info'])
             
             lib_total = lib["static_info"]["count_functions"] + lib["static_info"]["imports"]["count_imported_funcs"]
             M_total = set(range(0, lib_total))

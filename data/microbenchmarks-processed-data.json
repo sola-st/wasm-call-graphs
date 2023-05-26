@@ -62,7 +62,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.7135868072509766,
+        "execution_time": 1.6405582427978516,
         "callgraph": {
           "graph": {
             "0": [
@@ -106,7 +106,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.466989517211914,
+        "execution_time": 1.3146400451660156,
         "callgraph": {
           "graph": {
             "0": [
@@ -152,7 +152,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.1353492736816406,
+        "execution_time": 1.2524127960205078,
         "callgraph": {
           "graph": {
             "2": [],
@@ -201,7 +201,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.2066364288330078,
+        "execution_time": 1.0995864868164062,
         "callgraph": {
           "graph": {
             "0": [
@@ -324,7 +324,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.7374286651611328,
+        "execution_time": 4.784345626831055,
         "callgraph": {
           "graph": {
             "0": [
@@ -379,7 +379,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.2912750244140625,
+        "execution_time": 1.806020736694336,
         "callgraph": {
           "graph": {
             "0": [
@@ -436,7 +436,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.8087158203125,
+        "execution_time": 5.115509033203125,
         "callgraph": {
           "graph": {
             "4": [],
@@ -496,7 +496,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.8323192596435547,
+        "execution_time": 14.783859252929688,
         "callgraph": {
           "graph": {
             "0": [
@@ -626,7 +626,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.9577274322509766,
+        "execution_time": 1.1107921600341797,
         "callgraph": {
           "graph": {
             "1": [
@@ -670,7 +670,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.2421607971191406,
+        "execution_time": 0.9274482727050781,
         "callgraph": {
           "graph": {
             "0": [],
@@ -716,7 +716,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.7073879241943359,
+        "execution_time": 1.1665821075439453,
         "callgraph": {
           "graph": {
             "2": [],
@@ -764,7 +764,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.5230903625488281,
+        "execution_time": 0.9381771087646484,
         "callgraph": {
           "graph": {
             "1": [
@@ -859,7 +859,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.9355545043945312,
+        "execution_time": 3.9882659912109375,
         "callgraph": {
           "graph": {
             "0": [
@@ -895,7 +895,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.2772083282470703,
+        "execution_time": 1.5606880187988281,
         "callgraph": {
           "graph": {
             "0": [
@@ -933,7 +933,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.146554946899414,
+        "execution_time": 3.350973129272461,
         "callgraph": {
           "graph": {
             "2": [],
@@ -1050,7 +1050,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.0495185852050781,
+        "execution_time": 0.6999969482421875,
         "callgraph": {
           "graph": {
             "0": [
@@ -1094,7 +1094,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.2090206146240234,
+        "execution_time": 1.3318061828613281,
         "callgraph": {
           "graph": {
             "0": [
@@ -1140,7 +1140,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.6809234619140625,
+        "execution_time": 0.8623600006103516,
         "callgraph": {
           "graph": {
             "2": [],
@@ -1186,7 +1186,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.0502338409423828,
+        "execution_time": 1.3475418090820312,
         "callgraph": {
           "graph": {
             "0": [
@@ -1334,7 +1334,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.8401870727539062,
+        "execution_time": 1.5003681182861328,
         "callgraph": {
           "graph": {
             "1": [
@@ -1396,7 +1396,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.501321792602539,
+        "execution_time": 0.8695125579833984,
         "callgraph": {
           "graph": {
             "5": [],
@@ -1462,7 +1462,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.4257431030273438,
+        "execution_time": 1.1692047119140625,
         "callgraph": {
           "graph": {
             "6": [],
@@ -1527,7 +1527,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.390695571899414,
+        "execution_time": 0.7364749908447266,
         "callgraph": {
           "graph": {
             "1": [
@@ -1688,7 +1688,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.8840560913085938,
+        "execution_time": 1.2328624725341797,
         "callgraph": {
           "graph": {
             "1": [
@@ -1740,7 +1740,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.7824897766113281,
+        "execution_time": 1.285552978515625,
         "callgraph": {
           "graph": {
             "0": [],
@@ -1795,7 +1795,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.5950927734375,
+        "execution_time": 1.0192394256591797,
         "callgraph": {
           "graph": {
             "3": [
@@ -1850,7 +1850,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.5712509155273438,
+        "execution_time": 1.291513442993164,
         "callgraph": {
           "graph": {
             "1": [
@@ -2003,7 +2003,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.8234977722167969,
+        "execution_time": 1.2984275817871094,
         "callgraph": {
           "graph": {
             "1": [
@@ -2055,7 +2055,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.7769336700439453,
+        "execution_time": 1.8956661224365234,
         "callgraph": {
           "graph": {
             "0": [],
@@ -2110,7 +2110,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.6654262542724609,
+        "execution_time": 2.3736953735351562,
         "callgraph": {
           "graph": {
             "4": [],
@@ -2168,7 +2168,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.7779598236083984,
+        "execution_time": 3.885030746459961,
         "callgraph": {
           "graph": {
             "1": [
@@ -2314,7 +2314,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.850677490234375,
+        "execution_time": 1.4379024505615234,
         "callgraph": {
           "graph": {
             "0": [
@@ -2369,7 +2369,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.2543201446533203,
+        "execution_time": 2.909421920776367,
         "callgraph": {
           "graph": {
             "0": [],
@@ -2415,7 +2415,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.9865760803222656,
+        "execution_time": 1.5289783477783203,
         "callgraph": {
           "graph": {
             "3": [],
@@ -2462,7 +2462,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.7061958312988281,
+        "execution_time": 1.5740394592285156,
         "callgraph": {
           "graph": {
             "0": [],
@@ -2596,7 +2596,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.348733901977539,
+        "execution_time": 1.5120506286621094,
         "callgraph": {
           "graph": {
             "0": [],
@@ -2647,7 +2647,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.313924789428711,
+        "execution_time": 1.3186931610107422,
         "callgraph": {
           "graph": {
             "0": [],
@@ -2740,8 +2740,8 @@
               "value": 0
             },
             "entries": [
-              "1",
-              "2"
+              "2",
+              "1"
             ],
             "count": 2
           }
@@ -2781,7 +2781,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.0383129119873047,
+        "execution_time": 0.7014274597167969,
         "callgraph": {
           "graph": {
             "0": [
@@ -2836,7 +2836,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.0235309600830078,
+        "execution_time": 1.4672279357910156,
         "callgraph": {
           "graph": {
             "0": [],
@@ -2887,7 +2887,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.8747577667236328,
+        "execution_time": 0.6735324859619141,
         "callgraph": {
           "graph": {
             "0": [],
@@ -3001,7 +3001,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.8921623229980469,
+        "execution_time": 1.2516975402832031,
         "callgraph": {
           "graph": {
             "0": [
@@ -3045,7 +3045,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.3790130615234375,
+        "execution_time": 1.3799667358398438,
         "callgraph": {
           "graph": {
             "0": [],
@@ -3088,7 +3088,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.2049674987792969,
+        "execution_time": 1.0004043579101562,
         "callgraph": {
           "graph": {
             "2": [],
@@ -3135,7 +3135,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.72479248046875,
+        "execution_time": 1.5964508056640625,
         "callgraph": {
           "graph": {
             "0": [],
@@ -3252,7 +3252,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.6678104400634766,
+        "execution_time": 0.7505416870117188,
         "callgraph": {
           "graph": {
             "0": [
@@ -3296,7 +3296,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.1985301971435547,
+        "execution_time": 0.8254051208496094,
         "callgraph": {
           "graph": {
             "0": [],
@@ -3339,7 +3339,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.7379055023193359,
+        "execution_time": 1.1641979217529297,
         "callgraph": {
           "graph": {
             "2": [],
@@ -3387,7 +3387,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.6167888641357422,
+        "execution_time": 0.8397102355957031,
         "callgraph": {
           "graph": {
             "0": [],
@@ -3503,7 +3503,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.8423328399658203,
+        "execution_time": 0.8301734924316406,
         "callgraph": {
           "graph": {
             "0": [
@@ -3558,7 +3558,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.7574558258056641,
+        "execution_time": 1.3947486877441406,
         "callgraph": {
           "graph": {
             "0": [],
@@ -3601,7 +3601,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.7855892181396484,
+        "execution_time": 0.8115768432617188,
         "callgraph": {
           "graph": {
             "1": [],
@@ -3649,7 +3649,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.6651878356933594,
+        "execution_time": 0.7269382476806641,
         "callgraph": {
           "graph": {
             "0": [],
@@ -3765,7 +3765,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.2629032135009766,
+        "execution_time": 2.4111270904541016,
         "callgraph": {
           "graph": {
             "0": [
@@ -3820,7 +3820,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.4531612396240234,
+        "execution_time": 1.3718605041503906,
         "callgraph": {
           "graph": {
             "0": [],
@@ -3863,7 +3863,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.268148422241211,
+        "execution_time": 5.744695663452148,
         "callgraph": {
           "graph": {
             "2": [],
@@ -3911,7 +3911,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.4107227325439453,
+        "execution_time": 6.227016448974609,
         "callgraph": {
           "graph": {
             "0": [],
@@ -4034,7 +4034,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.8924007415771484,
+        "execution_time": 0.9264945983886719,
         "callgraph": {
           "graph": {
             "0": [
@@ -4095,7 +4095,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.3589859008789062,
+        "execution_time": 0.8749961853027344,
         "callgraph": {
           "graph": {
             "0": [
@@ -4147,7 +4147,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.9198188781738281,
+        "execution_time": 0.743865966796875,
         "callgraph": {
           "graph": {
             "3": [],
@@ -4204,7 +4204,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.7293224334716797,
+        "execution_time": 0.6349086761474609,
         "callgraph": {
           "graph": {
             "0": [
@@ -4337,7 +4337,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.8032321929931641,
+        "execution_time": 0.9272098541259766,
         "callgraph": {
           "graph": {
             "0": [
@@ -4400,7 +4400,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.1665821075439453,
+        "execution_time": 1.1663436889648438,
         "callgraph": {
           "graph": {
             "0": [
@@ -4452,7 +4452,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.2254714965820312,
+        "execution_time": 1.1448860168457031,
         "callgraph": {
           "graph": {
             "3": [],
@@ -4509,7 +4509,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.1129379272460938,
+        "execution_time": 1.0027885437011719,
         "callgraph": {
           "graph": {
             "0": [
@@ -4641,7 +4641,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.9684562683105469,
+        "execution_time": 5.985736846923828,
         "callgraph": {
           "graph": {
             "0": [
@@ -4702,7 +4702,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.3060569763183594,
+        "execution_time": 1.6715526580810547,
         "callgraph": {
           "graph": {
             "0": [
@@ -4754,7 +4754,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.2955665588378906,
+        "execution_time": 5.501031875610352,
         "callgraph": {
           "graph": {
             "3": [],
@@ -4811,7 +4811,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.394033432006836,
+        "execution_time": 2.1550655364990234,
         "callgraph": {
           "graph": {
             "0": [
@@ -4913,8 +4913,8 @@
               "value": 0
             },
             "entries": [
-              "1",
-              "2"
+              "2",
+              "1"
             ],
             "count": 2
           }
@@ -4947,7 +4947,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.7429122924804688,
+        "execution_time": 1.1315345764160156,
         "callgraph": {
           "graph": {
             "0": [
@@ -5002,7 +5002,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.0194778442382812,
+        "execution_time": 0.8292198181152344,
         "callgraph": {
           "graph": {
             "0": [],
@@ -5045,7 +5045,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.7343292236328125,
+        "execution_time": 0.6840229034423828,
         "callgraph": {
           "graph": {
             "2": [],
@@ -5093,7 +5093,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.5271434783935547,
+        "execution_time": 0.8192062377929688,
         "callgraph": {
           "graph": {
             "0": [],
@@ -5228,7 +5228,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.7457733154296875,
+        "execution_time": 0.7081031799316406,
         "callgraph": {
           "graph": {
             "0": [
@@ -5291,7 +5291,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.7126331329345703,
+        "execution_time": 0.7135868072509766,
         "callgraph": {
           "graph": {
             "0": [
@@ -5343,7 +5343,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.5784034729003906,
+        "execution_time": 0.9281635284423828,
         "callgraph": {
           "graph": {
             "3": [],
@@ -5400,7 +5400,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.96893310546875,
+        "execution_time": 0.7851123809814453,
         "callgraph": {
           "graph": {
             "0": [
@@ -5509,8 +5509,8 @@
               "value": 0
             },
             "entries": [
-              "2",
-              "3"
+              "3",
+              "2"
             ],
             "count": 2
           }
@@ -5543,7 +5543,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.504659652709961,
+        "execution_time": 1.0828971862792969,
         "callgraph": {
           "graph": {
             "0": [
@@ -5604,7 +5604,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.3885498046875,
+        "execution_time": 1.3813972473144531,
         "callgraph": {
           "graph": {
             "0": [
@@ -5656,7 +5656,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.63323974609375,
+        "execution_time": 1.4824867248535156,
         "callgraph": {
           "graph": {
             "3": [],
@@ -5713,7 +5713,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.5316734313964844,
+        "execution_time": 1.4042854309082031,
         "callgraph": {
           "graph": {
             "0": [
@@ -5849,7 +5849,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.8306503295898438,
+        "execution_time": 1.2450218200683594,
         "callgraph": {
           "graph": {
             "0": [
@@ -5904,7 +5904,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.5017986297607422,
+        "execution_time": 0.8728504180908203,
         "callgraph": {
           "graph": {
             "0": [],
@@ -5947,7 +5947,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.6978511810302734,
+        "execution_time": 0.6773471832275391,
         "callgraph": {
           "graph": {
             "2": [],
@@ -5995,7 +5995,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.77056884765625,
+        "execution_time": 0.83160400390625,
         "callgraph": {
           "graph": {
             "0": [],
@@ -6111,7 +6111,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.9005069732666016,
+        "execution_time": 1.42669677734375,
         "callgraph": {
           "graph": {
             "0": [
@@ -6166,7 +6166,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.2619495391845703,
+        "execution_time": 2.786874771118164,
         "callgraph": {
           "graph": {
             "0": [],
@@ -6209,7 +6209,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.238107681274414,
+        "execution_time": 4.701137542724609,
         "callgraph": {
           "graph": {
             "2": [],
@@ -6257,7 +6257,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 1.2252330780029297,
+        "execution_time": 4.980564117431641,
         "callgraph": {
           "graph": {
             "0": [],
@@ -6496,11 +6496,11 @@
               "value": 1
             },
             "entries": [
-              "8",
-              "3",
               "7",
-              "10",
-              "9"
+              "9",
+              "3",
+              "8",
+              "10"
             ],
             "count": 5
           }
@@ -6582,7 +6582,7 @@
         "name": "wassail",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 0.6663799285888672,
+        "execution_time": 1.4286041259765625,
         "callgraph": {
           "graph": {
             "4": [
@@ -6801,7 +6801,7 @@
         "name": "wavm",
         "callgraph_construction": true,
         "dce": false,
-        "execution_time": 1.1143684387207031,
+        "execution_time": 1.2624263763427734,
         "callgraph": {
           "graph": {
             "0": [],
@@ -6979,7 +6979,7 @@
         "name": "metadce",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.9055137634277344,
+        "execution_time": 2.0139217376708984,
         "callgraph": {
           "graph": {
             "22": [],
@@ -7172,7 +7172,7 @@
         "name": "twiggy",
         "callgraph_construction": false,
         "dce": true,
-        "execution_time": 0.6756782531738281,
+        "execution_time": 1.3988018035888672,
         "callgraph": {
           "graph": {
             "3": [],

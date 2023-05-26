@@ -1,6 +1,5 @@
 import sys
 import json
-from numpy import gradient
 from prettytable import PrettyTable
 
 REAL_JSON_PATH = "./../../data/real-world-processed-data.json"

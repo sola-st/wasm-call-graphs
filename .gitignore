@@ -2,7 +2,8 @@ node_modules
 *.wat
 *~
 *.ll
-tools/
+tools/wassail
+tools/twiggy
 challenges-prevalence/WasmBench-filtered-binaries-metadata/
 challenges-prevalence/data/
 challenges-prevalence/wasmbench-static-info.json

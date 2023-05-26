@@ -1,11 +1,11 @@
 digraph "Call graph: ./../../data/microbenchmarks-raw-data/host-code-table-mutable/tool-evaluation-data/WAVM/wavm.bc" {
 	label="Call graph: ./../../data/microbenchmarks-raw-data/host-code-table-mutable/tool-evaluation-data/WAVM/wavm.bc";
 
-	Node0x2133930 [shape=record,label="{__gxx_personality_v0}"];
-	Node0x2133a10 [shape=record,label="{functionDef0}"];
-	Node0x2133a10 -> Node0x213b970;
-	Node0x213b9f0 [shape=record,label="{functionDef1}"];
-	Node0x213ba70 [shape=record,label="{functionDef2}"];
-	Node0x213baf0 [shape=record,label="{functionDef3}"];
-	Node0x213b970 [shape=record,label="{callIndirectFail}"];
+	Node0x1572920 [shape=record,label="{__gxx_personality_v0}"];
+	Node0x1572a00 [shape=record,label="{functionDef0}"];
+	Node0x1572a00 -> Node0x157a960;
+	Node0x157a9e0 [shape=record,label="{functionDef1}"];
+	Node0x157aa60 [shape=record,label="{functionDef2}"];
+	Node0x157aae0 [shape=record,label="{functionDef3}"];
+	Node0x157a960 [shape=record,label="{callIndirectFail}"];
 }
