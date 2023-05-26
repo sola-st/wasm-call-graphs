@@ -19,10 +19,10 @@ COPY . /home/toughcall
 # Wassail - Install from copied directory in tools/wassail
 # I wish this worked but it does not and it seems to be some ridiculousness with opam versioning that I've now spent way too much time trying to solve. 
 # Instead, tools/main.exe points to the wassail executable and we can run the evaluation with that 
-RUN opam init --auto-setup --yes --disable-sandboxing \
-	&& eval $(opam env) \
-	&& opam install --yes core_unix \
-	&& opam install --yes home/toughcall/tools/wassail
+#RUN opam init --auto-setup --yes --disable-sandboxing \
+#	&& eval $(opam env) \
+#	&& opam install --yes core_unix \
+#	&& opam install --yes home/toughcall/tools/wassail
 
 # Twiggy - Install from copied directory in tools/twiggy 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
