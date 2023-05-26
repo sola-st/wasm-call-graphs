@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd tools_ 
+cd tools
 
 # Clone the Wassail repo 
 git clone https://github.com/acieroid/wassail.git
