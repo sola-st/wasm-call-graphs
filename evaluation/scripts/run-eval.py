@@ -145,8 +145,7 @@ def main():
 
                     # Uninstrument test 
                         # rm -rf instrumented-index.js node_modules
-                        # npm i
-
+                    
                     # Run test
                         # node index.js  
 
@@ -162,6 +161,8 @@ def main():
                         # because this is the easiest way we can keep relative paths 
                     cwd = os.getcwd()
                     os.chdir(test)
+                    
+                    stdout = execute_command("npm i", print_stdout=False)
                     
                     run_instrumented_tests_command = "node ./instrumented-index.js --reachable-exports --callsite-sensitive-cg --lower-bound"
                     stdout = execute_command(run_instrumented_tests_command, print_stdout=False)
