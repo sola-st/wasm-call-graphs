@@ -26,7 +26,7 @@ def extract_wasm_and_test_paths(TEST_DIR):
             paths[extract_name(item1_path)] = {"test_paths" : [], "wasm_path" : ""}
             for item2 in os.listdir(item1_path):
                 item2_path = os.path.join(item1_path, item2)
-                if os.path.splitext(item2_path)[1] == ".wasm":
+                if os.path.splitext(item2_path)[1] == ".wasm" and "_instrumented" not in os.path.basename(item2_path) :
                     paths[extract_name(item1_path)]["wasm_path"] = item2_path
                 elif os.path.isdir(item2_path):
                     paths[extract_name(item1_path)]["test_paths"].append(item2_path) 
@@ -178,8 +178,8 @@ def main():
                     # Wasabi instruments the .wasm file. Replace the original wasm file(s) with this instrumented wasm file. 
                     wasm_file_name = wasm_file.split("/")[-1]
                     instrumented_wasm_file = "./../" + wasm_file_name.split(".wasm")[0]+"_instrumented.wasm"                    
-                    org_wasm_paths = extract_wasm_file_paths_in_dir(".", wasm_file_name)
-                    for path in org_wasm_paths: 
+                    org_wasm_paths_in_test = extract_wasm_file_paths_in_dir(".", wasm_file_name)
+                    for path in org_wasm_paths_in_test: 
                         _ = execute_command("cp {} {}".format(instrumented_wasm_file, path), print_stdout=False)
 
                     print(instrumented_wasm_file)
