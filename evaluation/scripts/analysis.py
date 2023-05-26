@@ -118,7 +118,6 @@ def main():
                     tool_reachable_edges = set()
                     for node, child in tool["callgraph"]["reachable_edges"]["names"]:
                         tool_reachable_edges.add((node, child))
-                    print()
                     edges_missing = precise_edges.difference(tool_reachable_edges)
                     superflous_edges = tool_reachable_edges.difference(precise_edges)
                     

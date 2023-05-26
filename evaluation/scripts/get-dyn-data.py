@@ -55,8 +55,6 @@ data = json.load(open(TEST_SUITE_DATA_JSON_PATH))
 print("Updating data.json with data extracted by Wasabi for each test case...")
 for lib in dyn_data.keys(): 	 
 	
-	print(lib)
-
 	lib_obj = [l for l in data['library_data'] if l['library_name'] == lib][0]
 		
 	for test in dyn_data[lib]["tests"]: 

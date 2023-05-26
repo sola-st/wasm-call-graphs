@@ -59,7 +59,7 @@ def recall_precision_latex_table(f, data):
             if tool["callgraph"] == None:
                 #tool_recall_data += "& & & "
                 tool_recall_data += "\multicolumn{5}{c|}{Crash} & "
-                tool_ascii_data.append("DNE")
+                tool_ascii_data.append(["DNE"])
             else:
                 missing_funcs = tool['callgraph']['missing_functions']['count']
                 missing_percent = "({:.0f}\%)".format(tool['callgraph']['missing_functions']['percent'])
@@ -80,7 +80,9 @@ def recall_precision_latex_table(f, data):
                 #    tool['callgraph']['removed_functions']['percent'])
                 
                 #tool_ascii_data.append("{:.2f}".format(tool["recall"]))
-                tool_ascii_data.append("{}".format(tool['callgraph']['reachable_functions']['count']))
+                tool_ascii_data.append([tool['callgraph']['reachable_functions']['count'], 
+                                        tool['callgraph']['missing_functions']['count'], 
+                                        tool['callgraph']['removed_functions']['count']])
 
         tool_recall_data = tool_recall_data[:-3]
         #tool_percent_data = tool_percent_data[:-3]
@@ -187,7 +189,7 @@ def micro_eval_latex_table(f, data):
     f.write("    \midrule\n")
     
     benchmark_counter = 0
-    rows_data = []
+    rows_data = {}
     summary = {
         "ground_truth": { "f_all": 0, "f_r": 0, "e": 0}, 
         "wassail"     : { "f_r": 0,   "e": 0, "s": 0, "p": 0},
@@ -210,7 +212,7 @@ def micro_eval_latex_table(f, data):
             microbench_challenges = microbench_challenges[:-2]
 
         tools_data = ""
-        pretty_row = []
+        pretty_row = {}
 
         summary["ground_truth"]["f_all"] +=  data[microbench]["ground_truth"]["count_funcs"]
         summary["ground_truth"]["f_r"] += data[microbench]["ground_truth"]["reachable_functions"]["count"]
@@ -224,7 +226,7 @@ def micro_eval_latex_table(f, data):
                 elif "twiggy" in tool['name']: 
                     tools_data += "\multicolumn{3}{c}{"+dne+"} & "
                 else: tools_data += "\multicolumn{3}{c|}{"+dne+"} & "
-                pretty_row.append("-")
+                pretty_row[tool['name']] = ["-"]
 
             else:
                 sound = "\\xmark"
@@ -241,9 +243,8 @@ def micro_eval_latex_table(f, data):
                     summary[tool["name"]]["e"] += tool['callgraph']['count_edges']                    
                 else: tools_data += (f"{tool['callgraph']['reachable_functions']['count']} & {sound} & {precise} & ")
 
-                pretty_row.append(tool['soundness']['sound'])
+                pretty_row[tool['name']] = [tool['soundness']['sound'], tool['precision']['precise']]
                 
-
         tools_data = tools_data[:-3]
         
         #print(data[microbench]['precise_callgraph'])
@@ -259,7 +260,7 @@ def micro_eval_latex_table(f, data):
         ))        
         
         benchmark_counter += 1
-        rows_data.append([microbench] + pretty_row) 
+        rows_data[microbench] = pretty_row 
 
     f.write("    \\midrule\n")
     summary_line = ("    \multicolumn{3}{l|}{\\textit{Summary}} & "
@@ -278,14 +279,37 @@ def micro_eval_latex_table(f, data):
     return rows_data
 
 def recall_precision_pretty_table(data):
+    
+    def num_spaces(number, total_spaces):
+        return total_spaces - len(str(number)) 
+    
     table = PrettyTable()
-    table.title = "Recall of every tool on each library"
-    table.field_names = ["Library", "F_total", "F_dyn", 
-                         "Wassail F_r", 
-                         "WAVM+LLVM F_r", 
-                         "MetaDCE F_r",
-                         "Twiggy F_r"] 
-    table.add_rows(data)
+    table.title = "Evaluation of the soundness of existing call graph analyses on real-world programs"
+    table.field_names = ["Library", "F_all", "F_dyn", 
+                         "Wassail", 
+                         "WAVM+LLVM", 
+                         "MetaDCE",
+                         "Twiggy"] 
+    table.add_row(["", "", "", 
+                   "  F_r   F_un  F_del", 
+                   "  F_r   F_un  F_del",
+                   "  F_r   F_un  F_del",
+                   "  F_r   F_un  F_del",])
+    rows = []
+    for lib in data: 
+        name, f_all, f_dyn = lib[0:3]
+        row = [name, f_all, f_dyn]
+        for tool in lib[3:]:
+            if len(tool) == 1: 
+                row.append("        DNE       ")
+            else:
+                x = ""
+                for n in tool: 
+                    num_extra_spaces = num_spaces(n, 5)
+                    x += " "*num_extra_spaces + str(n) + " "
+                row.append(x)
+        rows.append(row)
+    table.add_rows(rows)
     table.float_format = '.2'
     print(table)
 
@@ -301,14 +325,21 @@ def micro_eval_pretty_table(data):
     table = PrettyTable()
     table.title = "Evaluation of each tool against the microbenchmarks"
     table.field_names = ["Name", "Wassail", "WAVM+LLVM", "MetaDCE", "Twiggy"]
+    table.add_row(["", "S   P", "S   P", "S   P", "S   P"])
     data_pretty = []
-    for col in data: 
-        pretty_row = []
-        for row in col: 
-            if row == True: pretty_row.append("✓")
-            elif row == False: pretty_row.append("✕")
-            else: pretty_row.append(row)
-        data_pretty.append(pretty_row) 
+    for micro in data: 
+        pretty_row = [micro]
+        for tool in data[micro]: 
+            temp = data[micro][tool]
+            if len(temp) == 1: pretty_row.append("  -  ")
+            else: 
+                s, p = temp
+                if s == True: s = "✓" 
+                else: s = "✕"
+                if p == True: p = "✓"
+                else: p = "✕"
+                pretty_row.append("{}   {}".format(s, p))
+        data_pretty.append(pretty_row)
     table.add_rows(data_pretty)
     print(table)
 

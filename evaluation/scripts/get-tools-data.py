@@ -79,7 +79,6 @@ def execute_command(command, program, output_file, write_stdout=True):
     return (not flag_stderr, stdout, exec_time)  
     
 def run_wassail(wasm_file, lib, bin_type):
-    print("running wassail")
     # Wassail 
     wassail_path = "./../../tools/main.exe"
     
@@ -638,17 +637,10 @@ def main():
     wassail_status, wassail_time   = run_wassail(wasm_file, lib_name, bin_type)
     metadce_status, metadce_time   = run_metadce(wasm_file, lib_name, lib_obj, bin_type)
     twiggy_status , twiggy_time    = run_twiggy (wasm_file, lib_name, bin_type)
-    awsm_status   , awsm_time      = run_awsm   (wasm_file, lib_name, bin_type)
+    #awsm_status   , awsm_time      = run_awsm   (wasm_file, lib_name, bin_type)
     wavm_status   , wavm_time      = run_wavm   (wasm_file, lib_name, bin_type) 
     
-    #wassail_status, wassail_time = False, 0
-    #metadce_status, metadce_time = False, 0
-    #twiggy_status , twiggy_time  = True , 0
-    #awsm_status   , awsm_time    = False, 0 
-    #wavm_status   , wavm_time    = False, 0
-    
-    reachable_funcs_count = [None]*5
-
+    reachable_funcs_count = [None]*4
 
     if wassail_status: 
         cg_path = "{}/{}/{}/tool-evaluation-data/wassail/callgraph.dot".format(DATA_PATH, prg_type, lib_name)
@@ -684,7 +676,7 @@ def main():
                     }
                 }
             })
-        reachable_funcs_count[1] = len(reachable_funcs)
+        reachable_funcs_count[0] = len(reachable_funcs)
     else:
         lib_obj["tools"].append({
             "name": "wassail",
@@ -692,7 +684,8 @@ def main():
             "dce" : False,
             "callgraph": None, 
             "execution_time": None, 
-        })        
+        })     
+       
     
     if wavm_status:
         wavm_dot_path = "{}/{}/{}/tool-evaluation-data/WAVM/wavm.bc.callgraph.dot".format(DATA_PATH, prg_type, lib_name)
@@ -728,7 +721,7 @@ def main():
                     }
                 }
             })
-        reachable_funcs_count[4] = len(reachable_funcs)
+        reachable_funcs_count[1] = len(reachable_funcs)
     else:
         lib_obj["tools"].append({
             "name": "wavm",
