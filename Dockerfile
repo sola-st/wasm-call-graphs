@@ -5,7 +5,7 @@ FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
-	&& apt-get -y install --no-install-recommends sudo build-essentials vim python3 pip git curl nodejs npm ocaml opam \
+	&& apt-get -y install --no-install-recommends sudo build-essential vim python3 pip git curl nodejs npm ocaml opam \
 	&& apt-get -y install --no-install-recommends libgmp-dev libmpfr-dev pkg-config m4 wabt
 RUN pip install prettytable
 # we need node17
