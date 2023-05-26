@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/@npcz/magic/dist/magic-js.wasabi.js");
+global.Wasabi = require("./../magic-js.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

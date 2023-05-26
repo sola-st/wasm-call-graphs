@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/sql.js/dist/sql-wasm.wasabi.js");
+global.Wasabi = require("./../sql-wasm.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

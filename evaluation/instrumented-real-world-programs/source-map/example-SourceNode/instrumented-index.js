@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/source-map/lib/mappings.wasabi.js");
+global.Wasabi = require("./../mappings.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

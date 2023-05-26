@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/opencv-wasm/opencv.wasabi.js");
+global.Wasabi = require("./../opencv.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/vscode-oniguruma/release/onig.wasabi.js");
+global.Wasabi = require("./../onig.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

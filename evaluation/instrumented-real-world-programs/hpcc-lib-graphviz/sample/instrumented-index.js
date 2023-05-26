@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/@hpcc-js/wasm/dist/graphvizlib.wasabi.js");
+global.Wasabi = require("./../graphvizlib.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

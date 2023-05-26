@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/wasm-rsa/wasm/nodejs/rsa_lib_bg.wasabi.js");
+global.Wasabi = require("./../rsa_lib_bg.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

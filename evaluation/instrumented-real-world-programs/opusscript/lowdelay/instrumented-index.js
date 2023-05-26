@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/opusscript/build/opusscript_native_wasm.wasabi.js");
+global.Wasabi = require("./../opusscript_native_wasm.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

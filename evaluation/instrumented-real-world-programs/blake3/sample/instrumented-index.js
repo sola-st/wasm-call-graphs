@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/blake3-wasm/dist/wasm/nodejs/blake3_js_bg.wasabi.js");
+global.Wasabi = require("./../blake3_js_bg.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`

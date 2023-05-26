@@ -1,4 +1,4 @@
-global.Wasabi = require("./node_modules/fonteditor-core/woff2/woff2.wasabi.js");
+global.Wasabi = require("./../woff2.wasabi.js");
 let analysis = require("./../../analysis.js");
 
 let filename = `${__filename}`
