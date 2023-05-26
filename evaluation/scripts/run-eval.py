@@ -32,6 +32,17 @@ def extract_wasm_and_test_paths(TEST_DIR):
                     paths[extract_name(item1_path)]["test_paths"].append(item2_path) 
     return paths 
 
+def extract_wasm_file_paths_in_dir(TEST_DIR, filename):
+    paths = []
+    for subdir, _, files in os.walk(TEST_DIR): 
+        for file in files: 
+            file = os.path.join(subdir, file)
+            if os.path.splitext(file)[1] == ".wasm" and os.path.basename(file) == filename:
+                paths.append(file)
+    print(paths)
+    return paths 
+
+
 def execute_command(command, print_stdout=True):
     if print_stdout: p = Popen(command, shell=True, stderr=PIPE)
     else: p = Popen(command, shell=True, stdout=PIPE, stderr=PIPE)
@@ -117,21 +128,21 @@ def main():
         execute_command("cp {} {}".format(MICROBENCH_JSON_PATH, MICROBENCH_DATA_JSON_PATH))
 
     if flag_micro: 
-        paths = extract_wasm_and_test_paths(MICRO_TEST_PATH)
-        for lib in paths:
-            wasm_file = paths[lib]["wasm_path"]
+        org_wasm_paths = extract_wasm_and_test_paths(MICRO_TEST_PATH)
+        for lib in org_wasm_paths:
+            wasm_file = org_wasm_paths[lib]["wasm_path"]
             if flag_micro_eval[0]: execute_command("python3 get-static-data.py --micro-update-json {}".format(wasm_file)); print("\n") 
             if flag_micro_eval[0]: execute_command("python3 get-tools-data.py --micro-update-json {}".format(wasm_file)); print("\n")
         execute_command("python3 analysis.py --micro"); print("\n")
 
     if flag_real: 
-        paths = extract_wasm_and_test_paths(REAL_TEST_SUITE_PATH)    
+        org_wasm_paths = extract_wasm_and_test_paths(REAL_TEST_SUITE_PATH)    
         
-        for lib in paths:
+        for lib in org_wasm_paths:
             
-            if paths[lib]["wasm_path"] == "": continue
+            if org_wasm_paths[lib]["wasm_path"] == "": continue
             
-            wasm_file = paths[lib]["wasm_path"]
+            wasm_file = org_wasm_paths[lib]["wasm_path"]
             
             if flag_real_eval[0]: execute_command("python3 get-static-data.py --real-update-json {}".format(wasm_file)); print("\n") 
             if flag_real_eval[1]: execute_command("python3 get-tools-data.py  --real-update-json {}".format(wasm_file)); print("\n")
@@ -139,7 +150,7 @@ def main():
             if flag_real_eval[2]: 
                 
                 print("Running tests for {}...\n".format(lib))
-                for test in paths[lib]['test_paths']:
+                for test in org_wasm_paths[lib]['test_paths']:
                     
                     print(lib+"/"+extract_name(test))
 
@@ -162,16 +173,25 @@ def main():
                     cwd = os.getcwd()
                     os.chdir(test)
                     
-                    stdout = execute_command("npm i", print_stdout=False)
+                    _ = execute_command("npm i", print_stdout=False)
+
+                    # Wasabi instruments the .wasm file. Replace the original wasm file(s) with this instrumented wasm file. 
+                    wasm_file_name = wasm_file.split("/")[-1]
+                    instrumented_wasm_file = "./../" + wasm_file_name.split(".wasm")[0]+"_instrumented.wasm"                    
+                    org_wasm_paths = extract_wasm_file_paths_in_dir(".", wasm_file_name)
+                    for path in org_wasm_paths: 
+                        _ = execute_command("cp {} {}".format(instrumented_wasm_file, path), print_stdout=False)
+
+                    print(instrumented_wasm_file)
                     
-                    run_instrumented_tests_command = "node ./instrumented-index.js --reachable-exports --callsite-sensitive-cg --lower-bound"
-                    stdout = execute_command(run_instrumented_tests_command, print_stdout=False)
-                    stdout = stdout.split("\n")
-                    results = [re.search("(\d+) ",x).groups()[0].strip() for x in stdout[len(stdout)-6:] if x != '']
-                    print("{} exported functions are reachable.".format(results[0]))  
-                    print("{} callsites have been analyzed.".format(results[1]))          
-                    print("{} functions are the lower bound for the analysis.".format(results[2]))
-                    print("\n")
+                    #run_instrumented_tests_command = "node ./instrumented-index.js --reachable-exports --callsite-sensitive-cg --lower-bound"
+                    #stdout = execute_command(run_instrumented_tests_command, print_stdout=False)
+                    #stdout = stdout.split("\n")
+                    #results = [re.search("(\d+) ",x).groups()[0].strip() for x in stdout[len(stdout)-6:] if x != '']
+                    #print("{} exported functions are reachable.".format(results[0]))  
+                    #print("{} callsites have been analyzed.".format(results[1]))          
+                    #print("{} functions are the lower bound for the analysis.".format(results[2]))
+                    #print("\n")
 
                     os.chdir(cwd)
 
