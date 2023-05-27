@@ -80,7 +80,7 @@ def execute_command(command, program, output_file, write_stdout=True):
     
 def run_wassail(wasm_file, lib, bin_type):
     # Wassail 
-    wassail_path = "./../../tools/main.exe"
+    wassail_path = "./../../tools/wassail/_build/default/main.exe" 
     
     # data/real-world-programs-raw-data/lib/tool-evaluation-data/wassail/callgraph.dot
     prg_type = "real-world-programs-raw-data" if bin_type == "real" else "microbenchmarks-raw-data" 

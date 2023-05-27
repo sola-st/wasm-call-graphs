@@ -25,13 +25,16 @@ COPY . /home/toughcall
 # Instead, tools/main.exe points to the wassail executable and we can run the evaluation with that 
 # Only that doesn't work either because opam is garbage.
 RUN opam init --auto-setup --disable-sandboxing --yes --bare
-RUN opam switch create system ocaml-base-compiler.4.07.1
+RUN opam switch create system ocaml-base-compiler.4.14.1
 RUN eval $(opam env)
 
 WORKDIR /home/toughcall/tools/wassail
 RUN opam install --yes .; exit 0
 RUN opam install --yes core_unix
 RUN opam install --yes . 
+RUN make 
+
+WORKDIR /
 
 #RUN opam install --yes core_unix wasm.2.0.0
 #RUN opam install --yes home/toughcall/tools/wassail
