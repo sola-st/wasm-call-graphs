@@ -1,6 +1,6 @@
 # That’s a Tough Call: Studying the Challenges of Call Graph Construction for WebAssembly
 
-This repository contains the supplementary material for the paper "That’s a Tough Call: On Static Call Graph Construction for WebAssembly Binaries" (ISSTA'23).
+This repository contains supplementary material for the paper "That’s a Tough Call: On Static Call Graph Construction for WebAssembly Binaries" (ISSTA'23).
 
 ## Running via Docker
 
@@ -16,12 +16,12 @@ The image itself is about 4 GB on disk and takes between 15 and 30 minutes to bu
 
 ### Running the Image 
 
-The following command will launch the ToughCall Docker container in daemon mode, meaning that the docker container is running in the background and can be connected to.
+The following command will launch the `toughcall` Docker container in daemon mode, meaning that the docker container is running in the background and can be connected to.
 ```
 docker run -d -t -i -p 3000:3000 -p 5000:5000 toughcall
 # The container ID will be written to the console. 
 ```
-The container ID will be needed to connect to the container. You can recover the container ID by running `docker ps` and noting the ID of the container named `toughcall`. You can stop the container using `docker stop <container-id>`. If you get an error saying that the post is occupied, you can either run on a different port or stop the currently running container and then re-run the run command on the same port. 
+The container ID will be needed to connect to the container. You can recover the container ID by running `docker ps` and noting the ID of the container named `toughcall`. You can stop the container using `docker stop <container-id>`. If you get an error saying that the port is occupied, you can either run on a different port or stop the currently running container and then re-run the run command on the same port. 
 
 To connect to the container, run:
 ```
@@ -38,21 +38,21 @@ The container is organized as follows.
     - `wasm/`: Source code of the Rust WebAssembly parser and analysis library.
     - `scripts/`: Scripts used to analyze WasmBench along with extracted data.
   - `data/`: Raw data for microbenchmarks and real-world programs.
-    - `microbenchmarks-raw-data/`: Raw data from the microbenchmark programs.
-    - `real-world-programs-raw-data/`: Raw data from the real-world programs.
-    - `tables/`: .tex files for tables in the paper.
+    - `microbenchmarks-raw-data/`
+    - `real-world-programs-raw-data/`
+    - `tables/`: `.tex` files for tables in the paper.
     - `microbenchmarks-processed-data.json/`: Processed data from the microbenchmarks.
     - `real-world-processed-data.json/`: Processed data from the real-world programs.
-  - `evaluation/`: Evaluation scripts, raw data and processed data for the study of soundness (and precision for the microbenchmarks) of the existing static analyses.
+  - `evaluation/`: Evaluation scripts for the study of soundness (and precision for the microbenchmarks) of the various static analyses.
     - `instrumented-real-world-programs/`: Real world programs that have been instrumented with Wasabi.
-    - `metadce-inputs/`: Inputs to MetaDCE.
+    - `metadce-inputs/`: Inputs to the MetaDCE tool.
     - `scripts/`: 
       - `analysis.py/`: Run analysis for real world programs and microbenchmarks.
       - `get-dyn-data.py/`: Reads the Wasabi output files and saves the data in a JSON file.
       - `get-static-data.py/`: Fetches static data for a given WebAssembly binary.
       - `get-tools-data.py/`: Runs all the tools that are being evaluated on the Wasm file that is passed in.
-      - `instrument-test.sh/`: Bash script to instrument a nodejs application to collect data using Wasabi.
-      - `latexify.py/`: Generates ASCII and Latex tables from processed data.
+      - `instrument-test.sh/`: Bash script to instrument a npm application to collect data using Wasabi.
+      - `latexify.py/`: Generates ASCII and LaTeX tables from processed data.
       - `run-eval.py/`: Runs evaluation for real world programs and microbenchmarks.
   - `microbenchmarks/`: Set of microbenchmarks with their build and run scripts.
   - `real-world-programs/`: Programs collected from NPM and GitHub.
@@ -74,18 +74,18 @@ python3 run-eval.py --all-fresh
 You should see ASCII tables for the LaTeX tables in the paper. For example: 
 
 ```
-+-----------------------------------------------------------------------------------------------+
-|                      Evaluation of each tool against the microbenchmarks                      |
-+------------------------------------------------------+---------+-----------+---------+--------+
-|                         Name                         | Wassail | WAVM+LLVM | MetaDCE | Twiggy |
-+------------------------------------------------------+---------+-----------+---------+--------+
-|                                                      |  S   P  |   S   P   |  S   P  | S   P  |
-|                  direct-call-simple                  |  ✓   ✓  |   ✓   ✓   |  ✓   ✓  | ✓   ✓  |
-|                direct-call-transitive                |  ✓   ✓  |   ✓   ✓   |  ✓   ✓  | ✓   ✓  |
-|              direct-call-imported-func               |  ✓   ✓  |   ✓   ✓   |  ✓   ✓  | ✓   ✓  |
-|                  entry-point-start                   |  ✓   ✓  |   ✓   ✓   |  ✓   ✓  |   -    |
-|                                                     ...                                       |
-+-----------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------+
+|        Evaluation of each tool against the microbenchmarks         |
++---------------------------+---------+-----------+---------+--------+
+|            Name           | Wassail | WAVM+LLVM | MetaDCE | Twiggy |
++---------------------------+---------+-----------+---------+--------+
+|                           |  S   P  |   S   P   |  S   P  | S   P  |
+|     direct-call-simple    |  ✓   ✓  |   ✓   ✓   |  ✓   ✓  | ✓   ✓  |
+|   direct-call-transitive  |  ✓   ✓  |   ✓   ✓   |  ✓   ✓  | ✓   ✓  |
+| direct-call-imported-func |  ✓   ✓  |   ✓   ✓   |  ✓   ✓  | ✓   ✓  |
+|     entry-point-start     |  ✓   ✓  |   ✓   ✓   |  ✓   ✓  |   -    |
+|                                 ...                                |
++--------------------------------------------------------------------+
 ```
 
 ## Detailed Artifact Description
@@ -103,11 +103,11 @@ This script analyzes the given WebAssembly binary and reports static information
 6. Detailed information about the exports including the type of export, name and internal ID.
 7. Debug names that map internal function IDs to debug names.  
 8. Detailed information about calls in the binary including, each call, the total number of calls and unique calls. 
-9. Detailed information about indirect calls in the binary including, the total number of indirect calls and the types of functions called indirectly.  
+9. Detailed information about indirect calls in the binary including, the total number of indirect calls and the function types called indirectly.  
 
 ### `instrument-test.sh` and `get-dyn-data.py` 
 
-`instrument-test.sh` instruments your npm application using [Wasabi](https://github.com/danleh/wasabi). It instruments a given WebAssembly file with Wasabi by generating hooks for all calls, the beginning of functions and store instructions. 
+`instrument-test.sh` instruments your npm application using a dynamic analysis framework [Wasabi](https://github.com/danleh/wasabi). It instruments a given WebAssembly file with Wasabi by generating hooks for all calls, the beginning of functions and store instructions. 
 
 `get-dyn-data.py` then runs the instrumented npm applications and reports the exported functions and internal functions that are reachable in that run of the application. This is used later on the evaluation to determine if a call-graph analysis tool is sound and precise. Below is a sample output of the script being run on tests for the library `shiki`. 
 
@@ -132,7 +132,7 @@ shiki/example-bash
 
 ### `get-tools-data.py`
 
-This script runs all the tools that are being evaluated on the WebAssembly file that is passed in. Each of the tools call-graph is first obtained in a run of the tool. The execution time is recorded. The call-graph graph is the normalized to a standard representation. If the tool performs dead-code elimination, the result of that is recorded and standardized. Each tools reachability graph as well as stdout and stderr are located in `data/<real/micro>/lib/tool-evaluation-data/<tool>/`. The script reports on stdout if the tools ran successfully on the WebAssembly binary, how long the tool to execute or, in the case of a failure, where the error is recorded as well as how many functions were determined to be reachable by the tool. The output of the script being run on `fonteditor-core/woff2.wasm` is shown below: 
+This script runs all the tools that are being evaluated on the WebAssembly file that is passed in. First, the call-graph produced by each of the tools is extracted. The execution time is recorded. The call-graph is then normalized to a standard representation. If the tool performs dead-code elimination, the result of that is recorded and standardized as well. Each tools call-graph as well as stdout and stderr are located in `data/<real/micro>/lib/tool-evaluation-data/<tool>/`. The script reports on stdout if the tools ran successfully on the WebAssembly binary, how long the execution took, or, in the case of a failure, where the error is recorded, as well as how many functions were determined to be reachable by the tool. The output of the script being run on `fonteditor-core/woff2.wasm` is shown below: 
 
 ```
 Computing set of reachable functions for each tool being evaluated...
@@ -146,28 +146,27 @@ Executing opt            ...SUCCESS. 1.15ms
 1118 reachable functions computed for wassail.
  345 reachable functions computed for wavm.
  345 reachable functions computed for twiggy.
-Updating test-suite-data.json...
 ```
 
 ### `analysis.py` and `latexify.py` 
 
-`analysis.py` goes over the raw data computed and stored for each of the microbenchmarks and real-world programs. For the real-world programs, it compares the computed call-graph against dynamic reachability information extracted using Wasabi and determines if there are any missing functions (which is an indication of unsoundness) or correctly removed functions (which is an indication of how precise the call-graph is). It computes absolute values as well as percentages for each. For microbenchmarks, it compares the call-graphs produced by each tool with a handwritten, precise call-graph and determines soundness and precision. All the analysis data, as well as the static, dynamic and tool-specific data for each program is stored either in `data/microbenchmarks-processed-data.json` or `real-world-processed-data.json`. 
+`analysis.py` goes over the raw data computed and stored for each of the microbenchmarks and real-world programs. For the real-world programs, it compares the computed call-graph against dynamic reachability information extracted using Wasabi and determines if there are any missing functions (which is an indication of unsoundness) or correctly removed functions (which is an indication of how precise the call-graph is). It computes absolute values as well as percentages for each. For microbenchmarks, it compares the call-graphs produced by each tool with a handwritten, precise call-graph and determines soundness and precision. All the analysis data, as well as the static, dynamic and tool-specific data for each program is stored either in `data/microbenchmarks-processed-data.json` or `data/real-world-processed-data.json`. 
 
 These JSON files are read by `latexify.py` to create the three ASCII tables (and LaTeX tables) seen at the end of running the evaluation. Namely,  
 1. The table titled *Evaluation of each tool against the microbenchmarks* corresponds to Table 1 in the paper. 
-2. The table titled *Evaluation of the soundness of existing call graph analyses on real-world programs* corresponds to Table 3 in the paper. 
-3. The table titled *Coverage of each test case for its library* corresponds to Table 2 in the paper. 
+2. The table titled *Coverage of each test case for its library* corresponds to Table 2 in the paper. 
+3. The table titled *Evaluation of the soundness of existing call graph analyses on real-world programs* corresponds to Table 3 in the paper.
 
 ### `run-eval.py`
 
-The evaluation can be re-run easily with the `run-eval.py` script. This script interweaves running each of the above scripts depending on different options passed to it. In a fresh evaluation (`--all-fresh`), it extracts static information for each WebAssembly file, computes sets of (dynamically known) reachable functions for each test using Wasabi and computes sets of reachable functions for each tool being evaluated. It then runs an analysis on all the extracted data and latexifies relevant data while also reporting results on stdout. It also has options to only re-run specific parts of this evaluation like `--real --eval-tools` which can be explored using `--help`. 
-
+The evaluation can be re-run easily with the `run-eval.py` script. This script interweaves running each of the above scripts depending on different options passed to it. In a fresh evaluation (`--all-fresh`), it extracts static information for each WebAssembly file, computes sets of (dynamically extracted) reachable functions for each application using Wasabi and computes sets of reachable functions for each tool being evaluated. It then runs an analysis on all the extracted data and latexifies relevant data while also reporting results on stdout. The script also has options to only re-run specific parts of the evaluation like the options `--real --eval-tools` which re-runs the tools on all real-world programs. These options can be explored using `--help`. 
+ 
 
 ## Extending the Artifact
 
 Any researchers or developers looking to prototype a static analysis over WebAssembly may benefit from this artifact. Our dataset of JS applications that use WebAssembly in the backend is a first of its kind (most papers use PolyBench compiled to WebAssembly) and is important to evaluate new static analyses against, as explained in the paper. Additionally, `get-tools-data.py` can easily be extended to evaluate a new call-graph analysis against the different challenges in the microbenchmarks, as well as against the current state-of-the-art. Specifically, the following additions would have to be made to extend the script with a new tool: 
 1. Add a new function `run_tool` that runs the tool on a given WebAssembly binary. 
-2. Add a new function `process_tool` that processes the data extracted by the previous function. Depending on the output format, this function can utilize calls to `replace_graph_nodes_with_id` or `replace_names_with_internal_ids` to normalize the reachability graph to a standard representation. `get_reachable_funcs_and_edges` or `get_reachable_funcs_from_dot` can then be called to extract the reachable functions from a set of initially reachable functions. 
+2. Add a new function `process_tool` that processes the data extracted by the previous function. Depending on the output format, this function can utilize calls to the functions `replace_graph_nodes_with_id` or `replace_names_with_internal_ids` to normalize the reachability graph to a standard representation. The functions `get_reachable_funcs_and_edges` or `get_reachable_funcs_from_dot` can then be called to extract the reachable functions from a set of initially reachable functions. 
 
 ## Running Locally
 
