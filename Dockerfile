@@ -5,8 +5,12 @@ FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
-	&& apt-get -y install --no-install-recommends sudo build-essential vim python3 pip git curl nodejs npm ocaml opam \
-	&& apt-get -y install --no-install-recommends libgmp-dev libmpfr-dev pkg-config m4 wabt
+	&& apt-get -y -q install sudo build-essential rsync wget zip unzip \
+	&& apt-get -y install --no-install-recommends vim python3 pip git curl nodejs npm ocaml opam \
+	&& apt-get -y install --no-install-recommends libgmp-dev libmpfr-dev pkg-config m4 wabt \
+	&& apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN pip install prettytable
 # we need node17
 RUN curl -sL https://deb.nodesource.com/setup_17.x | bash -
@@ -19,10 +23,18 @@ COPY . /home/toughcall
 # Wassail - Install from copied directory in tools/wassail
 # I wish this worked but it does not and it seems to be some ridiculousness with opam versioning that I've now spent way too much time trying to solve. 
 # Instead, tools/main.exe points to the wassail executable and we can run the evaluation with that 
-#RUN opam init --auto-setup --yes --disable-sandboxing \
-#	&& eval $(opam env) \
-#	&& opam install --yes core_unix \
-#	&& opam install --yes home/toughcall/tools/wassail
+# Only that doesn't work either because opam is garbage.
+RUN opam init --auto-setup --disable-sandboxing --yes --bare
+RUN opam switch create system ocaml-base-compiler.4.07.1
+RUN eval $(opam env)
+
+WORKDIR /home/toughcall/tools/wassail
+RUN opam install --yes .; exit 0
+RUN opam install --yes core_unix
+RUN opam install --yes . 
+
+#RUN opam install --yes core_unix wasm.2.0.0
+#RUN opam install --yes home/toughcall/tools/wassail
 
 # Twiggy - Install from copied directory in tools/twiggy 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
