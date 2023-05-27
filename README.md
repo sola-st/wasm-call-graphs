@@ -21,7 +21,7 @@ The following command will launch the ToughCall Docker container in daemon mode,
 docker run -d -t -i -p 3000:3000 -p 5000:5000 toughcall
 # The container ID will be written to the console. 
 ```
-The container ID will be needed to connect to the container. You can recover the container ID by running `docker ps` and noting the ID of the container named toughcall. You can stop the container using `docker stop <container-id>`
+The container ID will be needed to connect to the container. You can recover the container ID by running `docker ps` and noting the ID of the container named `toughcall`. You can stop the container using `docker stop <container-id>`. If you get an error saying that the post is occupied, you can either run on a different port or stop the currently running container and then re-run the run command on the same port. 
 
 To connect to the container, run:
 ```
@@ -63,7 +63,7 @@ This section illustrates the general workflow of the artifact. It assumes you ar
 
 ### What is this Artifact? 
 
-This artifact is a self-contained environment to reproduce the evaluation of the ISSTA'23 paper "That’s a Tough Call: Studying the Challenges of Call Graph Construction for WebAssembly". This artifact contains 25 microbenchmarks and 10 real-world npm applications that are used to evaluate various WebAssembly static analysis tools and frameworks. This artifact automatically builds the tools, extracts static and dynamic information from the WebAssembly binaries in each of the microbenchmarks and applications being evaluated, and runs each of the tools over them. All intermediate data has been stored in each run of the evaluation and can be inspected. 
+This artifact is a self-contained environment to reproduce the evaluation of the ISSTA'23 paper "That’s a Tough Call: Studying the Challenges of Call Graph Construction for WebAssembly". The artifact contains 25 microbenchmarks and 10 real-world npm applications that are used to evaluate various WebAssembly static analysis tools and frameworks. This artifact automatically builds the tools, extracts static and dynamic information from the WebAssembly binaries in each of the microbenchmarks and applications being evaluated, and runs each of the tools over them. All intermediate data has been stored in each run of the evaluation and can be inspected. 
 
 Run the following commands to run the entire evaluation: 
 ```
@@ -132,7 +132,7 @@ shiki/example-bash
 
 ### `get-tools-data.py`
 
-This script runs all the tools that are being evaluated on the WebAssembly file that is passed in. Each of the tools call-graph is first obtained in a run of the tool. The execution time is recorded. The call-graph graph is the normalized to a standard representation. If the tool performs dead-code elimination, the result of that is recorded and standardized. Each tools reachability graph as well as stdout and stderr are located in `data/<real/micro>/lib/tool-evaluation-data/<tool>/`. The script reports on stdout if the tools ran successfully on the WebAssembly binary, how long the tool to execute or, in the case of a failure, where the error is recorded as well as how many functions were determined to be reachable by the tool. The output of the script being run on fonteditor-core/woff2.wasm is shown below: 
+This script runs all the tools that are being evaluated on the WebAssembly file that is passed in. Each of the tools call-graph is first obtained in a run of the tool. The execution time is recorded. The call-graph graph is the normalized to a standard representation. If the tool performs dead-code elimination, the result of that is recorded and standardized. Each tools reachability graph as well as stdout and stderr are located in `data/<real/micro>/lib/tool-evaluation-data/<tool>/`. The script reports on stdout if the tools ran successfully on the WebAssembly binary, how long the tool to execute or, in the case of a failure, where the error is recorded as well as how many functions were determined to be reachable by the tool. The output of the script being run on `fonteditor-core/woff2.wasm` is shown below: 
 
 ```
 Computing set of reachable functions for each tool being evaluated...
@@ -149,17 +149,29 @@ Executing opt            ...SUCCESS. 1.15ms
 Updating test-suite-data.json...
 ```
 
-### `analysis.py`, `run-eval.py` and `latexify.py`
+### `analysis.py` and `latexify.py` 
 
-TODO
+`analysis.py` goes over the raw data computed and stored for each of the microbenchmarks and real-world programs. For the real-world programs, it compares the computed call-graph against dynamic reachability information extracted using Wasabi and determines if there are any missing functions (which is an indication of unsoundness) or correctly removed functions (which is an indication of how precise the call-graph is). It computes absolute values as well as percentages for each. For microbenchmarks, it compares the call-graphs produced by each tool with a handwritten, precise call-graph and determines soundness and precision. All the analysis data, as well as the static, dynamic and tool-specific data for each program is stored either in `data/microbenchmarks-processed-data.json` or `real-world-processed-data.json`. 
+
+These JSON files are read by `latexify.py` to create the three ASCII tables (and LaTeX tables) seen at the end of running the evaluation. Namely,  
+1. The table titled *Evaluation of each tool against the microbenchmarks* corresponds to Table 1 in the paper. 
+2. The table titled *Evaluation of the soundness of existing call graph analyses on real-world programs* corresponds to Table 3 in the paper. 
+3. The table titled *Coverage of each test case for its library* corresponds to Table 2 in the paper. 
+
+### `run-eval.py`
+
+The evaluation can be re-run easily with the `run-eval.py` script. This script interweaves running each of the above scripts depending on different options passed to it. In a fresh evaluation (`--all-fresh`), it extracts static information for each WebAssembly file, computes sets of (dynamically known) reachable functions for each test using Wasabi and computes sets of reachable functions for each tool being evaluated. It then runs an analysis on all the extracted data and latexifies relevant data while also reporting results on stdout. It also has options to only re-run specific parts of this evaluation like `--real --eval-tools` which can be explored using `--help`. 
+
 
 ## Extending the Artifact
 
-TODO 
+Any researchers or developers looking to prototype a static analysis over WebAssembly may benefit from this artifact. Our dataset of JS applications that use WebAssembly in the backend is a first of its kind (most papers use PolyBench compiled to WebAssembly) and is important to evaluate new static analyses against, as explained in the paper. Additionally, `get-tools-data.py` can easily be extended to evaluate a new call-graph analysis against the different challenges in the microbenchmarks, as well as against the current state-of-the-art. Specifically, the following additions would have to be made to extend the script with a new tool: 
+1. Add a new function `run_tool` that runs the tool on a WebAssembly binary. 
+2. Add a new function `process_tool` that processes the data extracted by the previous function. Depending on the output format, this function can utilize calls to `replace_graph_nodes_with_id` or `replace_names_with_internal_ids` to normalize the reachability graph to a standard representation. `get_reachable_funcs_and_edges` or `get_reachable_funcs_from_dot` can then be called to extract the reachable functions from a set of initially reachable functions. 
 
 ## Running Locally
 
-If you want to run our analyses and evaluation yourself, here a rough list of the required software and input data:
+If you want to run our analyses and evaluation yourself, here is a rough list of the required software and input data:
 
 - OS: Ubuntu 20.04 LTS
 - Wasmtime as a WASI-compliant WebAssembly VM, see https://github.com/bytecodealliance/wasmtime
