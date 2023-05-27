@@ -12,7 +12,7 @@ cd wasm-call-graphs
 chmod +x setup.sh && ./setup.sh
 docker build -t toughcall .
 ```
-The image itself is about 4 GB on disk and takes between 15 and 30 minutes to build, depending on hardware and network connection.
+The image itself is about 6 GB on disk and takes between 15 and 30 minutes to build, depending on hardware and network connection.
 
 ### Running the Image 
 
@@ -87,6 +87,7 @@ You should see ASCII tables for the LaTeX tables in the paper. For example:
 |                                 ...                                |
 +--------------------------------------------------------------------+
 ```
+Note: If you get an error from npm asking you to install a newer version of npm, simply re-run the script. The error should not reappear.  
 
 ## Detailed Artifact Description
 
