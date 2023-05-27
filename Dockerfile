@@ -21,9 +21,6 @@ RUN mkdir -p /home/toughcall
 COPY . /home/toughcall
 
 # Wassail - Install from copied directory in tools/wassail
-# I wish this worked but it does not and it seems to be some ridiculousness with opam versioning that I've now spent way too much time trying to solve. 
-# Instead, tools/main.exe points to the wassail executable and we can run the evaluation with that 
-# Only that doesn't work either because opam is garbage.
 RUN opam init --auto-setup --disable-sandboxing --yes --bare
 RUN opam switch create system ocaml-base-compiler.4.14.1
 RUN eval $(opam env)
