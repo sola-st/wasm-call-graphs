@@ -2,7 +2,7 @@
 ;; function (i.e., requires interprocedural analysis).
 ;; Entry point: $main
 ;; Precise call graph: $main -> $index, $main -> $a
-;; Reachable functions: $main, $call_indirect, $a
+;; Reachable functions: $main, $index, $a
 (module
     ;; (import "host" "print" (func $print (param i32)))
     (func $main (export "main")
