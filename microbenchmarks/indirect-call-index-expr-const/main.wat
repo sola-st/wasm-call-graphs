@@ -22,5 +22,5 @@
         ;; call $print
     )
     (table $table 2 funcref)
-    (elem $table (i32.const 0) $a $b)
+    (elem $table (i32.const 0) $a $not-reachable)
 )
